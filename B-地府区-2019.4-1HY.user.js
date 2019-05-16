@@ -345,7 +345,7 @@ createButton('自动三气', btnBox0, AutoKillFunc);
 createButton('青龙监听', btnBox0, listenQLFunc);
 createButton('兽雀', btnBox0, shouqueFunc);
 //createButton('交悬红', btnBox0, LingxuanhongFunc);
-createButton('嵩山', btnBox0, SongshanFunc);
+//createButton('嵩山', btnBox0, SongshanFunc);
 //隐藏所有按钮的按钮----------------------------------
 var buttonhiden = 0;
 function buttonhideFunc() {
@@ -380,7 +380,7 @@ function hideButton() {
     btnList['自动三气'].style.visibility = "hidden";
     btnList['青龙监听'].style.visibility = "hidden";
     btnList['兽雀'].style.visibility = "hidden";
-    btnList['嵩山'].style.visibility = "hidden";
+  //  btnList['嵩山'].style.visibility = "hidden";
 }
 function showButton() {
     btnBox0.style.visibility = "visible";
@@ -405,7 +405,7 @@ function showButton() {
     btnList['自动三气'].style.visibility = "visible";
     btnList['青龙监听'].style.visibility = "visible";
     btnList['兽雀'].style.visibility = "visible";
-    btnList['嵩山'].style.visibility = "visible";
+   // btnList['嵩山'].style.visibility = "visible";
 }
 
 //我是谁？？？
@@ -694,9 +694,9 @@ function xfjFunc() { go("jh 44;n;n;n;n;e;ne;ne;ne;n;n;n;n;n;nw;nw;nw;w;n;n;n;e;e
 createPopButton('幽冥副本', '直通车', YMfbFunc);
 function YMfbFunc() { go("jh 45;ne;ne;n;n;ne;ne;e;ne;n;n;n;n;n;ne;ne;n;n;n;nw;nw;n;e;e;e;e;e;"); }
 
-//乔阴县--------------------------------------------------
-createPopButton('乔阴县', '直通车', qyFunc);
-function qyFunc() { go("jh 7;"); }
+//乔阴县--------------------飞格斗跑路------------------------------
+createPopButton('通天寺', '直通车', ttsFunc);
+function ttsFunc() { go("home;rank go 187;s;e;e;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;e;e;e;se;s;s;e;e;e;s;s;"); }
 
 //峨眉山--------------------------------------------------
 createPopButton('峨眉山门', '直通车', emFunc);
