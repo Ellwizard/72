@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         B-1-5区-2019.4-1HY
+// @name         B-71-75区-2019.4-1HY
 // @namespace    http://tampermonkey.net/
 // @version      2019.4.25
 // @description  try to take over the world!
@@ -2032,8 +2032,8 @@ function QinglongMon() { //各种监控大杂烩
         if (type == "main_msg") {  //handle main message;
             var msg = g_simul_efun.replaceControlCharBlank(b.get("msg"));
             //         console.log(msg);
-            if ((msg.match("1-5区]") != null) && (KFQLtrigger == 1)) {
-                //监控 1-5  青龙(周一、周二）-
+            if ((msg.match("71-75区]") != null) && (KFQLtrigger == 1)) {
+                //监控 71-75  青龙(周一、周二）-
                 if ((msg.match("晚香玉") != null || msg.match("凌霄花") != null || msg.match("百宜雪梅") != null || msg.match("朝开暮落花") != null || msg.match("熙颜花") != null || msg.match("夕雾草") != null || msg.match("彼岸花") != null || msg.match("洛神花") != null || msg.match("碎片") != null || PTtrigger == 1) && (msg.match("荣威镖局") == null)) { // pt triggsuer = 1 是默认， =0 时 打所有跨服青龙
                     //                  if (( msg.match("晚香玉")!=null || msg.match("凌霄花")!=null || msg.match("百宜雪梅")!=null || msg.match("朝开暮落花")!=null || msg.match("凤凰木")!=null || msg.match("熙颜花")!=null || msg.match("君影草")!=null ||msg.match("矢车菊")!=null ||msg.match("忘忧草")!=null ||msg.match("仙客来")!=null ||msg.match("雪英")!=null ||msg.match("夕雾草")!=null ||  msg.match("彼岸花")!=null || msg.match("洛神花")!=null || PTtrigger == 0) && ( msg.match("荣威镖局")==null)){ // pt triggsuer = 1 是默认， =0 时 打所有跨服青龙
                     clearInterval(QinglongIntervalFunc);
@@ -2044,10 +2044,10 @@ function QinglongMon() { //各种监控大杂烩
                     QinglongIntervalFunc = setInterval(Qinglong, 500);
 
                 }
-                //监控 1-5  镖车(周日）-
-                if (msg.match("1-5区]花落云") != null) {
-                    if (btnList1["杀好人"].innerText == '停好人') { tarNPC = '[1-5区]花落云'; }
-                    else { tarNPC = '[1-5区]墟归一'; }
+                //监控 71-75  镖车(周日）-
+                if (msg.match("71-75区]花落云") != null) {
+                    if (btnList1["杀好人"].innerText == '停好人') { tarNPC = '[71-75区]花落云'; }
+                    else { tarNPC = '[71-75区]墟归一'; }
                     clearInterval(QinglongIntervalFunc);
                     var url = msg.split("href;0;")[1].split("")[0];
                     clickButton(url);
@@ -2139,11 +2139,11 @@ function QinglongMon() { //各种监控大杂烩
         //系统通知信息（消息）
         if (type == "channel" && subType == "sys") {
             var msg = g_simul_efun.replaceControlCharBlank(b.get("msg"));
-            //监控 1-5  周四跨服逃犯
-            if (msg.match("1-5区]段老大慌不择路") != null && kuafuzhuitao == 1) {
+            //监控 71-75  周四跨服逃犯
+            if (msg.match("71-75区]段老大慌不择路") != null && kuafuzhuitao == 1) {
                 var url = msg.split("href;0;")[1].split("")[0];
-                if (btnList1["杀好人"].innerText == '停好人') { tarNPC = '[1-5区]无一'; }
-                else { tarNPC = '[1-5区]段老大'; }
+                if (btnList1["杀好人"].innerText == '停好人') { tarNPC = '[71-75区]无一'; }
+                else { tarNPC = '[71-75区]段老大'; }
                 clearInterval(QinglongIntervalFunc);
                 Qinglong();
                 QinglongIntervalFunc = setInterval(Qinglong, 500);
@@ -3108,9 +3108,9 @@ function JinKuaFuFunc() {
 
 
 // 杀坏人----------------------------------------------------------------------------------------------------------------
-var HongMingNPCList = ["钱凌异","齐伯川","韦子壮","[1-5区]段老大", "[1-5区]墟归一", "[1-5区]上官晓芙", "[1-5区]洪昭天","夜魔*恶棍", "夜魔*流寇", "夜魔*剧盗", "夜魔*云老四", "夜魔*岳老三", "夜魔*二娘", "夜魔*段老大", "黑袍公", "独孤须臾", "翼国公", "云观海", "年兽", "铁狼军", "银狼军", "金狼军", "金狼将", "十夫长", "百夫长", "月幽剑士", "濯缨剑士", "对影剑士", "夏花剑士", "[一]镇擂斧将", "[二]镇擂斧将", "天魔真身", "攻楼死士", "镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神", "不『二』剑客"];
+var HongMingNPCList = ["钱凌异","齐伯川","韦子壮","[71-75区]段老大", "[71-75区]墟归一", "[71-75区]上官晓芙", "[71-75区]洪昭天","夜魔*恶棍", "夜魔*流寇", "夜魔*剧盗", "夜魔*云老四", "夜魔*岳老三", "夜魔*二娘", "夜魔*段老大", "黑袍公", "独孤须臾", "翼国公", "云观海", "年兽", "铁狼军", "银狼军", "金狼军", "金狼将", "十夫长", "百夫长", "月幽剑士", "濯缨剑士", "对影剑士", "夏花剑士", "[一]镇擂斧将", "[二]镇擂斧将", "天魔真身", "攻楼死士", "镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神", "不『二』剑客"];
 var HongMingNPCListClan1 = ["镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神"];
-var HongMingNPCListKuaFu = ["[1-5区]段老大", "[1-5区]墟归一", "[1-5区]上官晓芙", "[1-5区]洪昭天"];
+var HongMingNPCListKuaFu = ["[71-75区]段老大", "[71-75区]墟归一", "[71-75区]上官晓芙", "[71-75区]洪昭天"];
 var killHongMingIntervalFunc = null;
 var currentNPCIndex = 0;
 function killHongMingTargetFunc() {
@@ -3190,8 +3190,8 @@ Array.prototype.contains = function (obj) {
 
 
 // 杀好人----------------------------------------------------------------------------------------------------------------
-var HuangMingNPCList = ["王铁匠", "杨掌柜", "柳绘心", "柳小花", "卖花姑娘", "刘守财", "朱老伯", "方老板", "客商", "方寡妇", "[1-5区]无一",  "无一", "铁二", "追三", "冷四", "[1-5区]花落云", "[1-5区]辰川", "[1-5区]王世仲", "守楼虎将", "天魔真身", "无『双』公主"];
-//var HuangMingNPCList = ["[1-5区]王铁匠", "[1-5区]杨掌柜", "[1-5区]柳绘心", "[1-5区]柳小花", "[1-5区]卖花姑娘","[1-5区]刘守财","[1-5区]朱老伯","[1-5区]方老板", "[1-5区]客商","[1-5区]方寡妇","王铁匠", "杨掌柜", "柳绘心", "柳小花", "卖花姑娘","刘守财","朱老伯","方老板", "客商","方寡妇","[1-5区]无一","[1-5区]铁二","[1-5区]追三","[1-5区]冷四","[1-5区]花落云", "[1-5区]辰川","[1-5区]王世仲","[一]镇擂斧将","[二]镇擂斧将","饕餮分身","饕餮兽魂","饕餮幼崽","守谷神兽","镇谷神兽","守楼虎将"];
+var HuangMingNPCList = ["王铁匠", "杨掌柜", "柳绘心", "柳小花", "卖花姑娘", "刘守财", "朱老伯", "方老板", "客商", "方寡妇", "[71-75区]无一",  "无一", "铁二", "追三", "冷四", "[71-75区]花落云", "[71-75区]辰川", "[71-75区]王世仲", "守楼虎将", "天魔真身", "无『双』公主"];
+//var HuangMingNPCList = ["[71-75区]王铁匠", "[71-75区]杨掌柜", "[71-75区]柳绘心", "[71-75区]柳小花", "[71-75区]卖花姑娘","[71-75区]刘守财","[71-75区]朱老伯","[71-75区]方老板", "[71-75区]客商","[71-75区]方寡妇","王铁匠", "杨掌柜", "柳绘心", "柳小花", "卖花姑娘","刘守财","朱老伯","方老板", "客商","方寡妇","[71-75区]无一","[71-75区]铁二","[71-75区]追三","[71-75区]冷四","[71-75区]花落云", "[71-75区]辰川","[71-75区]王世仲","[一]镇擂斧将","[二]镇擂斧将","饕餮分身","饕餮兽魂","饕餮幼崽","守谷神兽","镇谷神兽","守楼虎将"];
 var killHuangMingIntervalFunc = null;
 
 var currentNPCIndex = 0;
@@ -3285,8 +3285,8 @@ function Zhou4Func() {
 }
 
 //周四跨服自动用的
-var Zhou4NPCList = ["[1-5区]段老大"];
-//var Zhou4NPCList = ["[1-5区]无一"];
+var Zhou4NPCList = ["[71-75区]段老大"];
+//var Zhou4NPCList = ["[71-75区]无一"];
 var Zhou4IntervalFunc = null;
 var currentNPCIndex = 0;
 function Zhou4() {
