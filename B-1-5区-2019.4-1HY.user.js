@@ -1,4 +1,4 @@
-﻿// ==UserScript==
+// ==UserScript==
 // @name         B-1-5区-2019.4-1HY
 // @namespace    http://tampermonkey.net/
 // @version      2019.4.25
@@ -345,7 +345,7 @@ createButton('自动三气', btnBox0, AutoKillFunc);
 createButton('青龙监听', btnBox0, listenQLFunc);
 createButton('兽雀', btnBox0, shouqueFunc);
 //createButton('交悬红', btnBox0, LingxuanhongFunc);
-//createButton('嵩山', btnBox0, SongshanFunc);
+createButton('白陀', btnBox0, baituoFunc);
 //隐藏所有按钮的按钮----------------------------------
 var buttonhiden = 0;
 function buttonhideFunc() {
@@ -380,7 +380,7 @@ function hideButton() {
     btnList['自动三气'].style.visibility = "hidden";
     btnList['青龙监听'].style.visibility = "hidden";
     btnList['兽雀'].style.visibility = "hidden";
-  //  btnList['嵩山'].style.visibility = "hidden";
+    btnList['白陀'].style.visibility = "hidden";
 }
 function showButton() {
     btnBox0.style.visibility = "visible";
@@ -405,7 +405,7 @@ function showButton() {
     btnList['自动三气'].style.visibility = "visible";
     btnList['青龙监听'].style.visibility = "visible";
     btnList['兽雀'].style.visibility = "visible";
-   // btnList['嵩山'].style.visibility = "visible";
+    btnList['白陀'].style.visibility = "visible";
 }
 
 //我是谁？？？
@@ -1329,6 +1329,10 @@ function LingxuanhongFunc() {
 //嵩山任务-------------------------
 function SongshanFunc() {
     go('home;jh 22;n;n;w;n;n;n;n;n;e;n;n;n;n;n;n;n;n;event_1_55671421;');     //接嵩山
+}
+//正分级任务-------------------------
+function baituoFunc() {
+    go('home;jh 21;');     //飞白陀
 }
 
 // 摸尸体----------------------------------------------------
@@ -3108,7 +3112,7 @@ function JinKuaFuFunc() {
 
 
 // 杀坏人----------------------------------------------------------------------------------------------------------------
-var HongMingNPCList = ["钱凌异","齐伯川","韦子壮","[1-5区]段老大", "[1-5区]墟归一", "[1-5区]上官晓芙", "[1-5区]洪昭天","夜魔*恶棍", "夜魔*流寇", "夜魔*剧盗", "夜魔*云老四", "夜魔*岳老三", "夜魔*二娘", "夜魔*段老大", "黑袍公", "独孤须臾", "翼国公", "云观海", "年兽", "铁狼军", "银狼军", "金狼军", "金狼将", "十夫长", "百夫长", "月幽剑士", "濯缨剑士", "对影剑士", "夏花剑士", "[一]镇擂斧将", "[二]镇擂斧将", "天魔真身", "攻楼死士", "镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神", "不『二』剑客"];
+var HongMingNPCList = ["星宿恶徒【一】","星宿恶徒【二】","星宿恶徒【三】","星宿恶徒【四】","[1-5区]段老大", "[1-5区]墟归一", "[1-5区]上官晓芙", "[1-5区]洪昭天","夜魔*恶棍", "夜魔*流寇", "夜魔*剧盗", "夜魔*云老四", "夜魔*岳老三", "夜魔*二娘", "夜魔*段老大", "黑袍公", "独孤须臾", "翼国公", "云观海", "年兽", "铁狼军", "银狼军", "金狼军", "金狼将", "十夫长", "百夫长", "月幽剑士", "濯缨剑士", "对影剑士", "夏花剑士", "[一]镇擂斧将", "[二]镇擂斧将", "天魔真身", "攻楼死士", "镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神", "不『二』剑客"];
 var HongMingNPCListClan1 = ["镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神"];
 var HongMingNPCListKuaFu = ["[1-5区]段老大", "[1-5区]墟归一", "[1-5区]上官晓芙", "[1-5区]洪昭天"];
 var killHongMingIntervalFunc = null;
