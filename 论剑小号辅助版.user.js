@@ -100,7 +100,8 @@ function createButton(btnName,func){
 
 //按钮列表----------------------------------
 createButton('签到',CheckInFunc);
-createButton('挖矿',WKFunc);
+createButton('挖天矿',WTKFunc);
+createButton('挖地矿',WDKFunc);
 createButton('梵音',CheckInFunc1);
 createButton('报名',ShiJieFunc);
 //createButton('吃果',SongmieguiFunc);
@@ -171,12 +172,17 @@ function ShiJieFunc(){
     go('swords select_member gumu_yangguo');   //神雕大侠
    
 }
-// 挖矿---------------------------------------------------
-function WKFunc(){
-      go('home;jh 2;n;n;n;n;n;n;n;n;n;n;w;w;w;w;event_1_21731755;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_21731755;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_21731755;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_21731755;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_21731755;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_21731755;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;home;');//挖矿
+// 挖地矿--------天event_1_21731755;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;-------------------------------------------
+function WTKFunc(){
+      go('event_1_21731755;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_21731755;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_21731755;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_21731755;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_21731755;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;event_1_22920188;');//挖矿
 }
 
+//=========== 地go('event_1_83697921;event_1_64388826;event_1_64388826;event_1_64388826;event_1_64388826;event_1_64388826;}===================================================================================================
+function WDKFunc(){
+      go('event_1_83697921;event_1_64388826;event_1_64388826;event_1_64388826;event_1_64388826;event_1_64388826;event_1_83697921;event_1_64388826;event_1_64388826;event_1_64388826;event_1_64388826;event_1_64388826;event_1_83697921;event_1_64388826;event_1_64388826;event_1_64388826;event_1_64388826;event_1_64388826;event_1_83697921;event_1_64388826;event_1_64388826;event_1_64388826;event_1_64388826;event_1_64388826;');//挖矿
+}
 
+//========
 // 送玫瑰-吃朱果---------------------------------------------------
 function SongmieguiFunc(){
      go('items info zhu guo;use_all');
