@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         B-1-5区-2019.4-1HY
 // @namespace    http://tampermonkey.net/
-// @version      2019.4.25
+// @version      2019.8.27
 // @description  try to take over the world!
 // @author       Lihaorong
 // @match        http://*.yytou.cn/*
