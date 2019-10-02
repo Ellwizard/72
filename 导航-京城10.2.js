@@ -167,7 +167,8 @@ function CMTKFunc(){
     clickButton('prev');//回主页
 }
 function VIPBFunc(){
-    clickButton('vip finish_big_task;prev');     //回主页
+    clickButton('vip finish_big_task');
+    clickButton('prev');//回主页
 }
 //==========================================
 function MyNavigatorFunc(){
