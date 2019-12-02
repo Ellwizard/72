@@ -1302,17 +1302,18 @@ function clearPuzzleFunc() {
 function ZhuangBei() {
     if (btnList["战斗装"].innerText == '战斗装') {
         console.log("切换战斗装备！");
-        go('auto_equip on');       // 一键装备
+        go('auto_equip on');// 一键装备
      go('unwield longwulianmoge_yuyemoqiang');//脱魔枪
      go('unwield longwulianmoge_fengleixuefu');//脱风雷
      go('unwield longwulianmoge_xiefoyaochui');//脱妖锤
-   //  go('unwield weapon_sb_unarmed11');       // 脱拳套
-     go('unwield weapon_sb_sword12');       // 脱轩辕剑
-     go('unwield weapon_sb_spear12');       // 脱枪
-    // go('wield weapon_sb_unarmed11 rumai');       // 入脉破岳掌套
-     go('wield weapon_sb_spear12');       // 穿枪
-     go('wield weapon_sb_sword12');        //穿轩辕剑
-     go('wield weapon_sb_stick12 rumai');        //穿破宇棍
+     go('unwield longwulianmoge_mojianlianhun');//脱魔剑
+   //go('unwield weapon_sb_unarmed11');       // 脱拳套
+   //go('unwield weapon_sb_sword12');       // 脱轩辕剑
+   //go('unwield weapon_sb_spear12');       // 脱枪
+     go('wield weapon_sb_sword12 rumai');// 入脉枪
+   //go('wield weapon_sb_spear12');       // 穿枪
+   //go('wield weapon_sb_sword12');        //穿轩辕剑
+   //go('wield weapon_sb_stick12 rumai');        //穿破宇棍
 
         btnList["战斗装"].innerText = '打坐装';
     }
@@ -1325,7 +1326,7 @@ function ZhuangBei() {
      go('wear equip_finger_kongdong_bulao');       // 博睿扳指equip_head_dashi_wushuang
      go('wear equip_head_tianji_jiuxuan');       // 天机帽
      go('wield longwulianmoge_mojianlianhun');//穿魔剑
-     go('unwield weapon_sb_sword12');       // 脱轩辕剑
+     go('unwield weapon_sb_stick12');       // 脱棍子
      go('wield weapon_stick_miaoyun_lhx');       // 装笛子
         btnList["战斗装"].innerText = '战斗装';
     }
@@ -2329,14 +2330,14 @@ Array.prototype.contains = function (obj) {
     }
     return false;
 };
-
+/*
 var qlMon = new QinglongMon;
 webSocketMsg.prototype.old = gSocketMsg.dispatchMessage;
 gSocketMsg.dispatchMessage = function (b) {
     this.old(b);
     qlMon.dispatchMessage(b);
 }
-
+*/
 //一键恢复------------------------
 var healtriger = 0;
 function yijianhuifuFunc() {
@@ -3191,7 +3192,7 @@ function JinKuaFuFunc() {
 //广场杀坏人------------------------------------------------
 
 // 杀坏人----------------------------------------------------------------------------------------------------------------
-var HongMingNPCList = ["方夜羽","东方不败","祝玉妍","李秋水","石观音","白猿","凌未风","萧秋水","蒙赤行","叶孤城","厉工","石幽明","胡铁花","星宿恶徒【二】","星宿恶徒【一】","星宿恶徒【三】","星宿恶徒【四】","夜魔*恶棍", "夜魔*流寇", "夜魔*剧盗", "夜魔*云老四", "夜魔*岳老三", "夜魔*二娘", "夜魔*段老大", "黑袍公", "独孤须臾", "翼国公", "云观海", "年兽", "铁狼军", "银狼军", "金狼军", "金狼将", "十夫长", "百夫长", "月幽剑士", "濯缨剑士", "对影剑士", "夏花剑士", "[一]镇擂斧将", "[二]镇擂斧将", "天魔真身", "攻楼死士", "镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神", "不『二』剑客"];
+var HongMingNPCList = ["方夜羽","慕容博","庞斑","东方不败","祝玉妍","李秋水","石观音","白猿","凌未风","萧秋水","蒙赤行","叶孤城","厉工","石幽明","胡铁花","星宿恶徒【二】","星宿恶徒【一】","星宿恶徒【三】","星宿恶徒【四】","夜魔*恶棍", "夜魔*流寇", "夜魔*剧盗", "夜魔*云老四", "夜魔*岳老三", "夜魔*二娘", "夜魔*段老大", "黑袍公", "独孤须臾", "翼国公", "云观海", "年兽", "铁狼军", "银狼军", "金狼军", "金狼将", "十夫长", "百夫长", "月幽剑士", "濯缨剑士", "对影剑士", "夏花剑士", "[一]镇擂斧将", "[二]镇擂斧将", "天魔真身", "攻楼死士", "镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神", "不『二』剑客"];
 var HongMingNPCListClan1 = ["镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神"];
 var HongMingNPCListKuaFu = ["[1-5区]段老大", "[1-5区]墟归一", "[1-5区]上官晓芙", "[1-5区]洪昭天"];
 var killHongMingIntervalFunc = null;
@@ -3273,7 +3274,7 @@ Array.prototype.contains = function (obj) {
 
 
 // 杀好人----------------------------------------------------------------------------------------------------------------
-var HuangMingNPCList = ["乾罗","令狐冲","石之轩","天山童姥","楚昭南","阿青","楚留香","朱大天王","石之轩","追三","西门吹雪","令东来","传鹰","无花", "守楼虎将", "天魔真身", "无『双』公主",];
+var HuangMingNPCList = ["乾罗","乔峰","浪翻云","令狐冲","石之轩","天山童姥","楚昭南","阿青","楚留香","朱大天王","石之轩","追三","西门吹雪","令东来","传鹰","无花", "守楼虎将", "天魔真身", "无『双』公主",];
 //var HuangMingNPCList = ["[1-5区]王铁匠", "[1-5区]杨掌柜", "[1-5区]柳绘心", "[1-5区]柳小花", "[1-5区]卖花姑娘","[1-5区]刘守财","[1-5区]朱老伯","[1-5区]方老板", "[1-5区]客商","[1-5区]方寡妇","王铁匠", "杨掌柜", "柳绘心", "柳小花", "卖花姑娘","刘守财","朱老伯","方老板", "客商","方寡妇","[1-5区]无一","[1-5区]铁二","[1-5区]追三","[1-5区]冷四","[1-5区]花落云", "[1-5区]辰川","[1-5区]王世仲","[一]镇擂斧将","[二]镇擂斧将","饕餮分身","饕餮兽魂","饕餮幼崽","守谷神兽","镇谷神兽","守楼虎将"];
 var killHuangMingIntervalFunc = null;
 currentNPCIndex = 0;
