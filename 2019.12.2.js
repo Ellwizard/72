@@ -1543,7 +1543,11 @@ createPopButton('买灵芝', '辅助集合', buyMedecineFunc);
 //createPopButton('捡钥匙', '辅助集合', JianyaoshiFunc);
 //createPopButton('合宝石', '辅助集合', heBaoshi);
 createPopButton('开白银', '辅助集合', KaibaiyinFunc);
-createPopButton('批量', '辅助集合', KaiqingmuFunc);
+createPopButton('开青木', '辅助集合', KaiqingmuFunc);
+createPopButton('开盒子', '辅助集合', KaihezhiFunc);
+createPopButton('用耀玉', '辅助集合', YongyaoyuFunc);
+createPopButton('用黄金', '辅助集合', YonghuangjinFunc);
+createPopButton('用铂金', '辅助集合', YongbojinFunc);
 createPopButton('挖天证', '辅助集合', WTZFunc);
 createPopButton('挖地证', '辅助集合', WDZFunc);
 //开白银--------------------------------------------------
@@ -1576,14 +1580,54 @@ function WDZFunc() {
         setTimeout(800);
       }
 }
-//批量--------------------------------------------------
+//开青木--------------------------------------------------
 function KaiqingmuFunc() {
    var numb2 = 700;
     for (var i = 0; i < numb2; i++) { // 从第一个开始循环
        function KQM(){
-        go("items;items use obj_yaoyubaoxiang"); //铂金obj_box3耀玉obj_yaoyubaoxiang；开青木obj_qingmubaoxiang_N_100;千年灵草qiannianlingcao_N_100;千年紫芝qiannian zizhi_N_100
+        go("items;items use obj_qingmubaoxiang_N_100"); //铂金obj_box3耀玉obj_yaoyubaoxiang；开青木obj_qingmubaoxiang_N_100;千年灵草qiannianlingcao_N_100;千年紫芝qiannian zizhi_N_100
          }
          setTimeout(KQM,800);
+    }
+}
+//用耀玉--------------------------------------------------
+function YongyaoyuFunc() {
+   var numb2 = 700;
+    for (var i = 0; i < numb2; i++) { // 从第一个开始循环
+       function YYYM(){
+        go("items;items use obj_yaoyubaoxiang"); //铂金obj_box3耀玉；开青木obj_qingmubaoxiang_N_100;千年灵草qiannianlingcao_N_100;千年紫芝qiannian zizhi_N_100
+         }
+         setTimeout(YYYM,800);
+    }
+}
+//用铂金--------------------------------------------------
+function YongbojinFunc() {
+   var numb2 = 700;
+    for (var i = 0; i < numb2; i++) { // 从第一个开始循环
+       function YBJM(){
+        go("items;items use obj_box3"); //铂金obj_box3耀玉obj_yaoyubaoxiang；开青木obj_qingmubaoxiang_N_100;千年灵草qiannianlingcao_N_100;千年紫芝qiannian zizhi_N_100
+         }
+         setTimeout(YBJM,800);
+    }
+}
+//用黄金--------------------------------------------------
+function YonghuangjinFunc() {
+   var numb2 = 700;
+    for (var i = 0; i < numb2; i++) { // 从第一个开始循环
+       function YHJM(){
+        go("items;items use huangjin box"); //铂金obj_box3耀玉obj_yaoyubaoxiang；开青木obj_qingmubaoxiang_N_100;千年灵草qiannianlingcao_N_100;千年紫芝qiannian zizhi_N_100
+         }
+         setTimeout(YHJM,800);
+    }
+}
+//开盒子--------------------------------------------------
+function KaihezhiFunc() {
+   var numb2 = 700;
+    for (var i = 0; i < numb2; i++) { // 从第一个开始循环
+       function KHZM(){
+        go("items;items use obj_mijimuhe"); //铂金obj_box3耀玉obj_yaoyubaoxiang；开青木obj_qingmubaoxiang_N_100;千年灵草qiannianlingcao_N_100;千年紫芝qiannian zizhi_N_100
+         }
+         setTimeout(KHZM,800);
     }
 }
 
