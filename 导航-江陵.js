@@ -11,7 +11,7 @@
 var btnList = {};		// 按钮列表
 var buttonWidth = '30px';	// 按钮宽度
 var buttonHeight = '20px';	// 按钮高度
-var currentPos = 500;		// 当前按钮距离顶端高度，初始130
+var currentPos = 70;		// 当前按钮距离顶端高度，初始130
 var delta = 20;	                // 每个按钮间隔
 //var corpseNPCLists = prompt("请输入要摸的目标","月老的尸体");
 
@@ -127,6 +127,10 @@ createButton('导',MyNavigatorFunc);
 createButton('令',CLPFunc);
 createButton('卡',CMTKFunc);
 createButton('爆',VIPBFunc);
+createButton('超',CJJSFunc);
+createButton('舍',SLJSFunc);
+createButton('加',JSKJSFunc);
+createButton('通',TTJSFunc);
 
 
 function createButton(btnName,func){
@@ -169,6 +173,19 @@ function CMTKFunc(){
 function VIPBFunc(){
     clickButton('vip finish_big_task');
     clickButton('prev');//回主页
+}
+//加速==============================================
+function CJJSFunc(){
+    clickButton('tupo_speedup3');
+}
+function SLJSFunc(){
+    clickButton('tupo_speedup4_1');
+}
+function JSKJSFunc(){
+    clickButton('tupo_speedup2');
+}
+function TTJSFunc(){
+    clickButton('tupo_speedup3_1');
 }
 //==========================================
 function MyNavigatorFunc(){
