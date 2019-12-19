@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         B-1-5区-2019.10
+// @name         B20191219
 // @namespace    http://tampermonkey.net/
-// @version      2019.8.27
+// @version      2019.12.19
 // @description  try to take over the world!
 // @author       Lihaorong
 // @match        http://*.yytou.cn/*
@@ -3049,4 +3049,2145 @@ var items_use = '『秘籍木盒』 兰陵美酒 周年英雄令 周年热血令
 var items_store = '长生石 晚香玉 凌霄花 百宜雪梅 朝开暮落花 凤凰木 熙颜花 君影草 矢车菊 忘忧草 仙客来 雪英 夕雾草 洛神花千年紫芝千年灵草驻颜丹烧香符周年礼券玄重铁分身卡高级乾坤袋装备打折卡碎片鎏金黑玉锥';
 var items_study = ' ';
 var items_splite = '翎眼赤护 青鸾护臂 苍狼护臂 宝玉甲 天寒匕 貂皮斗篷 白玉腰束 无心匕 玄武盾 月光宝甲 沧海护腰 夜行披风虎皮腰带红光匕金丝甲羊毛斗篷破军盾金丝甲疯魔杖毒龙鞭玉清棍生死符霹雳掌套血屠刀残雪帽残雪戒残雪鞋残雪手镯残雪项链金丝宝甲衣';
-var items_sell = '漫天花雨匕三清神冠七星翻云靴咒剑王□鲜红锦衣牛皮靴八角锤灰雁七星宝戒船桨白金项链断云斧乌夷长裙红色绸裙包子大剪刀黑水伏蛟帝王剑麻布手套银丝帽吴钩绵裙铜钹大刀紫袍铁笛圣火令绿罗裙绣花针清心散垓下刀紫金杖阿拉伯弯刀青锋剑青布袍淑女剑紫霜血蝉衣软金束带穿花蛇影鞋魔鞭翩珑大红僧袍九环禅杖精铁棒毒蒺藜暗灵桃木剑横断钩银丝链甲衣天魔刀玉竹杖叫化鸡七星剑逆钩匕银丝甲天寒帽天寒戒天寒鞋天寒项链天寒手镯软甲衣金刚杖飞羽剑斩空刀拜月掌套金弹子新月棍白蟒鞭硫磺木戟黑袍粗布白袍长戟回旋镖拂尘松子白色棋子黑色棋子竹节鞭白棋子木叉银色丝带波斯长袍铁鞭竹刀长虹剑莲蓬鲤鱼窄裉袄灵芝锦衣台夷头巾毛毯废焦丹废药渣台夷头巾粉红绸衫灰燕野山鸡麻雀岩鸽瑶琴维吾尔族长袍旧书桃符纸木锤木钩竹鞭木刀木枪木剑彩巾彩靴彩帽彩带彩镯彩衣砍刀绣花鞋舞蝶彩衫军刀铁扇剑割鹿刀大理雪梨圆领小袄皮帽弯月刀兔肉粗磁大碗羊肉串天山雪莲青铜盾禅杖金刚罩丝质披风暗箭青葫芦松子铁斧水蜜桃蓑衣破弯刀柴刀丝衣长鞭道德经布裙钢丝甲衣牛皮带制服金刚杖斩空刀拜月掌套金弹子新月棍白蟒鞭-草莓玉蜂浆玉蜂蜜蜂浆瓶豆浆蛋糕菠菜粉条包裹鸡叫草水密桃--新月棍银簪重甲羊角匕梅花匕日月神教腰牌船篙-丝绸马褂白缨冠白色长袍蛇杖鬼头刀拐杖古铜缎子袄裙大环刀鹿皮手套丝绸衣羊毛裙牧羊鞭牛皮酒袋麻带钢剑钢杖藤甲盾长斗篷军袍破披风木盾铁盾锦缎腰带鞶革青色道袍-鲫鱼树枝水草破烂衣服-鹿皮小靴青绫绸裙粗布衣草帽草鞋布鞋精铁甲-柳玉刀玉竹剑钢刀戒刀单刀长剑
+var items_sell = '漫天花雨匕三清神冠七星翻云靴咒剑王□鲜红锦衣牛皮靴八角锤灰雁七星宝戒船桨白金项链断云斧乌夷长裙红色绸裙包子大剪刀黑水伏蛟帝王剑麻布手套银丝帽吴钩绵裙铜钹大刀紫袍铁笛圣火令绿罗裙绣花针清心散垓下刀紫金杖阿拉伯弯刀青锋剑青布袍淑女剑紫霜血蝉衣软金束带穿花蛇影鞋魔鞭翩珑大红僧袍九环禅杖精铁棒毒蒺藜暗灵桃木剑横断钩银丝链甲衣天魔刀玉竹杖叫化鸡七星剑逆钩匕银丝甲天寒帽天寒戒天寒鞋天寒项链天寒手镯软甲衣金刚杖飞羽剑斩空刀拜月掌套金弹子新月棍白蟒鞭硫磺木戟黑袍粗布白袍长戟回旋镖拂尘松子白色棋子黑色棋子竹节鞭白棋子木叉银色丝带波斯长袍铁鞭竹刀长虹剑莲蓬鲤鱼窄裉袄灵芝锦衣台夷头巾毛毯废焦丹废药渣台夷头巾粉红绸衫灰燕野山鸡麻雀岩鸽瑶琴维吾尔族长袍旧书桃符纸木锤木钩竹鞭木刀木枪木剑彩巾彩靴彩帽彩带彩镯彩衣砍刀绣花鞋舞蝶彩衫军刀铁扇剑割鹿刀大理雪梨圆领小袄皮帽弯月刀兔肉粗磁大碗羊肉串天山雪莲青铜盾禅杖金刚罩丝质披风暗箭青葫芦松子铁斧水蜜桃蓑衣破弯刀柴刀丝衣长鞭道德经布裙钢丝甲衣牛皮带制服金刚杖斩空刀拜月掌套金弹子新月棍白蟒鞭-草莓玉蜂浆玉蜂蜜蜂浆瓶豆浆蛋糕菠菜粉条包裹鸡叫草水密桃--新月棍银簪重甲羊角匕梅花匕日月神教腰牌船篙-丝绸马褂白缨冠白色长袍蛇杖鬼头刀拐杖古铜缎子袄裙大环刀鹿皮手套丝绸衣羊毛裙牧羊鞭牛皮酒袋麻带钢剑钢杖藤甲盾长斗篷军袍破披风木盾铁盾锦缎腰带鞶革青色道袍-鲫鱼树枝水草破烂衣服-鹿皮小靴青绫绸裙粗布衣草帽草鞋布鞋精铁甲-柳玉刀玉竹剑钢刀戒刀单刀长剑长枪铁锤木棍轻罗绸衫兽皮鞋皮鞭铁棍飞镖匕首细剑绣鞋绣花小鞋狼皮雪靴金戒金手镯铁戒银戒铁手镯银手镯铁项链银项链';
+
+function clearitem() {
+    var t = $("tr[bgcolor]:contains(万两)").siblings();
+    if (t.length > 0) {
+        clearInterval(clb_time);
+        for (var i = 0; i < t.length; i++) {
+            if (t.eq(i)[0].innerText.replace(/\s+/g, "") != "") {
+                var a = t.eq(i).find('td')[0].innerText.replace('\n', "");
+                var b = parseInt(t.eq(i).find('td')[1].innerText.match(/\d+/g)[0]);
+                var c = t[i].getAttribute('onclick').split("'")[1].split("info ")[1];
+                if (items_use.indexOf(a) != -1) {
+                    console.log("使用：" + a + " 数量：" + b);
+                    for (j = 0; j < b; j++) {
+                        go('items use ' + c);
+                    }
+                } else if (items_store.indexOf(a) != -1) {
+                    console.log("存仓库：" + a + " 数量：" + b);
+                    go('items put_store ' + c);
+                } else if (items_study.indexOf(a) != -1) {
+                    console.log("学习：" + a + " 数量：" + b);
+                    for (j = 0; j < b; j++) {
+                        go('study ' + c);
+                    }
+                } else if (items_sell.indexOf(a) != -1) {
+                    console.log("卖掉：" + a + " 数量：" + b);
+                    for (j = 0; j < Math.floor(b / 10); j++) {
+                        go('items sell ' + c + '_N_10');
+                    }
+                    for (j = 0; j < (b % 10); j++) {
+                        go('items sell ' + c);
+                    }
+                } else if (items_splite.indexOf(a) != -1) {
+                    console.log("分解：" + a + " 数量：" + b);
+                    for (j = 0; j < Math.floor(b / 10); j++) {
+                        go('items splite ' + c + '_N_10');
+                    }
+                    for (j = 0; j < (b % 10); j++) {
+                        go('items splite ' + c);
+                    }
+                }/*
+                if (a.indexOf('】璞玉') != -1) {
+                    console.log("存仓库：" + a + " 数量：" + b);
+                    go('items put_store ' + c);
+                }
+                if (a.indexOf('】青玉') != -1) {
+                    console.log("存仓库：" + a + " 数量：" + b);
+                    go('items put_store ' + c);
+                }
+                if (a.indexOf('】墨玉') != -1) {
+                    console.log("存仓库：" + a + " 数量：" + b);
+                    go('items put_store ' + c);
+                }*/
+                //                if(a.indexOf('残页』')!=-1){
+                //                    console.log("存仓库："+a+" 数量："+b);
+                //                    go('items put_store '+c);
+                //                }
+                // if(a.indexOf('宝石')!=-1){
+                //     console.log("存仓库："+a+" 数量："+b);
+                //     go('items put_store '+c);
+                // }
+                if (a.indexOf('基础') != -1 || a.indexOf('中级') != -1 || a.indexOf('进阶') != -1 || a.indexOf('衫') != -1 || a.indexOf('劲服') != -1 || a.indexOf('袈裟') != -1 || a.indexOf('吹雪') != -1 || a.indexOf('圣衣') != -1 || a.indexOf('道袍') != -1 || a.indexOf('水烟阁') != -1) {
+                    console.log("卖掉：" + a + " 数量：" + b);
+                    for (j = 0; j < b; j++) {
+                        go('items sell ' + c);
+                    }
+                }
+            }
+        }
+       // go('use_all');
+    }
+}
+
+//比试铜人
+//var tongren= 0 ;
+function BiShiTongRenFunc() {
+    // if (tongren == 0 ){
+    AutoKillFunc();
+    go('home;clan zsdg enter;n;n;n;n;n;event_1_14757697;eval_halt_move();s;s;e;e;e;e;e;e;e;e;n;n;event_1_35095441;eval_halt_move();home;');
+    /*
+    go('enable unmap_all',0);      //一键取消技能
+    go('auto_equip off',0);      //一键脱衣服
+    go('enforce 0',0);      //enforce=0
+    go('event_1_14757697',1);  //挑战铜人 1
+    go('event_1_35095441',1);  //挑战铜人 2
+    go('enable map_all',0);
+    //        go('enable mapped_skills restore go 3', 1);
+    go('auto_equip on',0);      //一键穿衣服
+    go('enforce 1459');      //enforce
+
+    tongren = 1;
+} else{
+    go('home;clan zsdg enter;n;n;n;n;n;n;n;e;e;e;e;e;e;e;e;s;s;');
+    /*
+    go('enable unmap_all',0);      //一键取消技能
+    go('auto_equip off',0);      //一键脱衣服
+    go('enforce 0',0);      //enforce=0
+    go('event_1_35095441',1);  //挑战铜人 2
+    go('enable map_all',0);
+    //      go('enable mapped_skills restore go 3', 1);
+    go('auto_equip on',0);      //一键穿衣服
+    go('enforce 1459');      //enforce
+    */
+    //    tongren = 0;
+    //  }
+}
+
+//createButton('苗疆炼药',MjlyFunc);
+
+//苗疆炼药------------------------
+function MjlyFunc() {
+    //    var msg = "毒藤胶和毒琥珀准备好了吗？\n苗疆地图开了吗？\n没有就点取消！";
+    //    if (confirm(msg)===true){
+    //        console.log("去苗疆。");
+    setTimeout(Mjly1Func, 200);
+    //    setTimeout(Mjly3Func,200);
+    //    }else{
+    //        return false;
+    //    }
+}
+function Mjly1Func() {
+    go('jh 40;s;s;s;s;e;s;se;sw;s;sw;e;e;sw;se;sw;se;');
+    console.log("铁索桥。");
+    go('event_1_8004914;');
+    setTimeout(Mjly2Func, 6000);
+}
+function Mjly2Func() {
+    if (g_obj_map.get("msg_room").get("short") !== "澜沧江南岸") {
+        console.log("重新跑。");
+        setTimeout(Mjly1Func, 100);
+    } else {
+        console.log("继续走。");
+        go('se;s;s;e;n;n;e;s;e;ne;s;sw;e;e;ne;ne;nw;ne;ne;n;n;w;');
+        setTimeout(Mjly3Func, 5000);
+    }
+}
+function Mjly3Func() {
+    if (isContains($('span.out2:contains(炼药的丹炉)').text().slice(-6), '明天再来吧！')) {
+        console.log("炼完了。");
+        go('home');
+    } else {
+        go('lianyao;');
+        setTimeout(Mjly3Func, 6000);
+    }
+}
+//铁血日常
+function TiexueFunc() {
+    go('jh 31;n;se;e;se;s;s;sw;se;se;e;nw;e;ne;n;ne;n;n;n;n;n;n;n;n;n;e;e;event_1_94442590;event_1_85535721;');
+}
+//-------------------------分割线-----------
+//天山挂机------------------------
+function TsdzFunc() {
+    //    var msg = "身上有御寒衣吗？\n要有掌门手谕并且过了碧海哟~\n走挂机10分钟，没有就点取消！";
+    //    if (confirm(msg)===true){
+    //        console.log("去天山。");
+    setTimeout(Tsdz1Func, 200);
+    //    }else{
+    //        return false;
+    //    }
+}
+function Tsdz1Func() {
+    go('jh 39;ne;e;n;ne;ne;n;ne;nw;event_1_58460791;');
+    setTimeout(Tsdz2Func, 5000);
+}
+function Tsdz2Func() {
+    if (g_obj_map.get("msg_room") == undefined) {
+        setTimeout(function () { Tsdz2Func(); }, 200);
+    } else {
+        var locationname = g_obj_map.get("msg_room").get("short");
+        console.log(locationname);
+        if (locationname == "失足岩") {
+            console.log("继续走。");
+            go('nw;n;ne;nw;nw;w;n;n;n;e;e;s;give tianshan_hgdz;ask tianshan_hgdz;ask tianshan_hgdz;s;event_1_34855843');
+        } else {
+            setTimeout(Tsdz1Func, 200);
+        }
+    }
+}
+//---------消生死-----------------------------------
+function XSSFunc(){
+go('jh 1;e;n;n;n;n;w;event_1_44575766');
+}
+
+//进入跨服-------------------------------------------------------------------------------------------------------------
+function JinKuaFuFunc() {
+    go('jh 1;e;n;n;n;n;w;event_1_36344468');
+    //    if(realmInfo == 'kuafu'){
+    QLtrigger = 0;// 跨服不需要监控青龙
+    btnList['青龙监听'].innerText = '青龙监听';
+    KFQLtrigger = 1;
+    btnList1['跨服青龙'].innerText = '停止青龙';
+    getQLListenMessage()
+    getKFQLListenMessage()
+    setTimeout(function () { clickButton('auto_equip on') }, 6000);  // 一键装备
+}
+//广场杀好人-----------------------------------------------
+
+//广场杀坏人------------------------------------------------
+
+// 杀坏人----------------------------------------------------------------------------------------------------------------
+var HongMingNPCList = ["白开心","李大嘴","慕容博","庞斑","方夜羽","东方不败","祝玉妍","李秋水","石观音","白猿","凌未风","萧秋水","蒙赤行","叶孤城","厉工","石幽明","胡铁花","星宿恶徒【二】","星宿恶徒【一】","星宿恶徒【三】","星宿恶徒【四】","夜魔*恶棍", "夜魔*流寇", "夜魔*剧盗", "夜魔*云老四", "夜魔*岳老三", "夜魔*二娘", "夜魔*段老大", "黑袍公", "独孤须臾", "翼国公", "云观海", "年兽", "铁狼军", "银狼军", "金狼军", "金狼将", "十夫长", "百夫长", "月幽剑士", "濯缨剑士", "对影剑士", "夏花剑士", "[一]镇擂斧将", "[二]镇擂斧将", "天魔真身", "攻楼死士", "镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神", "不『二』剑客"];
+var HongMingNPCListClan1 = ["镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神"];
+var HongMingNPCListKuaFu = ["[1-5区]段老大", "[1-5区]墟归一", "[1-5区]上官晓芙", "[1-5区]洪昭天"];
+var killHongMingIntervalFunc = null;
+currentNPCIndex = 0;
+function killHongMingTargetFunc() {
+  //  zdskill = null;
+    if (btnList1["杀坏人"].innerText == '杀坏人') {
+        currentNPCIndex = 0;
+        console.log("开始杀红名目标NPC！");
+     //  var skillLists = mySkillLists;
+        btnList1["杀坏人"].innerText = '停坏人';
+        killHongMingIntervalFunc = setInterval(killHongMing, 500);
+
+    } else {
+        console.log("停止杀红名目标NPC！");
+        btnList1["杀坏人"].innerText = '杀坏人';
+        clearInterval(killHongMingIntervalFunc);
+    }
+}
+
+function killHongMing() {
+    if ($('span').text().slice(-7) == "不能杀这个人。") {
+        currentNPCIndex = currentNPCIndex + 1;
+        //       console.log("不能杀这个人！");
+    }
+    getHongMingTargetCode();
+    if ($('span:contains(胜利)').text().slice(-3) == '胜利！' || $('span:contains(战败了)').text().slice(-6) == '战败了...') {
+        currentNPCIndex = 0;
+        console.log('杀人一次！');
+        clickButton('prev_combat');
+        nowXueTempCount = 0;
+    }
+}
+function getHongMingTargetCode() {
+    var peopleList = $(".cmd_click3");
+    var thisonclick = null;
+    var targetNPCListHere = [];
+    var countor = 0;
+    for (var i = 0; i < peopleList.length; i++) { // 从第一个开始循环
+        // 打印 NPC 名字，button 名，相应的NPC名
+        thisonclick = peopleList[i].getAttribute('onclick');
+        if (HongMingNPCList.contains(peopleList[i].innerText)) {
+            var targetCode = thisonclick.split("'")[1].split(" ")[1];
+            //           console.log("发现NPC名字：" +  peopleList[i].innerText + "，代号：" + targetCode);
+            targetNPCListHere[countor] = peopleList[i];
+            countor = countor + 1;
+        }
+    }
+    // targetNPCListHere 是当前场景所有满足要求的NPC button数组
+    if (currentNPCIndex >= targetNPCListHere.length) {
+        currentNPCIndex = 0;
+    }
+    if (targetNPCListHere.length > 0) {
+        thisonclick = targetNPCListHere[currentNPCIndex].getAttribute('onclick');
+        targetCode = thisonclick.split("'")[1].split(" ")[1];
+        //     console.log("准备杀目标NPC名字：" + targetNPCListHere[currentNPCIndex].innerText + "，代码：" + targetCode +"，目标列表中序号：" + (currentNPCIndex ));
+        clickButton('kill ' + targetCode); // 点击杀人
+        setTimeout(detectKillHongMingInfo, 200); // 200 ms后获取杀人情况，是满了还是进入了
+    }
+}
+function detectKillHongMingInfo() {
+    var HongMingInfo = $('span').text();
+    if (HongMingInfo.slice(-15) == "已经太多人了，不要以多欺少啊。") {
+        currentNPCIndex = currentNPCIndex + 1;
+    } else {
+        currentNPCIndex = 0;
+    }
+}
+Array.prototype.contains = function (obj) {
+    var i = this.length;
+    while (i--) {
+        if (this[i] === obj) {
+            return true;
+        }
+    }
+    return false;
+};
+
+
+
+// 杀好人----------------------------------------------------------------------------------------------------------------
+var HuangMingNPCList = ["浪翻云","令狐冲","乔峰","乾罗","令狐冲","天山童姥","楚昭南","阿青","楚留香","朱大天王","石之轩","追三","西门吹雪","令东来","传鹰","无花", "守楼虎将", "天魔真身", "无『双』公主",];
+//var HuangMingNPCList = ["[1-5区]王铁匠", "[1-5区]杨掌柜", "[1-5区]柳绘心", "[1-5区]柳小花", "[1-5区]卖花姑娘","[1-5区]刘守财","[1-5区]朱老伯","[1-5区]方老板", "[1-5区]客商","[1-5区]方寡妇","王铁匠", "杨掌柜", "柳绘心", "柳小花", "卖花姑娘","刘守财","朱老伯","方老板", "客商","方寡妇","[1-5区]无一","[1-5区]铁二","[1-5区]追三","[1-5区]冷四","[1-5区]花落云", "[1-5区]辰川","[1-5区]王世仲","[一]镇擂斧将","[二]镇擂斧将","饕餮分身","饕餮兽魂","饕餮幼崽","守谷神兽","镇谷神兽","守楼虎将"];
+var killHuangMingIntervalFunc = null;
+currentNPCIndex = 0;
+function killHuangMingTargetFunc() {
+   // zdskill = null;
+    if (btnList1["杀好人"].innerText == '杀好人') {
+        currentNPCIndex = 0;
+        console.log("开始杀好人目标NPC！");
+  //      skillLists = mySkillLists;
+        btnList1["杀好人"].innerText = '停好人';
+        killHuangMingIntervalFunc = setInterval(killHuangMing, 500);
+
+    } else {
+        console.log("停止杀好人目标NPC！");
+        btnList1["杀好人"].innerText = '杀好人';
+        clearInterval(killHuangMingIntervalFunc);
+    }
+}
+
+function killHuangMing() {
+    if ($('span').text().slice(-7) == "不能杀这个人。") {
+        currentNPCIndex = currentNPCIndex + 1;
+        console.log("不能杀这个人！");
+    }
+    getHuangMingTargetCode();
+    if ($('span:contains(胜利)').text().slice(-3) == '胜利！' || $('span:contains(战败了)').text().slice(-6) == '战败了...') {
+        currentNPCIndex = 0;
+        console.log('杀人一次！');
+        clickButton('prev_combat');
+        nowXueTempCount = 0;
+    }
+}
+function getHuangMingTargetCode() {
+    var peopleList = $(".cmd_click3");
+    var thisonclick = null;
+    var targetNPCListHere = [];
+    var countor = 0;
+    for (var i = 0; i < peopleList.length; i++) { // 从第一个开始循环
+        // 打印 NPC 名字，button 名，相应的NPC名
+        thisonclick = peopleList[i].getAttribute('onclick');
+        if (HuangMingNPCList.contains(peopleList[i].innerText)) {
+            var targetCode = thisonclick.split("'")[1].split(" ")[1];
+            //           console.log("发现NPC名字：" +  peopleList[i].innerText + "，代号：" + targetCode);
+            targetNPCListHere[countor] = peopleList[i];
+            countor = countor + 1;
+        }
+    }
+    // targetNPCListHere 是当前场景所有满足要求的NPC button数组
+    if (currentNPCIndex >= targetNPCListHere.length) {
+        currentNPCIndex = 0;
+    }
+    if (targetNPCListHere.length > 0) {
+        thisonclick = targetNPCListHere[currentNPCIndex].getAttribute('onclick');
+        targetCode = thisonclick.split("'")[1].split(" ")[1];
+        //      console.log("准备杀目标NPC名字：" + targetNPCListHere[currentNPCIndex].innerText + "，代码：" + targetCode +"，目标列表中序号：" + (currentNPCIndex ));
+        clickButton('kill ' + targetCode); // 点击杀人
+        setTimeout(detectKillHuangMingInfo, 200); // 200 ms后获取杀人情况，是满了还是进入了
+    }
+}
+function detectKillHuangMingInfo() {
+    var HuangMingInfo = $('span').text();
+    if (HuangMingInfo.slice(-15) == "已经太多人了，不要以多欺少啊。") {
+        currentNPCIndex = currentNPCIndex + 1;
+    } else {
+        currentNPCIndex = 0;
+    }
+}
+Array.prototype.contains = function (obj) {
+    var i = this.length;
+    while (i--) {
+        if (this[i] === obj) {
+            return true;
+        }
+    }
+    return false;
+};
+
+
+// 跨服追逃-------------------------------------------------------
+var kuafuzhuitao = 0;
+
+function Zhou4Func() {
+    if (kuafuzhuitao == 0) {
+        btnList1["跨服逃犯"].innerText = '停追逃';
+        kuafuzhuitao = 1;
+    } else {
+        btnList1["跨服逃犯"].innerText = '跨服逃犯';
+        kuafuzhuitao = 0;
+    }
+}
+
+//周四跨服自动用的
+var Zhou4NPCList = ["[1-5区]段老大"];
+//var Zhou4NPCList = ["[1-5区]无一"];
+var Zhou4IntervalFunc = null;
+var currentNPCIndex = 0;
+function Zhou4() {
+    if ($('span').text().slice(-7) == "不能杀这个人。") {
+        currentNPCIndex = currentNPCIndex + 1;
+        console.log("不能杀这个人！");
+    }
+    if ($('span').text().slice(-6) == "明天继续吧。") {
+        clearInterval(Zhou4IntervalFunc);
+        console.log("打满就不打了！");
+    }
+    getZhou4Code();
+    if ($('span:contains(胜利)').text().slice(-3) == '胜利！' || $('span:contains(战败了)').text().slice(-6) == '战败了...') {
+        currentNPCIndex = 0;
+        console.log('杀人一次！');
+        clickButton('prev_combat');
+        nowXueTempCount = 0;
+    }
+}
+function getZhou4Code() {
+    var peopleList = $(".cmd_click3");
+    var thisonclick = null;
+    var targetNPCListHere = [];
+    var countor = 0;
+    for (var i = 0; i < peopleList.length; i++) { // 从第一个开始循环
+        // 打印 NPC 名字，button 名，相应的NPC名
+        thisonclick = peopleList[i].getAttribute('onclick');
+        if (Zhou4NPCList.contains(peopleList[i].innerText)) {
+            var targetCode = thisonclick.split("'")[1].split(" ")[1];
+            //           console.log("发现NPC名字：" +  peopleList[i].innerText + "，代号：" + targetCode);
+            targetNPCListHere[countor] = peopleList[i];
+            countor = countor + 1;
+        }
+    }
+    // targetNPCListHere 是当前场景所有满足要求的NPC button数组
+    if (currentNPCIndex >= targetNPCListHere.length) {
+        currentNPCIndex = 0;
+    }
+    if (targetNPCListHere.length > 0) {
+        thisonclick = targetNPCListHere[currentNPCIndex].getAttribute('onclick');
+        var targetCode = thisonclick.split("'")[1].split(" ")[1];
+        console.log("准备杀目标NPC名字：" + targetNPCListHere[currentNPCIndex].innerText + "，代码：" + targetCode + "，目标列表中序号：" + (currentNPCIndex));
+        clickButton('kill ' + targetCode); // 点击杀人
+        setTimeout(detectZhou4Info, 200); // 200 ms后获取杀人情况，是满了还是进入了
+    }
+}
+function detectZhou4Info() {
+    var Zhou4Info = $('span').text();
+    if (Zhou4Info.slice(-15) == "已经太多人了，不要以多欺少啊。") {
+        currentNPCIndex = currentNPCIndex + 1;
+    } else {
+        currentNPCIndex = 0;
+    }
+}
+Array.prototype.contains = function (obj) {
+    var i = this.length;
+    while (i--) {
+        if (this[i] === obj) {
+            return true;
+        }
+    }
+    return false;
+};
+
+
+// 杀天剑----------------------------------------------------------------------------------------------------------------
+var TianJianNPCList = ["天剑", "天剑真身", "虹风", "虹雨", "虹雷", "虹电", "天剑谷卫士"];
+var TianJianNPCListAll = ["天剑", "天剑真身", "虹风", "虹雨", "虹雷", "虹电", "天剑谷卫士"];
+var TianJianNPCListBing = ["天剑谷卫士"];
+var TianJianNPCListBoss = ["天剑", "天剑真身", "虹风", "虹雨", "虹雷", "虹电"];
+var killTianJianIntervalFunc = null;
+var currentNPCIndex = 0;
+var tianjianBoss = 0;
+var tianjianBing = 0;
+
+function killTianJianTargetFuncBoss() {
+    if (tianjianBoss == 0) {
+        tianjianBoss = 1;
+        btnList1["天剑大怪"].innerText = '停大怪';
+    } else {
+        tianjianBoss = 0;
+        btnList1["天剑大怪"].innerText = '天剑大怪';
+    }
+    killTianJianTargetFunc();
+}
+
+function killTianJianTargetFuncBing() {
+    if (tianjianBing == 0) {
+        tianjianBing = 1;
+        btnList1["天剑小兵"].innerText = '停小兵';
+    } else {
+        tianjianBing = 0;
+        btnList1["天剑小兵"].innerText = '天剑小兵';
+    }
+    killTianJianTargetFunc();
+}
+
+function killTianJianTargetFunc() {
+    zdskill = mySkillLists;
+    skillLists = mySkillLists;
+    currentNPCIndex = 0;
+    if ((tianjianBoss == 1) && (tianjianBing == 1)) {
+        clearInterval(killTianJianIntervalFunc);
+        TianJianNPCList = TianJianNPCListAll;
+        killTianJianIntervalFunc = setInterval(killTianJian, 500);
+
+    } else if ((tianjianBoss == 1) && (tianjianBing == 0)) {
+        clearInterval(killTianJianIntervalFunc);
+        TianJianNPCList = TianJianNPCListBoss;
+        killTianJianIntervalFunc = setInterval(killTianJian, 500);
+    } else if ((tianjianBoss == 0) && (tianjianBing == 1)) {
+        clearInterval(killTianJianIntervalFunc);
+        TianJianNPCList = TianJianNPCListBing;
+        killTianJianIntervalFunc = setInterval(killTianJian, 500);
+    } else if ((tianjianBoss == 0) && (tianjianBing == 0)) {
+        clearInterval(killTianJianIntervalFunc);
+    }
+}
+
+
+function killTianJian() {
+    if ($('span').text().slice(-7) == "不能杀这个人。") {
+        currentNPCIndex = currentNPCIndex + 1;
+        console.log("不能杀这个人！");
+        //        return;
+    }
+    getTianJianTargetCode();
+    //setTimeout(ninesword, 200);
+    if ($('span:contains(胜利)').text().slice(-3) == '胜利！' || $('span:contains(战败了)').text().slice(-6) == '战败了...') {
+        currentNPCIndex = 0;
+        console.log('杀人一次！');
+        clickButton('prev_combat');
+        nowXueTempCount = 0;
+        clickButton('golook_room');
+    }
+}
+function getTianJianTargetCode() {
+    var peopleList = $(".cmd_click3");
+    var thisonclick = null;
+    var targetNPCListHere = [];
+    var countor = 0;
+    for (var i = 0; i < peopleList.length; i++) { // 从第一个开始循环
+        // 打印 NPC 名字，button 名，相应的NPC名
+        thisonclick = peopleList[i].getAttribute('onclick');
+        if (TianJianNPCList.contains(peopleList[i].innerText)) {
+            var targetCode = thisonclick.split("'")[1].split(" ")[1];
+            //           console.log("发现NPC名字：" +  peopleList[i].innerText + "，代号：" + targetCode);
+            targetNPCListHere[countor] = peopleList[i];
+            countor = countor + 1;
+        }
+    }
+    // targetNPCListHere 是当前场景所有满足要求的NPC button数组
+    if (currentNPCIndex >= targetNPCListHere.length) {
+        currentNPCIndex = 0;
+    }
+    if (targetNPCListHere.length > 0) {
+        thisonclick = targetNPCListHere[currentNPCIndex].getAttribute('onclick');
+        var targetCode = thisonclick.split("'")[1].split(" ")[1];
+        console.log("准备杀目标NPC名字：" + targetNPCListHere[currentNPCIndex].innerText + "，代码：" + targetCode + "，目标列表中序号：" + (currentNPCIndex));
+        clickButton('kill ' + targetCode); // 点击杀人
+        setTimeout(detectKillTianJianInfo, 200); // 200 ms后获取杀人情况，是满了还是进入了
+    }
+}
+function detectKillTianJianInfo() {
+    var TianJianInfo = $('span').text();
+    if (TianJianInfo.slice(-15) == "已经太多人了，不要以多欺少啊。") {
+        currentNPCIndex = currentNPCIndex + 1;
+    } else {
+        currentNPCIndex = 0;
+    }
+}
+Array.prototype.contains = function (obj) {
+    var i = this.length;
+    while (i--) {
+        if (this[i] === obj) {
+            return true;
+        }
+    }
+    return false;
+};
+
+// 天剑谷自动移动版。。。
+
+var tianjianTrigger = 0;
+function tianjianFunc() {
+    zdskill = mySkillLists;
+    if (tianjianTrigger == 0) {
+        btnList1["天剑队长"].innerText = '停止车头';
+        tianjianTrigger = 1;
+        killtianjian();
+        tianjianmove();
+        currentNPCIndex = 0;
+        console.log("开始杀天剑目标NPC！");
+        skillLists = mySkillLists;
+        killTianJianIntervalFunc = setInterval(killTianJian, 500);
+    } else if (tianjianTrigger == 1) {
+        btnList1["天剑队长"].innerText = '天剑队长';
+        tianjianTrigger = 0;
+        tjroomclear = 0;
+        path = [];
+        tjfight = 0;
+        preroomrandom = "";
+        clearInterval(killTianJianIntervalFunc);
+    }
+}
+
+var path = [];
+var tjfight = 0;
+var tjroomclear = 0;
+var preroomrandom = "";
+var direction = ["west", "east", "south", "north", "southwest", "southeast", "northeast", "northwest"];//八个方向
+function tianjianmove() {
+    var roominfo = g_obj_map.get("msg_room");
+    if ((roominfo == undefined || tjroomclear == 0) && tianjianTrigger == 1) {//房间信息没有刷新，或者在战斗，或者房间内还有npc
+        setTimeout(function () { tianjianmove(); }, 500);
+    } else {
+        console.log(path);
+        for (var i = 0; i < 8; i++) {
+            if (roominfo.get(direction[i]) != undefined) {
+                if (roominfo.get(direction[i]).match("峡谷") == null && (path.length <= 10 || Math.random() > 0.4)) {//不包含峡谷两个字，为特殊房间
+                    preroomrandom = roominfo.get("go_random");
+                    tjroomclear = 0;
+                    path.push(g_obj_map.get("msg_room").get(direction[i]));
+                    console.log("go " + direction[i]);
+                    clickButton("go " + direction[i]); //移动到特殊房间
+                    if (tianjianTrigger == 1) {
+                        tianjianmove();
+                        setTimeout(killtianjian, 100);
+                    }
+                    return;
+                }
+            }
+
+        }
+        //没有特殊房间，开始寻找普通房间
+        for (var i = 0; i < 8; i++) {
+            if (roominfo.get(direction[i]) != undefined) {
+                if (path.indexOf(g_obj_map.get("msg_room").get(direction[i])) == -1) {
+                    path.push(g_obj_map.get("msg_room").get(direction[i]));
+                    preroomrandom = roominfo.get("go_random");
+                    tjroomclear = 0;
+                    clickButton("go " + direction[i], 0);
+                    if (tianjianTrigger == 1) {
+                        tianjianmove();
+                        setTimeout(killtianjian, 100);
+                    }
+                    return;
+                }
+            }
+        }
+        preroomrandom = roominfo.get("go_random");
+        var randomdirect = Math.round((Math.random() * 7));
+        while (roominfo.get(direction[randomdirect]) == undefined) {
+            randomdirect = Math.round((Math.random() * 7));
+        }
+        tjroomclear = 0;
+        clickButton("go " + direction[randomdirect], 0);
+        if (tianjianTrigger == 1) {
+            tianjianmove();
+            setTimeout(killtianjian, 100);
+        }
+    }
+}
+function tianjianGu() {
+    this.dispatchMessage = function (b) {
+        var type = b.get("type"), subType = b.get("subtype");
+        console.log(type); console.log(subType);
+        if (type == "vs" && subType == "vs_info") { //这是进入战斗的提示
+            // ninesword();//绝学先放个
+        } else if (subType == "combat_result") {//战斗结束 继续调取击
+            tjfight = 0;
+            send("look_room\n");
+            setTimeout(killtianjian, 100);
+        }
+    }
+}
+function killtianjian() {
+    var npclist = g_obj_map.get("msg_room");
+    if ((npclist == undefined || tjfight == 1) && tianjianTrigger == 1) {
+        setTimeout(function () { killtianjian(); }, 500);
+    } else {
+        if (npclist.get("go_random") == preroomrandom && g_obj_map.get("msg_team") == undefined) {   // 没动啊，是队长或者一个人的话就再次调用移动
+            tjroomclear = 1;
+            return;
+        } else if (npclist.get("go_random") == preroomrandom && g_obj_map.get("msg_team").get("is_learder") == undefined) {
+            tjroomclear = 1;
+            return;
+        } else if (npclist.get("go_random") == preroomrandom && g_obj_map.get("msg_team").get("is_learder") == 1) {
+            tjroomclear = 1;
+            return;
+        }
+        for (var i = 1; i < 10; i++) {
+            if (npclist.get("npc" + i) == undefined) {
+                if (g_obj_map.get("msg_team") == undefined) {
+                    break;
+                } else if (g_obj_map.get("msg_team").get("is_learder") == undefined) {
+                    break;
+                } else if (g_obj_map.get("msg_team").get("is_learder") == 1) {
+                    break;
+                } else if (parseInt(g_obj_map.get("msg_team").get("is_leader")) == 0) {
+                    break;
+                }
+            }
+            if (npclist.get("npc" + i).split(",")[0] != "kuafu_tjgws" && npclist.get("npc" + i).split(",")[1].match("符兵") == null) {
+                tjfight = 1;
+                //  clickButton("kill "+npclist.get("npc"+i).split(",")[0]);
+                break;
+            }
+
+        }
+        for (var i = 1; i < 10; i++) {
+            if (npclist.get("npc" + i) == undefined) {
+                if (g_obj_map.get("msg_team") == undefined) {
+                    tjroomclear = 1;
+                    return;
+                } else if (g_obj_map.get("msg_team").get("is_learder") == undefined) {
+                    tjroomclear = 1;
+                    return;
+                } else if (g_obj_map.get("msg_team").get("is_learder") == 1) {
+                    tjroomclear = 1;
+                    return;
+                } else if (parseInt(g_obj_map.get("msg_team").get("is_leader")) == 0) {
+                    if (tianjianTrigger == 1)
+                        setTimeout(killtianjian, 200);
+                }
+            }
+            if (npclist.get("npc" + i).split(",")[0] == "kuafu_tjgws") {
+                tjfight = 1;
+                console.log("kill " + npclist.get("npc" + i).split(",")[0]);
+                //   clickButton("kill "+npclist.get("npc"+i).split(",")[0]);
+                return;
+            }
+        }
+        killtianjian();
+    }
+}
+var tianjian = new tianjianGu;
+
+//------------------------------------------------
+
+//撩奇侠--------------------------
+var QXStop = 0;
+var QXTalkcounter = 1;
+var QxTalking = 0;
+var finallist = [];
+var qinmiFinished = 0;
+var QiXiaList = [];
+
+function QiXiaTalkFunc11() {
+    var QiXiaList_Input = "";
+    //打开 江湖奇侠页面。
+    if (QXStop == 0) {
+        clickButton('open jhqx', 0);
+        GetQiXiaList();
+    } else if (QXStop == 1 && qinmiFinished == 0) {
+        QXStop = 0;
+        QiXiaTalkButton.innerText = '奇侠领朱果';
+    } else if (QXStop == 1 && qinmiFinished == 1) {
+        QXStop = 0;
+        QixiaList = [];
+        finallist = [];
+        QXTalkcounter = 1;
+        QixiaTotalCounter = 0;
+        clickButton('open jhqx', 0);
+        GetQiXiaList();
+    }
+}
+
+function GetQXID(name, QXindex) {
+    if (QXStop == 1 && qinmiFinished == 1) {
+        return;
+    } else if (g_obj_map.get("msg_room") == undefined || QXStop == 1) {
+        setTimeout(function () { GetQXID(name, QXindex); }, 500);
+    } else {
+        console.log("开始寻找" + name + QXindex);
+        var QX_ID = "";
+        var npcindex = 0;
+        var els = g_obj_map.get("msg_room").elements;
+        for (var i = els.length - 1; i >= 0; i--) {
+            if (els[i].key.indexOf("npc") > -1) {
+                if (els[i].value.indexOf(",") > -1) {
+                    var elsitem_ar = els[i].value.split(',');
+                    if (elsitem_ar.length > 1 && elsitem_ar[1] == name) {
+                        console.log(elsitem_ar[0]);
+                        npcindex = els[i].key;
+                        QX_ID = elsitem_ar[0];
+                    }
+                }
+            }
+        }
+        if (QX_ID == null || QX_ID == undefined || QX_ID == 0) {
+            clickButton('find_task_road qixia ' + QXindex);
+            setTimeout(function () { GetQXID(name, QXindex); }, 500);
+        } else {
+            console.log("找到奇侠编号" + QX_ID);
+            if (QXTalkcounter <= 5) {
+                console.log("开始与" + name + "第" + QXTalkcounter + "对话")
+                QXTalkcounter++;
+                clickButton('ask ' + QX_ID);
+                clickButton('find_task_road qixia ' + QXindex);
+                setTimeout(function () { GetQXID(name, QXindex) }, 500);
+            } else if (QXTalkcounter > 5) {
+                QXTalkcounter = 1;
+                console.log("与" + name + "对话完成");
+                QixiaTotalCounter++;
+                console.log("GetQXid:奇侠第" + QixiaTotalCounter + "号状态：" + finallist[QixiaTotalCounter]);
+                if (QixiaTotalCounter > 24) {
+                    console.log("今日奇侠已经完成");
+                } else {
+                    console.log("下一个目标是" + finallist[QixiaTotalCounter]["name"]);
+                }
+                talktoQixia();
+            }
+        }
+
+    }
+}
+var QixiaTotalCounter = 0;
+function TalkQXBase(name, QXindex) {
+    var QX_NAME = name;
+    console.log("开始撩" + QX_NAME + "！");
+    if (g_obj_map.get("msg_room") != undefined)
+        g_obj_map.get("msg_room").clear();
+    overrideclick('find_task_road qixia ' + QXindex);
+    overrideclick('golook_room');
+    setTimeout(function () { GetQXID(QX_NAME, QXindex); }, 500);
+}
+
+function GetQiXiaList() {
+    var html = g_obj_map.get("msg_html_page");
+    QxTalking = 1;
+    if (html == undefined) {
+        setTimeout(function () { GetQiXiaList(); }, 500);
+    } else if (g_obj_map.get("msg_html_page").get("msg").match("江湖奇侠成长信息") == null) {
+        setTimeout(function () { GetQiXiaList(); }, 500);
+    } else {
+        QiXiaList = formatQx(g_obj_map.get("msg_html_page").get("msg"));
+        console.log(QiXiaList);
+        SortQiXia();
+    }
+}
+function SortQiXia() {//冒泡法排序
+    var temp = {};
+    var temparray = [];
+    var newarray = [];
+    for (var i = 0; i < QiXiaList.length; i++) {
+        for (var j = 1; j < QiXiaList.length - i; j++) {
+            if (parseInt(QiXiaList[j - 1]["degree"]) < parseInt(QiXiaList[j]["degree"])) {
+                temp = QiXiaList[j - 1];
+                QiXiaList[j - 1] = QiXiaList[j];
+                QiXiaList[j] = temp;
+            }
+        }
+    }
+    var tempcounter = 0;
+    console.log("奇侠好感度排序如下:");
+    console.log(QiXiaList);
+    //首次排序结束 目前是按照由小到大排序。现在需要找出所有的超过25000 小于30000的奇侠。找到后 排序到最上面；
+    for (var i = 0; i < QiXiaList.length; i++) {
+        if (parseInt(QiXiaList[i]["degree"]) >= 25000 && parseInt(QiXiaList[i]["degree"]) < 30000) {
+            temparray[tempcounter] = QiXiaList[i];
+            tempcounter++;
+            newarray.push(i);
+        }
+    }
+    console.log(temparray);
+    console.log("提取满朱果好感度排序如下:");
+    for (var i = 0; i < QiXiaList.length; i++) {
+        if (newarray.indexOf(i) == -1) {
+            temparray[tempcounter] = QiXiaList[i];
+            tempcounter++;
+        }
+    }
+    var over3 = [];
+    console.log(temparray);//第一次排序结束。现在要挑出所有超过3万的亲密 并且放到最后。
+    for (var i = 0; i < temparray.length; i++) {
+        if (parseInt(temparray[i]["degree"]) >= 30000) {//找到3万以上的
+            over3.push(i);//push超过3万的序号
+        }
+    }
+    console.log(over3);
+    var overarray = [];
+    var overcounter = 0;
+    for (var i = 0; i < temparray.length; i++) { //第一遍循环 找到不在3万列表中的
+        if (over3.indexOf(i) < 0) {
+            overarray[overcounter] = temparray[i];
+            overcounter++;
+        }
+    }
+    console.log(overarray);
+    for (var i = 0; i < temparray.length; i++) {//第二遍循环 把列表中的插入
+        if (over3.indexOf(i) >= 0) {
+            overarray[overcounter] = temparray[i];
+            overcounter++;
+        }
+    }
+    finallist = [];
+    finallist = overarray;
+    console.log(finallist);
+    getZhuguo();
+}
+function getZhuguo() {
+    var msg = "";
+    console.log(finallist);
+    for (var i = 0; i < 4; i++) {//只检查 头四个奇侠是不是在师门，是不是已经死亡。
+        if (finallist[i]["isOk"] != true) {
+            msg += finallist[i]["name"] + " ";
+        }
+    }
+    if (msg != "") {
+        alert("根据您的奇侠亲密好感度，目前可以最优化朱果数目的以下奇侠不在江湖或者已经死亡：" + msg + "。请您稍后再尝试使用奇侠领取朱果服务。");
+    } else {//头四位奇侠都在江湖中，可以开始领取朱果
+        talktoQixia();
+    }
+}
+var unfinish = "";
+function talktoQixia() {
+    console.log("talktoqixia-奇侠-目前计数" + QixiaTotalCounter);
+    console.log(finallist[QixiaTotalCounter]);
+    if (QixiaTotalCounter <= 24) {// 奇侠list仍然有元素。开始调取排列第一个的奇侠
+        var Qixianame = "";
+        var QixiaIndex = 0;
+        console.log(finallist[QixiaTotalCounter]["name"]);
+        Qixianame = finallist[QixiaTotalCounter]["name"];
+        QixiaIndex = finallist[QixiaTotalCounter]["index"];
+        if (finallist[QixiaTotalCounter]["isOk"] != true) {
+            //            alert("奇侠"+Qixianame+"目前不在江湖，可能死亡，可能在师门。领取朱果中断，请在一段时间之后重新点击领取朱果按钮。无需刷新页面");
+            console.log("talktoqixia-奇侠" + Qixianame + "目前不在江湖，可能死亡，可能在师门。");
+            QixiaTotalCounter++;
+            setTimeout(talktoQixia, 500);
+            // return;
+        } else {
+            console.log(finallist[QixiaTotalCounter]);
+            clickButton('find_task_road qixia ' + QixiaIndex);
+            console.log(QixiaIndex);
+            GetQXID(Qixianame, QixiaIndex);
+        }
+    } else {
+        console.log("今日奇侠已经完成");
+        return;
+    }
+}
+
+// 格式话奇侠数据并返回数组
+function formatQx(str) {
+    var tmpMsg = removeSpec(str);
+    var arr = tmpMsg.match(/<tr>(.*?)<\/tr>/g);
+    var qxArray = [];
+    var qxInfo = {};
+    if (arr) {
+        for (var i = 0; i < arr.length; i++) {
+            qxInfo = {};
+            arr2 = arr[i].match(/<td[^>]*>([^\d\(]*)\(?(\d*)\)?<\/td><td[^>]*>(.*?)<\/td><td[^>]*>(.*?)<\/td><td[^>]*>.*?<\/td>/);
+            console.log(arr[i]);
+            console.log(arr2);
+
+            qxInfo["name"] = arr2[1];
+            qxInfo["degree"] = arr2[2] == "" ? 0 : arr2[2];
+            if (arr2[3].match("未出世") != null || arr2[4].match("师门") != null) {
+                qxInfo["isOk"] = false;
+            } else {
+                qxInfo["isOk"] = true;
+            }
+            qxInfo["index"] = i;
+            qxArray.push(qxInfo);
+
+        }
+        return qxArray;
+    }
+    return [];
+}
+
+// 去除链接以及特殊字符
+function removeSpec(str) {
+    var tmp = g_simul_efun.replaceControlCharBlank(str.replace(/\u0003.*?\u0003/g, ""));
+    tmp = tmp.replace(/[\x01-\x09|\x11-\x20]+/g, "");
+    tmp = tmp.replace(/朱果/g, "");
+    return tmp;
+}
+
+// 秘境优化----------------------------------------------------------------------------------------------------------------
+function mijingFunc() {
+    var roominfor = g_obj_map.get("msg_room").get("map_id");
+    console.log(roominfor);
+    var mijingid = ["liandanshi", "langhuanyudong", "leichishan", "yaowanggu", "shanya", "dixiamigong", "tianlongshan", "dafuchuan", "fomenshiku", "dilongling", "luanshishan", "lvzhou", "taohuadu", "daojiangu", "baguamen", "binhaigucheng", "lvshuige", "nanmanzhidi", "fengduguicheng", "duzhanglin", "nanmansenlin"];
+    if (mijingid.indexOf(roominfor) == -1) {
+        alert("当前秘境不支持优化。");
+        return;
+    } else if (roominfor == "shanya") { //山崖
+        clickButton('event_1_97070517', 0);
+        startOptimize(roominfor);
+    } else if (roominfor == "dixiamigong") {//地下迷宫
+        clickButton('event_1_3668752', 0);
+        startOptimize(roominfor);
+    } else if (roominfor == "langhuanyudong") {//琅嬛玉洞
+        clickButton('event_1_74168671', 0);
+        startOptimize(roominfor);
+    } else if (roominfor == "duzhanglin") {// 毒瘴林
+        clickButton('event_1_30944031', 0);
+        startOptimize(roominfor);
+    } else if (roominfor == "yaowanggu") {// 药王谷
+        clickButton('event_1_18864573', 0);
+        startOptimize(roominfor);
+    } else if (roominfor == "leichishan") {// 雷池山
+        clickButton('event_1_32379200', 0);
+        startOptimize(roominfor);
+    } else if (roominfor == "liandanshi") {// 炼丹室
+        clickButton('event_1_99063572', 0);
+        startOptimize(roominfor);
+    } else {
+        clickButton(roominfor + '_saodang', 0);//点击扫荡 按钮一次;
+        startOptimize(roominfor);
+    }
+}
+function startOptimize(roominfor) {
+    var promt = g_obj_map.get("msg_prompt");
+    console.log(roominfor);
+    if (promt == undefined) {
+        setTimeout(function () { startOptimize(roominfor) }, 500);
+    } else {
+        var msg = promt.get("msg");
+        var zhuguo = parseInt(msg.split("朱果")[1].split("。")[0].split("x")[1]);
+        if (zhuguo == 0) {
+            alert("当前扫荡出错了。");
+            return;
+        } else {
+            console.log("目前朱果为:" + zhuguo);
+            if (roominfor == "daojiangu") {
+                if (zhuguo >= 1535) {
+                    clickButton(roominfor + '_saodang go', 0);
+                } else {
+                    clickButton(roominfor + '_saodang', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "langhuanyudong") { // 琅嬛玉洞
+                if (zhuguo >= 2980) {
+                    clickButton('event_1_74168671 go', 1);
+                } else {
+                    clickButton('event_1_74168671', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "leichishan") { // 雷池山
+                if (zhuguo >= 5980) {
+                    clickButton('event_1_32379200 go', 1);
+                } else {
+                    clickButton('event_1_32379200', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "yaowanggu") { // 药王谷
+                if (zhuguo >= 5980) {
+                    clickButton('event_1_18864573 go', 1);
+                } else {
+                    clickButton('event_1_18864573', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "liandanshi") { // 炼丹室
+                if (zhuguo >= 2980) {
+                    clickButton('event_1_99063572 go', 1);
+                } else {
+                    clickButton('event_1_99063572', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "shanya") { // 山崖
+                if (zhuguo >= 2980) {
+                    clickButton('event_1_97070517 go', 1);
+                } else {
+                    clickButton('event_1_97070517', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "duzhanglin") { // 毒樟林
+                if (zhuguo >= 2970) {
+                    clickButton('event_1_30944031 go', 1);
+                } else {
+                    clickButton('event_1_30944031', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+
+            } else if (roominfor == "dixiamigong") {//地下迷宫
+                if (zhuguo >= 2970) {
+                    clickButton('event_1_3668752 go', 1);
+                } else {
+                    clickButton('event_1_3668752', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "binhaigucheng") {
+                if (zhuguo >= 3380) {
+                    clickButton(roominfor + '_saodang go', 0);
+                } else {
+                    clickButton(roominfor + '_saodang', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "taohuadu") {
+                if (zhuguo >= 1785) {
+                    clickButton(roominfor + '_saodang go', 0);
+                } else {
+                    clickButton(roominfor + '_saodang', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "lvshuige") {
+                if (zhuguo >= 1255) {
+                    clickButton(roominfor + '_saodang go', 0);
+                } else {
+                    clickButton(roominfor + '_saodang', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "lvzhou") {
+                if (zhuguo >= 2035) {
+                    clickButton(roominfor + '_saodang go', 0);
+                } else {
+                    clickButton(roominfor + '_saodang', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "luanshishan") {
+                if (zhuguo >= 2350) {
+                    clickButton(roominfor + '_saodang go', 0);
+                } else {
+                    clickButton(roominfor + '_saodang', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "dilongling") {
+                if (zhuguo >= 2385) {
+                    clickButton(roominfor + '_saodang go', 0);
+                } else {
+                    clickButton(roominfor + '_saodang', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "fomenshiku") {
+                if (zhuguo >= 2425) {
+
+                    clickButton(roominfor + '_saodang go', 0);
+
+                } else {
+                    clickButton(roominfor + '_saodang', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "dafuchuan") {
+                if (zhuguo >= 3080) {
+                    clickButton(roominfor + '_saodang go', 0);
+                } else {
+                    clickButton(roominfor + '_saodang', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "binghaigucheng") {
+                if (zhuguo >= 3385) {
+                    clickButton(roominfor + '_saodang go', 0);
+                } else {
+                    clickButton(roominfor + '_saodang', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "tianlongshan") {
+                if (zhuguo >= 3080) {
+                    clickButton(roominfor + '_saodang go', 0);
+                } else {
+                    clickButton(roominfor + '_saodang', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "baguamen") {
+                if (zhuguo >= 3635) {
+                    clickButton(roominfor + '_saodang go', 0);
+                } else {
+                    clickButton(roominfor + '_saodang', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "nanmanzhidi") {
+                if (zhuguo >= 3895) {
+                    clickButton(roominfor + '_saodang go', 0);
+                } else {
+                    clickButton(roominfor + '_saodang', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            } else if (roominfor == "fengduguicheng") {
+                if (zhuguo >= 3895) {
+                    clickButton(roominfor + '_saodang go', 0);
+                } else {
+                    clickButton(roominfor + '_saodang', 0);
+                    setTimeout(function () { startOptimize(roominfor) }, 500);
+                }
+            }
+        }
+    }
+}
+
+//琅嬛玉洞--------------------------------------------------
+function langhuanFunc() {
+    go("event_1_61856223;nw;event_1_92817399;nw;event_1_92817399;w;event_1_91110342;s;event_1_74276536;se;event_1_14726005;sw;event_1_66980486;nw;event_1_39972900;nw;event_1_61689122;w;event_1_19336706;s;event_1_30457951;sw;event_1_96023188;s;");
+}
+
+// 无尽深渊-------------------------------------------------
+function wujinFunc() {
+    go("event_1_73460819;event_1_52335885;e;event_1_56082528;e;event_1_96610703;s;event_1_30829528;w;event_1_20919210;w;event_1_45322510;s;event_1_53681413;s;event_1_4732228;e;event_1_24529326;n;event_1_65787232;e;event_1_39859996;s;event_1_22071325;e;event_1_37824403;e;event_1_10669895;n;event_1_87685798;w;event_1_35949241;n;event_1_27708165;e;event_1_9805486;n;event_1_39703232;w;fight henshan_guguai_laozhe;");
+}
+
+// 地下迷宫-------------------------------------------------
+function dixiamigongFunc() {
+    go("event_1_82876458;e;event_1_82876458;e;event_1_82876458;s;event_1_82876458;w;event_1_82876458;w;event_1_82876458;s;event_1_82876458;e;event_1_82876458;e;event_1_82876458;s;event_1_82876458;w;event_1_82876458;w;event_1_82876458;w;event_1_82876458;n;event_1_82876458;n;event_1_82876458;n;event_1_82876458;n;event_1_82876458;");
+}
+
+// 风泉剑---------------------------------------------------
+function FengquanFunc() {
+    go("jh 7;s;s;s;s;s;s;s;s;e;n;e;s;e;kill scholar_master;");
+}
+
+// 天山姥姥
+function TianshanlaolaoFunc() {
+    go("jh 16;s;s;s;s;e;n;e;event_1_5221690;s;w;event_1_57688376;n;n;e;n;event_1_88625473;event_1_82116250;event_1_90680562;event_1_38586637;fight xiaoyao_tonglao;");
+}
+
+
+// 雪婷-山坳----------------------------------------------------
+function ShanAoFunc() {
+    go("jh 1;e;n;n;n;n;n;find_task_road secret;secret_op1;");
+
+}
+
+// 华山村-桃花泉---------------------------------------------------
+function TaoHuaFunc() {
+    go("jh 3;s;s;s;s;s;nw;n;n;e;find_task_road secret;secret_op1;taohua1_op1;");
+}
+
+// 华山-千尺幢----------------------------------------------------
+function QianChiFunc() {
+    go("jh 4;n;n;n;n;find_task_road secret;secret_op1");
+}
+
+// 华山-猢狲愁----------------------------------------------------
+function HuSunFunc() {
+    go("jh 4;n;n;n;n;n;n;e;n;n;find_task_road secret;secret_op1");
+
+}
+
+// 华山-潭畔草地------------------------------------------------------
+function CaoDiFunc() {
+    go("jh 4;n;n;n;n;n;n;n;event_1_91604710;s;s;s;find_task_road secret;secret_op1");
+
+}
+
+// 华山-玉女峰----------------------------------------------------
+function YuNvFunc() {
+    go("jh 4;n;n;n;n;n;n;n;n;w;find_task_road secret;secret_op1");
+}
+
+// 华山-临渊石台---------------------------------------------------
+function ShiTaiFunc() {
+    go("jh 4;n;n;n;n;n;n;n;n;n;e;n;find_task_road secret;secret_op1");
+
+}
+// 华山  长空栈道---------------------------------------------------
+function ShiTaiFunc1() {
+    go("jh 4;n;n;n;n;n;n;n;n;n;e;find_task_road secret;secret_op1");
+}
+
+// 丐帮-沙丘小洞-----------------------------------------------------
+function ShaQiuFunc() {
+    go("jh 6;event_1_98623439;ne;n;ne;ne;ne;event_1_97428251;find_task_road secret;secret_op1");
+}
+
+// 峨眉山-九老洞-------------------------------------------------
+var jiulao = 0;
+function JiuLaoFunc() {
+    go("jh 8;w;nw;n;n;n;n;e;e;n;n;e;fight emei_shoushan;golook_room;n;eval_halt_move();golook_room;n;n;n;w;n;n;n;n;n;n;n;n;n;nw;sw;w;nw;w;find_task_road secret;secret_op1");
+    /*    if (jiulao == 0 ){
+        go("jh 8;w;nw;n;n;n;n;e;e;n;n;e;kill emei_shoushan;");
+        jiulao = 1;
+    }
+    else{
+        if ($('.cmd_click_room')[0] === undefined || $('.cmd_click_room')[0].innerText !== "山门广场"){
+            alert("请位于 #山门广场# 位置再点 #九老洞# 按钮！");
+            return;
+        }
+        go("n;n;n;w;n;n;n;n;n;n;n;n;n;nw;sw;w;nw;w;find_task_road secret;secret_op1");
+    }
+   */
+}
+// 恒山-悬松根----------------------------------------------------
+function XuanSongFunc() {
+    go("jh 9;n;w;find_task_road secret;secret_op1");
+}
+
+// 恒山-夕阳岭----------------------------------------------------
+function XiYangFunc() {
+    go("jh 9;n;n;e;find_task_road secret;secret_op1");
+}
+
+// 少林-青云坪----------------------------------------------------
+function QingYunFunc() {
+    go("jh 13;e;s;s;w;w;find_task_road secret;secret_op1");
+}
+
+// 逍遥-玉壁瀑布----------------------------------------------------
+function YuBiFunc() {
+    go("jh 16;s;s;s;s;e;n;e;find_task_road secret;secret_op1");
+}
+
+// 逍遥-湖边----------------------------------------------------
+function HuBianFunc() {
+    go("jh 16;s;s;s;s;e;n;e;event_1_5221690;s;w;find_task_road secret;secret_op1");
+}
+
+// 明教-碧水寒潭-----------------------------------------------------
+function BiShuiFunc() {
+    go("jh 18;n;nw;n;n;n;n;n;ne;n;n;n;n;n;e;e;se;se;e;find_task_road secret;secret_op1");
+}
+
+// 古墓-寒水潭----------------------------------------------------
+function HanShuiFunc() {
+    go("jh 20;w;w;s;e;s;s;s;s;s;sw;sw;s;e;se;find_task_road secret;secret_op1");
+}
+
+// 古墓-悬崖-------------------------------------------------
+function GuMuXuanYaFunc() {
+    go("jh 20;w;w;s;e;s;s;s;s;s;sw;sw;s;s;e;find_task_road secret;secret_op1");
+}
+
+// 白坨-戈壁----------------------------------------------------
+function GeBiFunc() {
+    go("jh 21;find_task_road secret;secret_op1");
+}
+
+// 嵩山-卢崖瀑布----------------------------------------------------
+function LuYaPuBuFunc() {
+    go("jh 22;n;n;n;eval_halt_move();golook_room;n;e;n;find_task_road secret;secret_op1");
+}
+
+// 嵩山-启母石----------------------------------------------------
+function QiMuFunc() {
+    go("jh 22;n;n;w;w;find_task_road secret;secret_op1");
+
+}
+
+// 嵩山-无极老母洞-------------------------------------------------
+function WuJiDongFunc() {
+    go("jh 22;n;n;w;n;n;n;n;find_task_road secret;secret_op1");
+
+}
+// 嵩山-无极老母洞---山溪畔-------------------------------------------------
+function WuJiDongFunc1() {
+    go("jh 22;n;n;w;n;n;n;n;event_1_88705407;s;s;find_task_road secret;secret_op1");
+
+}
+
+// 寒梅庄-奇槐坡----------------------------------------------------
+function QiHuaiFunc() {
+    go("jh 23;n;n;n;n;n;n;n;n;find_task_road secret;secret_op1;");
+
+}
+
+// 泰山-天梯----------------------------------------------------
+function TianTiFunc() {
+    go("jh 24;n;n;n;find_task_road secret;secret_op1");
+}
+
+// 泰山-小洞天----------------------------------------------------
+function XiaoDongFunc() {
+    go("jh 24;n;n;n;n;e;e;find_task_road secret;secret_op1");
+
+}
+
+// 泰山-云步桥----------------------------------------------------
+function YunBuFunc() {
+    go("jh 24;n;n;n;n;n;n;n;n;n;find_task_road secret;secret_op1");
+
+}
+
+// 泰山-观景台-----------------------------------------------------
+function GuanJingFunc() {
+    go("jh 24;n;n;n;n;n;n;n;n;n;n;n;n;e;e;n;find_task_road secret;secret_op1");
+}
+
+// 大旗门-危涯前----------------------------------------------------
+function WeiYaQianFunc() {
+    go("jh 25;w;find_task_road secret;secret_op1");
+}
+
+// 大昭-草原----------------------------------------------------
+function CaoYuanFunc() {
+    go("jh 26;w;find_task_road secret;secret_op1");
+}
+
+// 无名峡谷----------------------------------------------------
+function WuMingFunc() {
+    go("jh 29;n;n;n;n");
+    setTimeout(MaoShanWuZhongFunc, 2000);
+}
+function MaoShanWuZhongFunc() {
+    console.log($('span.outtitle').text());
+    if ($('span.outtitle').text().indexOf("雾中") > 0) {
+        go("event_1_60035830");
+        setTimeout(MaoShanWuZhongFunc, 1000);
+    } else if ($('span.outtitle').text().indexOf("平台") > 0) {
+        setTimeout(MaoShanWuZhongFunc, 1000);
+        go("event_1_65661209");
+    } else if ($('span.outtitle').text().indexOf("洞口") > 0) {
+        setTimeout(MaoShanWuZhongFunc, 1000);
+        go("s;event_1_65661209");
+    } else if ($('span.outtitle').text().indexOf("无名山峡谷") > 0) {
+        go("find_task_road secret;secret_op1");
+    }
+}
+
+
+//隐藏跨服按钮
+var buttonhidenall2 = 1;
+var buttonhideAllButton2 = document.createElement('button');
+buttonhideAllButton2.innerText = '跨服';
+buttonhideAllButton2.style.position = 'absolute';
+buttonhideAllButton2.style.right = '0px';
+buttonhideAllButton2.style.top = '540px';
+//currentPos = currentPos + delta;
+buttonhideAllButton2.style.width = buttonWidth + 66;
+buttonhideAllButton2.style.height = buttonHeight + 36;
+document.body.appendChild(buttonhideAllButton2);
+buttonhideAllButton2.addEventListener('click', buttonhideAll2Func)
+function buttonhideAll2Func() {
+    if (buttonhidenall2 == 0) {
+        buttonhidenall2 = 1
+        buttonhiden1 = 1;
+        buttonhideAllButton2.innerText = '跨服';
+        hideButton1();
+    } else {
+        buttonhidenall2 = 0;
+        buttonhiden1 = 0;
+        buttonhideAllButton2.innerText = '隐藏';
+        showButton1();
+    }
+}
+
+//隐藏日常按钮
+var buttonhidenall = 0;
+var buttonhideAllButton = document.createElement('button');
+buttonhideAllButton.innerText = '隐藏';
+buttonhideAllButton.style.position = 'absolute';
+buttonhideAllButton.style.right = '0px';
+buttonhideAllButton.style.top = '520px';
+//currentPos = currentPos + delta;
+buttonhideAllButton.style.width = buttonWidth + 66;
+buttonhideAllButton.style.height = buttonHeight + 36;
+document.body.appendChild(buttonhideAllButton);
+buttonhideAllButton.addEventListener('click', buttonhideAllFunc)
+function buttonhideAllFunc() {
+    if (buttonhidenall == 0) {
+        buttonhidenall = 1
+        buttonhiden = 1;
+        buttonhideAllButton.innerText = '本服';
+        hideButton();
+    } else {
+        buttonhidenall = 0;
+        buttonhiden = 0;
+        buttonhideAllButton.innerText = '隐藏';
+        showButton();
+    }
+}
+
+
+// 答题 ---------------------------------------------------
+var answerQuestionsInterval = null;
+var QuestAnsLibs = {
+    "“白玉牌楼”场景是在哪个地图上？": "c",
+    "“百龙山庄”场景是在哪个地图上？": "b",
+    "“冰火岛”场景是在哪个地图上？": "b",
+    "“常春岛渡口”场景是在哪个地图上？": "c",
+    "“跪拜坪”场景是在哪个地图上？": "b",
+    "“翰墨书屋”场景是在哪个地图上？": "c",
+    "“花海”场景是在哪个地图上？": "a",
+    "朱姑娘是哪个门派的师傅": "a",
+    "“留云馆”场景是在哪个地图上？": "b",
+    "“日月洞”场景是在哪个地图上？": "b",
+    "“蓉香榭”场景是在哪个地图上？": "c",
+    "“三清宫”场景是在哪个地图上？": "c",
+    "“三清殿”场景是在哪个地图上？": "b",
+    "“双鹤桥”场景是在哪个地图上？": "b",
+    "“无名山脚”场景是在哪个地图上？": "d",
+    "“伊犁”场景是在哪个地图上？": "b",
+    "“鹰记商号”场景是在哪个地图上？": "d",
+    "“迎梅客栈”场景是在哪个地图上？": "d",
+    "“子午楼”场景是在哪个地图上？": "c",
+    "8级的装备摹刻需要几把刻刀": "a",
+    "NPC公平子在哪一章地图": "a",
+    "瑷伦在晚月庄的哪个场景": "b",
+    "安惜迩是在那个场景": "c",
+    "阳刚之劲是哪个门派的阵法": "c",
+    "黯然销魂掌有多少招式？": "c",
+    "黯然销魂掌是哪个门派的技能": "a",
+    "八卦迷阵是哪个门派的阵法？": "b",
+    "八卦迷阵是那个门派的阵法": "a",
+    "白金戒指可以在哪位npc那里获得？": "b",
+    "白金手镯可以在哪位那里获得？": "a",
+    "白金项链可以在哪位那里获得？": "b",
+    "白蟒鞭的伤害是多少？": "a",
+    "白驼山第一位要拜的师傅是谁": "a",
+    "白银宝箱礼包多少元宝一个": "d",
+    "白玉腰束是腰带类的第几级装备？": "b",
+    "拜师风老前辈需要正气多少": "b",
+    "拜师老毒物需要蛤蟆功多少级": "a",
+    "拜师铁翼需要多少内力": "b",
+    "拜师小龙女需要容貌多少": "c",
+    "拜师张三丰需要多少正气": "b",
+    "包家将是哪个门派的师傅": "a",
+    "包拯在哪一章": "d",
+    "宝石合成一次需要消耗多少颗低级宝石？": "c",
+    "宝玉帽可以在哪位那里获得？": "d",
+    "宝玉鞋击杀哪个可以获得": "a",
+    "宝玉鞋在哪获得": "a",
+    "暴雨梨花针的伤害是多少？": "c",
+    "北斗七星阵是第几个的组队副本": "c",
+    "北冥神功是哪个门派的技能": "b",
+    "北岳殿神像后面是哪位npc": "b",
+    "匕首加什么属性": "c",
+    "碧海潮生剑在哪位师傅处学习": "a",
+    "碧磷鞭的伤害是多少？": "b",
+    "镖局保镖是挂机里的第几个任务": "d",
+    "冰魄银针的伤害是多少？": "b",
+    "病维摩拳是哪个门派的技能": "b",
+    "不可保存装备下线多久会消失": "c",
+    "不属于白驼山的技能是什么": "b",
+    "沧海护腰可以镶嵌几颗宝石": "d",
+    "沧海护腰是腰带类的第几级装备？": "a",
+    "藏宝图在哪个NPC处购买": "a",
+    "藏宝图在哪个处购买": "b",
+    "藏宝图在哪里那里买": "a",
+    "草帽可以在哪位那里获得？": "b",
+    "成功易容成异性几次可以领取易容成就奖": "b",
+    "成长计划第七天可以领取多少元宝？": "d",
+    "成长计划六天可以领取多少银两？": "d",
+    "成长计划需要多少元宝方可购买？": "a",
+    "城里打擂是挂机里的第几个任务": "d",
+    "城里抓贼是挂机里的第几个任务": "b",
+    "充值积分不可以兑换下面什么物品": "d",
+    "出生选武学世家增加什么": "a",
+    "闯楼第几层可以获得称号“藏剑楼护法”": "b",
+    "闯楼第几层可以获得称号“藏剑楼楼主”": "d",
+    "闯楼第几层可以获得称号“藏剑楼长老”": "c",
+    "闯楼每多少层有称号奖励": "a",
+    "春风快意刀是哪个门派的技能": "b",
+    "春秋水色斋需要多少杀气才能进入": "d",
+    "从哪个处进入跨服战场": "a",
+    "摧心掌是哪个门派的技能": "a",
+    "达摩在少林哪个场景": "c",
+    "达摩杖的伤害是多少？": "d",
+    "打开引路蜂礼包可以得到多少引路蜂？": "b",
+    "打排行榜每天可以完成多少次？": "a",
+    "打土匪是挂机里的第几个任务": "c",
+    "打造刻刀需要多少个玄铁": "a",
+    "打坐增长什么属性": "a",
+    "大保险卡可以承受多少次死亡后不降技能等级？": "b",
+    "大乘佛法有什么效果": "d",
+    "大旗门的修养术有哪个特殊效果": "a",
+    "大旗门的云海心法可以提升哪个属性": "c",
+    "大招寺的金刚不坏功有哪个特殊效果": "a",
+    "大招寺的铁布衫有哪个特殊效果": "c",
+    "当日最低累积充值多少元即可获得返利？": "b",
+    "刀法基础在哪掉落": "a",
+    "倒乱七星步法是哪个门派的技能": "d",
+    "等级多少才能在世界频道聊天？": "c",
+    "第一个副本需要多少等级才能进入": "d",
+    "貂皮斗篷是披风类的第几级装备？": "b",
+    "丁老怪是哪个门派的终极师傅": "a",
+    "丁老怪在星宿海的哪个场景": "b",
+    "东方教主在魔教的哪个场景": "b",
+    "斗转星移是哪个门派的技能": "a",
+    "斗转星移阵是哪个门派的阵法": "a",
+    "毒龙鞭的伤害是多少？": "a",
+    "毒物阵法是哪个门派的阵法": "b",
+    "独孤求败有过几把剑？": "d",
+    "独龙寨是第几个组队副本": "a",
+    "读书写字301-400级在哪里买书": "c",
+    "读书写字最高可以到多少级": "b",
+    "端茶递水是挂机里的第几个任务": "b",
+    "断云斧是哪个门派的技能": "a",
+    "锻造一把刻刀需要多少玄铁碎片锻造？": "c",
+    "锻造一把刻刀需要多少银两？": "a",
+    "兑换易容面具需要多少玄铁碎片": "c",
+    "多少消费积分换取黄金宝箱": "a",
+    "多少消费积分可以换取黄金钥匙": "b",
+    "翻译梵文一次多少银两": "d",
+    "方媃是哪个门派的师傅": "b",
+    "飞仙剑阵是哪个门派的阵法": "b",
+    "风老前辈在华山哪个场景": "b",
+    "风泉之剑加几点悟性": "c",
+    "风泉之剑可以在哪位npc那里获得？": "b",
+    "风泉之剑在哪里获得": "d",
+    "疯魔杖的伤害是多少？": "b",
+    "伏虎杖的伤害是多少？": "c",
+    "副本完成后不可获得下列什么物品": "b",
+    "副本一次最多可以进几人": "a",
+    "副本有什么奖励": "d",
+    "富春茶社在哪一章": "c",
+    "改名字在哪改？": "d",
+    "丐帮的绝学是什么": "a",
+    "丐帮的轻功是哪个": "b",
+    "干苦力是挂机里的第几个任务": "a",
+    "钢丝甲衣可以在哪位那里获得？": "d",
+    "高级乾坤再造丹加什么": "b",
+    "高级乾坤再造丹是增加什么的？": "b",
+    "高级突破丹多少元宝一颗": "d",
+    "割鹿刀可以在哪位npc那里获得？": "b",
+    "葛伦在大招寺的哪个场景": "b",
+    "根骨能提升哪个属性": "c",
+    "功德箱捐香火钱有什么用": "a",
+    "功德箱在雪亭镇的哪个场景？": "c",
+    "购买新手进阶礼包在挂机打坐练习上可以享受多少倍收益？": "b",
+    "孤独求败称号需要多少论剑积分兑换": "b",
+    "孤儿出身增加什么": "d",
+    "古灯大师是哪个门派的终极师傅": "c",
+    "古灯大师在大理哪个场景": "c",
+    "古墓多少级以后才能进去？": "d",
+    "寒玉床睡觉修炼需要多少点内力值": "c",
+    "寒玉床睡觉一次多久": "c",
+    "寒玉床需要切割多少次": "d",
+    "寒玉床在哪里切割": "a",
+    "寒玉床在那个地图可以找到？": "a",
+    "黑狗血在哪获得": "b",
+    "黑水伏蛟可以在哪位那里获得？": "c",
+    "红宝石加什么属性？": "b",
+    "洪帮主在洛阳哪个场景": "c",
+    "虎皮腰带是腰带类的第几级装备？": "a",
+    "花不为在哪一章": "a",
+    "花花公子在哪个地图": "a",
+    "华山村王老二掉落的物品是什么": "a",
+    "华山施戴子掉落的物品是什么": "b",
+    "华山武器库从哪个NPC进": "d",
+    "黄宝石加什么属性": "c",
+    "黄岛主在桃花岛的哪个场景": "d",
+    "黄袍老道是哪个门派的师傅": "c",
+    "积分商城在雪亭镇的哪个场景？": "c",
+    "技能柳家拳谁教的？": "a",
+    "技能数量超过了什么消耗潜能会增加": "b",
+    "嫁衣神功是哪个门派的技能": "b",
+    "剑冢在哪个地图": "a",
+    "街头卖艺是挂机里的第几个任务": "a",
+    "金弹子的伤害是多少？": "a",
+    "金刚不坏功有什么效果": "a",
+    "金刚杖的伤害是多少？": "a",
+    "金戒指可以在哪位npc那里获得？": "d",
+    "金手镯可以在哪位npc那里获得？": "b",
+    "金丝鞋可以在哪位npc那里获得？": "b",
+    "金项链可以在哪位npc那里获得？": "d",
+    "金玉断云是哪个门派的阵法": "a",
+    "锦缎腰带是腰带类的第几级装备？": "a",
+    "精铁棒可以在哪位那里获得？": "d",
+    "九区服务器名称": "d",
+    "九阳神功是哪个门派的技能": "c",
+    "九阴派梅师姐在星宿海哪个场景": "a",
+    "军营是第几个组队副本": "b",
+    "开通VIP月卡最低需要当天充值多少元方有购买资格？": "a",
+    "可以召唤金甲伏兵助战是哪个门派？": "a",
+    "客商在哪一章": "b",
+    "孔雀氅可以镶嵌几颗宝石": "b",
+    "孔雀氅是披风类的第几级装备？": "c",
+    "枯荣禅功是哪个门派的技能": "a",
+    "跨服是星期几举行的": "b",
+    "跨服天剑谷每周六几点开启": "a",
+    "跨服需要多少级才能进入": "c",
+    "跨服在哪个场景进入": "c",
+    "兰花拂穴手是哪个门派的技能": "a",
+    "蓝宝石加什么属性": "a",
+    "蓝止萍在哪一章": "c",
+    "蓝止萍在晚月庄哪个小地图": "b",
+    "老毒物在白驮山的哪个场景": "b",
+    "老顽童在全真教哪个场景": "b",
+    "莲花掌是哪个门派的技能": "a",
+    "烈火旗大厅是那个地图的场景": "c",
+    "烈日项链可以镶嵌几颗宝石": "c",
+    "林祖师是哪个门派的师傅": "a",
+    "灵蛇杖法是哪个门派的技能": "c",
+    "凌波微步是哪个门派的技能": "b",
+    "凌虚锁云步是哪个门派的技能": "b",
+    "领取消费积分需要寻找哪个NPC？": "c",
+    "鎏金缦罗是披风类的第几级装备？": "d",
+    "柳淳风在哪一章": "c",
+    "柳淳风在雪亭镇哪个场景": "b",
+    "柳文君所在的位置": "a",
+    "六脉神剑是哪个门派的绝学": "a",
+    "陆得财是哪个门派的师傅": "c",
+    "陆得财在乔阴县的哪个场景": "a",
+    "论剑每天能打几次": "a",
+    "论剑是每周星期几": "c",
+    "论剑是什么时间点正式开始": "a",
+    "论剑是星期几进行的": "c",
+    "论剑是星期几举行的": "c",
+    "论剑输一场获得多少论剑积分": "a",
+    "论剑要在晚上几点前报名": "b",
+    "论剑在周几进行？": "b",
+    "论剑中步玄派的师傅是哪个": "a",
+    "论剑中大招寺第一个要拜的师傅是谁": "c",
+    "论剑中古墓派的终极师傅是谁": "d",
+    "论剑中花紫会的师傅是谁": "c",
+    "论剑中青城派的第一个师傅是谁": "a",
+    "论剑中青城派的终极师傅是谁": "d",
+    "论剑中逍遥派的终极师傅是谁": "c",
+    "论剑中以下不是峨嵋派技能的是哪个": "b",
+    "论剑中以下不是华山派的人物的是哪个": "d",
+    "论剑中以下哪个不是大理段家的技能": "c",
+    "论剑中以下哪个不是大招寺的技能": "b",
+    "论剑中以下哪个不是峨嵋派可以拜师的师傅": "d",
+    "论剑中以下哪个不是丐帮的技能": "d",
+    "论剑中以下哪个不是丐帮的人物": "a",
+    "论剑中以下哪个不是古墓派的的技能": "b",
+    "论剑中以下哪个不是华山派的技能的": "d",
+    "论剑中以下哪个不是明教的技能": "d",
+    "论剑中以下哪个不是魔教的技能": "a",
+    "论剑中以下哪个不是魔教的人物": "d",
+    "论剑中以下哪个不是全真教的技能": "d",
+    "论剑中以下哪个不是是晚月庄的技能": "d",
+    "论剑中以下哪个不是唐门的技能": "c",
+    "论剑中以下哪个不是唐门的人物": "c",
+    "论剑中以下哪个不是铁雪山庄的技能": "d",
+    "论剑中以下哪个不是铁血大旗门的技能": "c",
+    "论剑中以下哪个是大理段家的技能": "a",
+    "论剑中以下哪个是大招寺的技能": "b",
+    "论剑中以下哪个是丐帮的技能": "b",
+    "论剑中以下哪个是花紫会的技能": "a",
+    "论剑中以下哪个是华山派的技能的": "a",
+    "论剑中以下哪个是明教的技能": "b",
+    "论剑中以下哪个是青城派的技能": "b",
+    "论剑中以下哪个是唐门的技能": "b",
+    "论剑中以下哪个是天邪派的技能": "b",
+    "论剑中以下哪个是天邪派的人物": "a",
+    "论剑中以下哪个是铁雪山庄的技能": "c",
+    "论剑中以下哪个是铁血大旗门的技能": "b",
+    "论剑中以下哪个是铁血大旗门的师傅": "a",
+    "论剑中以下哪个是晚月庄的技能": "a",
+    "论剑中以下哪个是晚月庄的人物": "a",
+    "论剑中以下是峨嵋派技能的是哪个": "a",
+    "论语在哪购买": "a",
+    "骆云舟在哪一章": "c",
+    "骆云舟在乔阴县的哪个场景": "b",
+    "落英神剑掌是哪个门派的技能": "b",
+    "吕进在哪个地图": "a",
+    "绿宝石加什么属性": "c",
+    "漫天花雨匕在哪获得": "a",
+    "茅山的绝学是什么": "b",
+    "茅山的天师正道可以提升哪个属性": "d",
+    "茅山可以招几个宝宝": "c",
+    "茅山派的轻功是什么": "b",
+    "茅山天师正道可以提升什么": "c",
+    "茅山学习什么技能招宝宝": "a",
+    "茅山在哪里拜师": "c",
+    "每次合成宝石需要多少银两？": "a",
+    "每个玩家最多能有多少个好友": "b",
+    "乌檀木刀可以在哪位npc那里获得？": "d",
+    "“双鹤桥”场景是在哪个地图上？": "b",
+    "vip每天不可以领取什么": "b",
+    "每天的任务次数几点重置": "d",
+    "每天分享游戏到哪里可以获得20元宝": "a",
+    "每天能挖几次宝": "d",
+    "每天能做多少个谜题任务": "a",
+    "每天能做多少个师门任务": "c",
+    "每天微信分享能获得多少元宝": "d",
+    "每天有几次试剑": "b",
+    "每天在线多少个小时即可领取消费积分？": "b",
+    "每突破一次技能有效系数加多少": "a",
+    "密宗伏魔是哪个门派的阵法": "c",
+    "灭绝师太在第几章": "c",
+    "灭绝师太在峨眉山哪个场景": "a",
+    "明教的九阳神功有哪个特殊效果": "a",
+    "明月帽要多少刻刀摩刻？": "a",
+    "摹刻10级的装备需要摩刻技巧多少级": "b",
+    "摹刻烈日宝链需要多少级摩刻技巧？": "c",
+    "摹刻扬文需要多少把刻刀？": "a",
+    "魔鞭诀在哪里学习": "d",
+    "魔教的大光明心法可以提升哪个属性": "d",
+    "莫不收在哪一章": "a",
+    "墨磷腰带是腰带类的第几级装备？": "d",
+    "木道人在青城山的哪个场景": "b",
+    "慕容家主在慕容山庄的哪个场景": "a",
+    "慕容山庄的斗转星移可以提升哪个属性": "d",
+    "哪个NPC掉落拆招基础": "a",
+    "哪个处可以捏脸": "a",
+    "哪个分享可以获得20元宝": "b",
+    "哪个技能不是魔教的": "d",
+    "哪个门派拜师没有性别要求": "d",
+    "哪个npc属于全真七子": "b",
+    "哪样不能获得玄铁碎片": "c",
+    "能增容貌的是下面哪个技能": "a",
+    "捏脸需要花费多少银两？": "c",
+    "捏脸需要寻找哪个NPC？": "a",
+    "欧阳敏是哪个门派的？": "b",
+    "欧阳敏是哪个门派的师傅": "b",
+    "欧阳敏在哪一章": "a",
+    "欧阳敏在唐门的哪个场景": "c",
+    "排行榜最多可以显示多少名玩家？": "a",
+    "逄义是在那个场景": "a",
+    "披星戴月是披风类的第几级装备？": "d",
+    "劈雳拳套有几个镶孔": "a",
+    "霹雳掌套的伤害是多少": "b",
+    "辟邪剑法是哪个门派的绝学技能": "a",
+    "辟邪剑法在哪学习": "b",
+    "婆萝蜜多心经是哪个门派的技能": "b",
+    "七宝天岚舞是哪个门派的技能": "d",
+    "七星鞭的伤害是多少？": "c",
+    "七星剑法是哪个门派的绝学": "a",
+    "棋道是哪个门派的技能": "c",
+    "千古奇侠称号需要多少论剑积分兑换": "d",
+    "乾坤大挪移属于什么类型的武功": "a",
+    "乾坤一阳指是哪个师傅教的": "a",
+    "青城派的道德经可以提升哪个属性": "c",
+    "青城派的道家心法有哪个特殊效果": "a",
+    "清风寨在哪": "b",
+    "清风寨在哪个地图": "d",
+    "清虚道长在哪一章": "d",
+    "去唐门地下通道要找谁拿钥匙": "a",
+    "全真的道家心法有哪个特殊效果": "a",
+    "全真的基本阵法有哪个特殊效果": "b",
+    "全真的双手互搏有哪个特殊效果": "c",
+    "日月神教大光明心法可以提升什么": "d",
+    "如何将华山剑法从400级提升到440级？": "d",
+    "如意刀是哪个门派的技能": "c",
+    "山河藏宝图需要在哪个NPC手里购买？": "d",
+    "上山打猎是挂机里的第几个任务": "c",
+    "少林的混元一气功有哪个特殊效果": "d",
+    "少林的易筋经神功有哪个特殊效果": "a",
+    "蛇形刁手是哪个门派的技能": "b",
+    "什么影响打坐的速度": "c",
+    "什么影响攻击力": "d",
+    "什么装备不能镶嵌黄水晶": "d",
+    "什么装备都能镶嵌的是什么宝石？": "c",
+    "什么装备可以镶嵌紫水晶": "c",
+    "神雕大侠所在的地图": "b",
+    "神雕大侠在哪一章": "a",
+    "神雕侠侣的时代背景是哪个朝代？": "d",
+    "神雕侠侣的作者是?": "b",
+    "升级什么技能可以提升根骨": "a",
+    "生死符的伤害是多少？": "a",
+    "师门磕头增加什么": "a",
+    "师门任务每天可以完成多少次？": "a",
+    "师门任务每天可以做多少个？": "c",
+    "师门任务什么时候更新？": "b",
+    "师门任务一天能完成几次": "d",
+    "师门任务最多可以完成多少个？": "d",
+    "施令威在哪个地图": "b",
+    "石师妹哪个门派的师傅": "c",
+    "使用朱果经验潜能将分别增加多少？": "a",
+    "首次通过乔阴县不可以获得那种奖励？": "a",
+    "受赠的消费积分在哪里领取": "d",
+    "兽皮鞋可以在哪位那里获得？": "b",
+    "树王坟在第几章节": "c",
+    "双儿在扬州的哪个小地图": "a",
+    "孙天灭是哪个门派的师傅": "c",
+    "踏雪无痕是哪个门派的技能": "b",
+    "踏云棍可以在哪位那里获得？": "a",
+    "唐门的唐门毒经有哪个特殊效果": "a",
+    "唐门密道怎么走": "c",
+    "天蚕围腰可以镶嵌几颗宝石": "d",
+    "天蚕围腰是腰带类的第几级装备？": "d",
+    "天山姥姥在逍遥林的哪个场景": "d",
+    "天山折梅手是哪个门派的技能": "c",
+    "天师阵法是哪个门派的阵法": "b",
+    "天邪派在哪里拜师": "b",
+    "天羽奇剑是哪个门派的技能": "a",
+    "铁戒指可以在哪位那里获得  ": "a",
+    "铁手镯 可以在哪位npc那里获得？  ": "a",
+    "铁血大旗门云海心法可以提升什么": "a",
+    "通灵需要花费多少银两？": "d",
+    "通灵需要寻找哪个NPC？": "c",
+    "突破丹在哪里购买": "b",
+    "屠龙刀法是哪个门派的绝学技能": "b",
+    "屠龙刀是什么级别的武器": "a",
+    "挖剑冢可得什么": "a",
+    "弯月刀可以在哪位那里获得？": "b",
+    "玩家每天能够做几次正邪任务": "c",
+    "玩家想修改名字可以寻找哪个NPC？": "a",
+    "晚月庄的内功是什么": "b",
+    "晚月庄的七宝天岚舞可以提升哪个属性": "b",
+    "晚月庄的小贩在下面哪个地点": "a",
+    "晚月庄七宝天岚舞可以提升什么": "b",
+    "晚月庄主线过关要求": "a",
+    "王铁匠是在那个场景": "b",
+    "王重阳是哪个门派的师傅": "b",
+    "魏无极处读书可以读到多少级？": "a",
+    "魏无极身上掉落什么装备": "c",
+    "魏无极在第几章": "a",
+    "闻旗使在哪个地图": "a",
+    "乌金玄火鞭的伤害是多少？": "d",
+    "钨金腰带是腰带类的第几级装备？": "d",
+    "武当派的绝学技能是以下哪个": "d",
+    "武穆兵法提升到多少级才能出现战斗必刷？": "d",
+    "武穆兵法通过什么学习": "a",
+    "武学世家加的什么初始属性": "a",
+    "舞中之武是哪个门派的阵法": "b",
+    "西毒蛇杖的伤害是多少？": "c",
+    "吸血蝙蝠在下面哪个地图": "a",
+    "下列哪项战斗不能多个玩家一起战斗？": "a",
+    "下列装备中不可摹刻的是": "c",
+    "下面哪个不是古墓的师傅": "d",
+    "下面哪个不是门派绝学": "d",
+    "下面哪个不是魔教的": "d",
+    "下面哪个地点不是乔阴县的": "d",
+    "下面哪个门派是正派": "a",
+    "下面哪个是天邪派的师傅": "a",
+    "下面有什么是寻宝不能获得的": "c",
+    "向师傅磕头可以获得什么？": "b",
+    "逍遥步是哪个门派的技能": "a",
+    "逍遥林是第几章的地图": "c",
+    "逍遥林怎么弹琴可以见到天山姥姥": "b",
+    "逍遥派的绝学技能是以下哪个": "a",
+    "萧辟尘在哪一章": "d",
+    "小李飞刀的伤害是多少？": "d",
+    "小龙女住的古墓是谁建造的？": "b",
+    "小男孩在华山村哪里": "a",
+    "新人礼包在哪个npc处兑换": "a",
+    "新手礼包在哪里领取": "a",
+    "新手礼包在哪领取？": "c",
+    "需要使用什么衣服才能睡寒玉床": "a",
+    "选择孤儿会影响哪个属性": "c",
+    "选择商贾会影响哪个属性": "b",
+    "选择书香门第会影响哪个属性": "b",
+    "选择武学世家会影响哪个属性": "a",
+    "学习屠龙刀法需要多少内力": "b",
+    "雪莲有什么作用": "a",
+    "雪蕊儿是哪个门派的师傅": "a",
+    "雪蕊儿在铁雪山庄的哪个场景": "d",
+    "扬文的属性": "a",
+    "扬州询问黑狗能到下面哪个地点": "a",
+    "扬州在下面哪个地点的处可以获得玉佩": "c",
+    "羊毛斗篷是披风类的第几级装备？": "a",
+    "阳刚之劲是哪个门派的阵法": "c",
+    "杨过小龙女分开多少年后重逢?": "c",
+    "杨过在哪个地图": "a",
+    "夜行披风是披风类的第几级装备？": "a",
+    "夜皇在大旗门哪个场景": "c",
+    "一个队伍最多有几个队员": "c",
+    "一天能完成谜题任务多少个": "b",
+    "一天能完成师门任务有多少个": "c",
+    "一天能完成挑战排行榜任务多少次": "a",
+    "一张分身卡的有效时间是多久": "c",
+    "一指弹在哪里领悟": "b",
+    "移开明教石板需要哪项技能到一定级别": "a",
+    "以下不是步玄派的技能的哪个": "c",
+    "以下不是天宿派师傅的是哪个": "c",
+    "以下不是隐藏门派的是哪个": "d",
+    "铁手镯可以在哪位npc那里获得": "a",
+    "以下哪个宝石不能镶嵌到戒指": "c",
+    "以下哪个宝石不能镶嵌到内甲": "a",
+    "以下哪个宝石不能镶嵌到披风": "c",
+    "以下哪个宝石不能镶嵌到腰带": "c",
+    "以下哪个宝石不能镶嵌到衣服": "a",
+    "以下哪个不是道尘禅师教导的武学？": "d",
+    "以下哪个不是何不净教导的武学？": "c",
+    "以下哪个不是慧名尊者教导的技能？": "d",
+    "以下哪个不是空空儿教导的武学？": "b",
+    "以下哪个不是梁师兄教导的武学？": "b",
+    "以下哪个不是论剑的皮肤？": "d",
+    "以下哪个不是全真七子？": "c",
+    "以下哪个不是宋首侠教导的武学？": "d",
+    "以下哪个不是微信分享好友、朋友圈、QQ空间的奖励？": "a",
+    "以下哪个不是岳掌门教导的武学？": "a",
+    "以下哪个不是在洛阳场景 ": "d",
+    "以下哪个不是在雪亭镇场景": "d",
+    "以下哪个不是在扬州场景": "d",
+    "以下哪个不是知客道长教导的武学？": "b",
+    "以下哪个门派不是隐藏门派？": "c",
+    "以下哪个门派是正派？": "d",
+    "以下哪个门派是中立门派？": "a",
+    "以下哪个是步玄派的祖师": "b",
+    "以下哪个是封山派的祖师": "c",
+    "以下哪个是花紫会的祖师": "a",
+    "以下哪个是晚月庄的祖师": "d",
+    "以下哪些物品不是成长计划第二天可以领取的？": "c",
+    "以下哪些物品不是成长计划第三天可以领取的？": "d",
+    "以下哪些物品不是成长计划第一天可以领取的？": "d",
+    "以下哪些物品是成长计划第四天可以领取的？": "a",
+    "以下哪些物品是成长计划第五天可以领取的？": "b",
+    "以下属于邪派的门派是哪个": "b",
+    "以下属于正派的门派是哪个": "a",
+    "以下谁不精通降龙十八掌？": "d",
+    "以下有哪些物品不是每日充值的奖励？": "d",
+    "倚天剑加多少伤害": "d",
+    "倚天屠龙记的时代背景哪个朝代？": "a",
+    "易容后保持时间是多久": "a",
+    "易容面具需要多少玄铁兑换": "c",
+    "易容术多少级才可以易容成异性NPC": "a",
+    "易容术可以找哪位NPC学习？": "b",
+    "易容术向谁学习": "a",
+    "易容术在哪里学习": "a",
+    "易容术在哪学习？": "b",
+    "银手镯可以在哪位那里获得？": "b",
+    "银丝链甲衣可以在哪位npc那里获得？": "a",
+    "银项链可以在哪位那里获得？": "b",
+    "尹志平是哪个门派的师傅": "b",
+    "隐者之术是那个门派的阵法": "a",
+    "鹰爪擒拿手是哪个门派的技能": "a",
+    "影响你出生的福缘的出生是？": "d",
+    "油流麻香手是哪个门派的技能": "a",
+    "游龙散花是哪个门派的阵法": "d",
+    "玉蜂浆在哪个地图获得": "a",
+    "玉女剑法是哪个门派的技能": "b",
+    "岳掌门在哪一章": "a",
+    "云九天是哪个门派的师傅": "c",
+    "云问天在哪一章": "a",
+    "在洛阳萧问天那可以学习什么心法": "b",
+    "在庙祝处洗杀气每次可以消除多少点": "a",
+    "在哪个NPC可以购买恢复内力的药品？ ": "c",
+    "在哪个处可以更改名字": "a",
+    "在哪个处领取免费消费积分": "d",
+    "在哪个处能够升级易容术": "b",
+    "在哪里可以找到“香茶”？": "a",
+    "在哪里捏脸提升容貌": "d",
+    "在哪里消杀气": "a",
+    "在逍遥派能学到的技能是哪个": "a",
+    "在雪亭镇李火狮可以学习多少级柳家拳": "b",
+    "在战斗界面点击哪个按钮可以进入聊天界面": "d",
+    "在正邪任务中不能获得下面什么奖励？": "d",
+    "怎么样获得免费元宝": "a",
+    "赠送李铁嘴银两能够增加什么": "a",
+    "张教主在明教哪个场景": "d",
+    "张三丰在哪一章": "d",
+    "张三丰在武当山哪个场景": "d",
+    "张松溪在哪个地图": "c",
+    "张天师是哪个门派的师傅": "a",
+    "张天师在茅山哪个场景": "d",
+    "长虹剑在哪位那里获得？": "a",
+    "长剑在哪里可以购买？": "a",
+    "正邪任务杀死好人增长什么": "b",
+    "正邪任务一天能做几次": "a",
+    "正邪任务中客商的在哪个地图": "a",
+    "正邪任务中卖花姑娘在哪个地图": "b",
+    "正邪任务最多可以完成多少个？": "d",
+    "支线对话书生上魁星阁二楼杀死哪个NPC给10元宝": "a",
+    "朱姑娘是哪个门派的师傅": "a",
+    "朱老伯在华山村哪个小地图": "b",
+    "追风棍可以在哪位npc那里获得？": "a",
+    "追风棍在哪里获得": "b",
+    "紫宝石加什么属性": "d",
+    "下面哪个npc不是魔教的": "d",
+    "藏宝图在哪里npc那里买": "a",
+    "从哪个npc处进入跨服战场": "a",
+    "钻石项链在哪获得": "a",
+    "在哪个npc处能够升级易容术": "b",
+    "扬州询问黑狗子能到下面哪个地点": "a",
+    "北岳殿神像后面是哪位npc": "b",
+    "兽皮鞋可以在哪位npc那里获得？": "b",
+    "在哪个npc处领取免费消费积分": "d",
+    "踏云棍可以在哪位npc那里获得？": "a",
+    "钢丝甲衣可以在哪位npc那里获得？": "d",
+    "铁手镯  可以在哪位npc那里获得？": "a",
+    "哪个npc处可以捏脸": "a",
+    "草帽可以在哪位npc那里获得？": "b",
+    "铁戒指可以在哪位npc那里获得？": "a",
+    "银项链可以在哪位npc那里获得？": "b",
+    "在哪个npc处可以更改名字": "a",
+    "长剑在哪里可以购买？": "a",
+    "宝玉帽可以在哪位npc那里获得？": "d",
+    "论剑中以下哪个不是晚月庄的技能": "d",
+    "清风寨在哪": "b",
+    "精铁棒可以在哪位npc那里获得？": "d",
+    "弯月刀可以在哪位npc那里获得？": "b",
+    "密宗伏魔是哪个门派的阵法": "c",
+    "vip每天不可以领取什么": "b",
+    "华山施戴子掉落的物品是什么": "b",
+    "钻石项链在哪获得": "a",
+    "藏宝图在哪个npc处购买": "b",
+    "宝玉鞋击杀哪个npc可以获得": "a",
+    "银手镯可以在哪位npc那里获得？": "b",
+    "莲花掌是哪个门派的技能": "a",
+    "九区服务器名称": "d",
+    "以下哪个不是在洛阳场景": "d",
+    "扬州在下面哪个地点的npc处可以获得玉佩": "c",
+    "清风寨在哪": "b",
+    "花不为在哪一章": "a",
+    "跨服天剑谷是星期几举行的": "b",
+    "白金手镯可以在哪位npc那里获得？": "a",
+    "长虹剑在哪位npc那里获得？": "a",
+    "全真的基本阵法有哪个特殊效果": "b",
+    "以下哪个门派不是隐藏门派？": "c",
+    "追风棍在哪里获得？": "b",
+    "林祖师是哪个门派的师傅": "a",
+    "丁老怪是哪个门派的终极师傅": "a",
+    "武学世家加的什么初始属性": "a",
+    "白金项链可以在哪位npc那里获得？": "b",
+    "黑水伏蛟可以在哪位npc那里获得？": "c",
+    "“翰墨书屋”场景是在哪个地图上？": "c"
+};
+function answerQuestionsFunc() {
+    if (btnList["开答题"].innerText == "开答题") {
+        console.log("准备自动答题！");
+        answerQuestionsInterval = setInterval(answerQuestions, 500);
+        btnList["开答题"].innerText = "停答题";
+    }
+    //else{
+    //  console.log("停止自动答题！");
+    // btnList["开答题"].innerText = "开答题";
+    //  clearInterval(answerQuestionsInterval);
+    // }
+}
+
+function answerQuestions() {
+    if ($('span:contains(每日武林知识问答次数已经)').text().slice(-46) == "每日武林知识问答次数已经达到限额，请明天再来。每日武林知识问答次数已经达到限额，请明天再来。") {
+        // 今天答题结束了
+        console.log("完成自动答题！");
+        btnList["开答题"].innerText = "开答题";
+        clearInterval(answerQuestionsInterval);
+    }
+    go('question');
+    setTimeout(getAndAnsQuestion, 200); // 200 ms之后提取问题，查询答案，并回答
+}
+
+function getAndAnsQuestion() {
+    // 提取问题
+    //alert($(".out").text());
+    var theQuestion = A = $(".out").text().split("题")[1].split("A")[0];
+    // 左右去掉空格
+
+    //var theQuestion = A = $(".out").text();
+    //theQuestion=theQuestion.split("题")[1];
+    //theQuestion=theQuestion.split("A.")[0];
+    theQuestion = theQuestion.replace(/^\theQuestion*/, "");
+    theQuestion = theQuestion.replace(/\theQuestion*$/, "");
+    theQuestion = theQuestion.slice(1);
+    //theQuestion = theQuestion.trim(" ","left").trim(" ","right");
+    //alert(theQuestion);
+    // 查找某个问题，如果问题有包含关系，则
+    var theAnswer = getAnswer2Question(theQuestion);
+    if (theAnswer !== "failed") {
+        eval("go('question " + theAnswer + "')");
+    }
+    //  else{
+    //alert("没有找到答案，请手动完成该题目！");
+    //      console.log("停止自动答题！");
+    //     btnList["开答题"].innerText = "开答题";
+    //      clearInterval(answerQuestionsInterval);
+    //      return;
+    //  }
+    setTimeout(printAnswerInfo, 300);
+
+}
+function printAnswerInfo() {
+    console.log("完成一道武林知识问答：");
+    console.log($('span:contains(知识问答第)').text().split("继续答题")[0]);
+}
+function getAnswer2Question(localQuestion) {
+    // 如果找到答案，返回响应答案，a,b,c或者d
+    // 如果没有找到答案，返回 "failed"
+
+    var resultsFound = [];
+    var countor = 0;
+    for (var quest in QuestAnsLibs) {
+        if (isContains(quest, localQuestion)) { //包含关系就可
+            resultsFound[countor] = quest;
+            countor = countor + 1;
+        } else if (isContains(quest, localQuestion.replace("npc", "")) || isContains(quest, localQuestion.replace("NPC", ""))) {
+
+        }
+
+    }
+    if (resultsFound.length == 1) {
+        return QuestAnsLibs[resultsFound[0]];
+    }
+    else {
+        console.log("题目 " + localQuestion + " 找不到答案或存在多个答案，请手动作答！");
+        return "failed";
+    }
+}
+
+/* // switch 案例
+    switch(localname){
+        case "王蓉":
+            setTimeout(TalkWangRong, currentTime); // 王蓉
+            break;
+        case "巫夜姬":
+            setTimeout(TalkWuYeJi, currentTime);
+            break;
+        default:
+            console.error("没有找到该奇侠：" + localname + " ！");
+    }
+*/
