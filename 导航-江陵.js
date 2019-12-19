@@ -138,7 +138,7 @@ function createButton(btnName,func){
     var myBtn = btnList[btnName];
     myBtn.innerText = btnName;
     myBtn.style.position = 'absolute';
-    myBtn.style.left = '2px';
+    myBtn.style.right = '-10px';
     myBtn.style.top = currentPos + 'px';
     currentPos = currentPos + delta;
     myBtn.style.width = buttonWidth;
