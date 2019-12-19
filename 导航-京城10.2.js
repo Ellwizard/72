@@ -1,4 +1,4 @@
-﻿// ==UserScript==
+// ==UserScript==
 // @name        导航仪
 // @namespace    http://tampermonkey.net/
 // @version      0.1
@@ -11,8 +11,8 @@
 var btnList = {};		// 按钮列表
 var buttonWidth = '30px';	// 按钮宽度
 var buttonHeight = '20px';	// 按钮高度
-var currentPos = 430;		// 当前按钮距离顶端高度，初始130
-var delta = 30;	                // 每个按钮间隔
+var currentPos = 500;		// 当前按钮距离顶端高度，初始130
+var delta = 20;	                // 每个按钮间隔
 //var corpseNPCLists = prompt("请输入要摸的目标","月老的尸体");
 
 
@@ -264,8 +264,8 @@ function MyNavigatorFunc(){
 
 
 
-var hairsfalling = {
-  '雪亭镇': {
+hairsfalling = {
+  'snow': {
     '逄义': 'jh 1',
     '金庸大师': 'jh 1,w',
     '胡斐': 'jh 1,w,w,n',
@@ -310,8 +310,7 @@ var hairsfalling = {
     '杜宽': 'jh 1,e,n,n,n,n,w',
     '杜宽宽': 'jh 1,e,n,n,n,n,w',
   },
-
-  '洛阳': {
+  'luoyang': {
     '农夫': 'jh 2,n',
     '守城士兵': 'jh 2,n,n',
     '客商': 'jh 2,n,n,e',
@@ -361,8 +360,7 @@ var hairsfalling = {
     '萧问天': 'jh 2,n,n,n,n,n,n,n,n,n,e,n,n',
     '藏剑楼首领': 'jh 2,n,n,n,n,n,n,n,n,n,e,n,n,n',
   },
-
-  '长安': {
+  'changan': {
     '胡商': 'jh 2,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
     '城门卫兵': 'jh 2,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
     '无影卫': 'jh 2,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w',
@@ -423,8 +421,7 @@ var hairsfalling = {
     '卓小妹': 'jh 2,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,e,e,e,e,n,n,n,w',
     '上官小婉': 'jh 2,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,e,e,e,e,n,n,n,e',
   },
-
-  '华山村': {
+  'huashancun': {
     '泼皮': 'jh 3',
     '松鼠': 'jh 3,n',
     '野兔': 'jh 3,n,e',
@@ -459,14 +456,13 @@ var hairsfalling = {
     '老狼': 'jh 3,s,s,s,s,s,nw,n',
     '土匪': 'jh 3,s,s,s,s,s,nw,n,n',
     '土匪头目': 'jh 3,s,s,s,s,s,nw,n,n,e',
-    '丐帮弟子': 'jh 3,s,s,s,s,s,nw,n,n,e',
+    '丐帮弟子': 'jh 3,s,s,s,s,s,nw,n,n,e,give huashancun_huashancun_fb9',
     '玉牡丹': 'jh 3,s,s,s,s,s,nw,n,n,e,get_silver',
     '刘龟仙': 'jh 3,s,s,s,s,s,nw,n,n,n,n',
     '萧独眼': 'jh 3,s,s,s,s,s,nw,n,n,n,n,n',
     '刘寨主': 'jh 3,s,s,s,s,s,nw,n,n,n,n,n,n',
   },
-
-  '华山': {
+  'huashan': {
     '孙驼子': 'jh 4',
     '吕子弦': 'jh 4,n',
     '女弟子': 'jh 4,n,n',
@@ -507,8 +503,7 @@ var hairsfalling = {
     '蒙面剑客': 'jh 4,n,n,n,n,n,n,n,n,n,n,w,event_1_30014247,s,s,s,s',
     '黑衣人': 'jh 4,n,n,n,n,n,n,n,n,n,n,w,event_1_30014247,s,s,s,s,s,e',
   },
-
-  '扬州': {
+  'yangzhou': {
     '官兵': 'jh 5',
     '花店伙计': 'jh 5,n,w,w,n',
     '大黑马': 'jh 5,n,n',
@@ -570,8 +565,7 @@ var hairsfalling = {
     '楚雄霸': 'jh 5,n,n,n,n,n,w,w,n,n,n,get_silver',
     '朱先生': 'jh 5,n,n,n,n,n,e,n,n,n',
   },
-
-  '丐帮': {
+  'gaibang': {
     '左全': 'jh 6',
     '裘万家': 'jh 6',
     '梁长老': 'jh 6,event_1_98623439',
@@ -584,12 +578,12 @@ var hairsfalling = {
     '马俱为': 'jh 6,event_1_98623439,ne,n,ne,ne,ne',
     '余洪兴': 'jh 6,event_1_98623439,ne,n,ne,ne,ne,event_1_97428251',
   },
-
-  '乔阴县': {
+  'choyin': {
     '守城官兵': 'jh 7',
     '卖饼大叔': 'jh 7,s',
     '陆得财': 'jh 7,s',
     '卖包子的': 'jh 7,s,s,s',
+    '怪人': 'jh 7,s,s,s,s,event_1_65599392,w',
     '武官': 'jh 7,s,s,s,s,s,s,e',
     '汤掌柜': 'jh 7,s,s,s,s,s,s,e',
     '家丁': 'jh 7,s,s,s,s,s,s,e,n',
@@ -602,8 +596,28 @@ var hairsfalling = {
     '妇人': 'jh 7,s,s,s,s,s,s,s,sw,w,n',
     '骆云舟': 'jh 7,s,s,s,s,s,s,s,s,e,n,e,s,e',
   },
-
-  '峨眉山': {
+  'emei': {
+    '参谋官': 'daily go 13',
+    '王坚': 'daily go 13',
+    '军械官': 'daily go 13,w,n',
+    '乞利': 'daily go 13,w,n',
+    '胡族军士': 'daily go 13,w,n',
+    '守城军士': 'daily go 13,w,n',
+    '神箭手': 'daily go 13,w,s',
+    '黑羽敌将': 'daily go 13,w,s',
+    '黑羽刺客': 'daily go 13,w,s',
+    '运输兵': 'daily go 13,w,w',
+    '粮库主薄': 'daily go 13,w,w,n',
+    '斥候': 'daily go 13,w,w,s',
+    '阿保甲': 'daily go 13,w,w,s',
+    '先锋军士': 'jh 8,ne,e,e',
+    '先锋敌将': 'jh 8,ne,e,e',
+    '传令兵': 'jh 8,ne,e,e,s',
+    '耶律霸': 'jh 8,ne,e,e,e',
+    '赤豹死士': 'jh 8,ne,e,e,n',
+    '黑鹰死士': 'jh 8,ne,e,e,n,n,n',
+    '金狼死士': 'jh 8,ne,e,e,n,n,n,n,n',
+    '金狼大将': 'jh 8,ne,e,e,n,n,n,n,n',
     '白猿': 'jh 8,w,nw,n,n,n,n,w',
     '文虚师太': 'jh 8,w,nw,n,n,n,n,e,e,n,n,e',
     '看山弟子': 'jh 8,w,nw,n,n,n,n,e,e,n,n,e',
@@ -627,8 +641,7 @@ var hairsfalling = {
     '灭绝掌门': 'jh 8,w,nw,n,n,n,n,e,e,n,n,e,em1,n,em2,n,n,n,w,n,n,n,n,n,n,n,n,n,ne,ne,n',
     '方碧翠': 'jh 8,w,nw,n,n,n,n,e,e,n,n,e,em1,n,em2,n,n,n,w,n,n,n,n,n,n,n,n,n,ne,ne,n',
   },
-
-  '恒山': {
+  'henshan': {
     '山盗': 'jh 9',
     '秦卷帘': 'jh 9,n',
     '九戒大师': 'jh 9,n,w',
@@ -655,8 +668,7 @@ var hairsfalling = {
     '魔教杀手': 'jh 9,n,n,n,n,n,n,n,n,n,w,n,e,henshan_qinqitai23_op1',
     '魔教头目': 'jh 9,n,n,n,n,n,n,n,n,n,w,n,n,n,n',
   },
-
-  '武当山': {
+  'wudang': {
     '土匪': 'jh 10',
     '王五': 'jh 10,w',
     '剑童': 'jh 10,w,n,search',
@@ -676,8 +688,7 @@ var hairsfalling = {
     '小蜜蜂': 'jh 10,w,n,n,w,w,w,n,n,n,n,e,e,e,e,s,e,s,e,n',
     '猴子': 'jh 10,w,n,n,w,w,w,n,n,n,n,e,e,e,e,s,e,s,e,s',
   },
-
-  '晚月庄': {
+  'latemoon': {
     '蝴蝶': 'jh 11,e,e,s',
     '彩衣少女': 'jh 11,e,e,s,sw',
     '蓝止萍': 'jh 11,e,e,s,sw,se,w',
@@ -697,8 +708,7 @@ var hairsfalling = {
     '金仪彤': 'jh 11,e,e,s,sw,se,w,w,s,s,s,e,s,s,w,s,e',
     '凤凰': 'jh 11,e,e,s,sw,se,w,w,s,s,s,e,s,s,w,s,e,e',
   },
-
-  '水烟阁': {
+  'waterfog': {
     '天邪虎': 'jh 12,n,n,n',
     '董老头': 'jh 12,n,n,n,e,n,n',
     '水烟阁武士': 'jh 12,n,n,n',
@@ -708,8 +718,7 @@ var hairsfalling = {
     '水烟阁司事': 'jh 12,n,n,n,w,n,nw,e',
     '於兰天武': 'jh 12,n,n,n,w,n,nw,e,n',
   },
-
-  '少林寺': {
+  'shaolin': {
     '山猪': 'jh 13',
     '虚通': 'jh 13',
     '虚明': 'jh 13,n',
@@ -776,8 +785,8 @@ var hairsfalling = {
     '渡云': 'jh 13,e,s,s,w,w,w',
     '渡风': 'jh 13,e,s,s,w,w,w',
   },
-
-  '唐门': {
+  'tangmen': {
+    '张之岳': 'jh 14,e,event_1_10831808,n',
     '唐门弟子': 'jh 14,w,n',
     '黄色唐门弟子': 'jh 14,w,n,n,n,e,e,n',
     '唐风': 'jh 14,w,n,n',
@@ -791,10 +800,10 @@ var hairsfalling = {
     '唐健': 'jh 14,w,n,n,n,e,e,n',
     '唐情': 'jh 14,w,n,n,n,e,e,n,n',
     '唐刚': 'jh 14,w,n,n,n,e,e,n,n',
+    '默剑客': 'jh 14,sw,s,e,s,s,sw,sw,w,w,s,s,e,e,e',
     '欧阳敏': 'jh 14,w,n,n,n,e,e,n,n,ask tangmen_tangmei,ask tangmen_tangmei,e,event_1_8413183,event_1_39383240,e,s,e,n,w,n,n',
   },
-
-  '青城山': {
+  'qingcheng': {
     '海公公': 'jh 15',
     '游方郎中': 'jh 15,n',
     '仵作': 'jh 15,s,ne',
@@ -829,8 +838,7 @@ var hairsfalling = {
     '木道神': 'jh 15,s,s,s,s,s,s,w',
     '背剑老人': 'jh 15,s,s,s,s,s,s,s,s,s,e,s',
   },
-
-  '逍遥林': {
+  'xiaoyao': {
     '天山姥姥': 'jh 16,s,s,s,s,e,n,e,event_1_5221690,s,w,event_1_57688376,n,n,e,n,event_1_88625473,event_1_82116250,event_1_90680562,event_1_38586637',
     '吴统领': 'jh 16,s,s,s,s,e,e,s,w',
     '逍遥祖师': 'jh 16,s,s,s,s,e,n,e,event_1_5221690,s,w,event_1_57688376,n,n',
@@ -845,8 +853,7 @@ var hairsfalling = {
     '苟书痴': 'jh 16,s,s,s,s,e,e,s,w,w,w',
     '李唱戏': 'jh 16,s,s,s,s,e,e,s,w,w,w,w,s',
   },
-
-  '开封': {
+  'kaifeng': {
     '骆驼': 'jh 17',
     '毒蛇': 'jh 17,event_1_97081006',
     '野猪': 'jh 17,event_1_97081006,s',
@@ -906,8 +913,7 @@ var hairsfalling = {
     '新娘': 'jh 17,sw,nw',
     '耶律夷烈': 'jh 17,sw,s,sw,nw,ne',
   },
-
-  '明教': {
+  'mingjiao': {
     '村民': 'jh 18',
     '沧桑老人': 'jh 18,e',
     '村妇': 'jh 18,w',
@@ -939,8 +945,7 @@ var hairsfalling = {
     '范右使': 'jh 18,n,nw,n,n,n,n,n,ne,n,n,n,n,n,n,n,n,n,n,n',
     '小昭': 'jh 18,n,nw,n,n,n,n,n,ne,n,n,n,n,n,n,n,n,n,n,n,n',
   },
-
-  '全真教': {
+  'quanzhen': {
     '终南山游客': 'jh 19,s,s,s,sw,s,e',
     '野马': 'jh 19,s',
     '男童': 'jh 19,s,s,s,sw,s,e,n,nw',
@@ -973,8 +978,7 @@ var hairsfalling = {
     '老人': 'jh 19,s,s,s,sw,s,e,n,nw,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
     '蜜蜂': 'jh 19,s,s,s,sw,s,e,n,nw,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w,n',
   },
-
-  '古墓': {
+  'gumu': {
     '天蛾': 'jh 20,w,w,s,e,s,s,s',
     '食虫虻': 'jh 20,w,w,s,e,s,s,s,s,s,sw',
     '白色玉蜂': 'jh 20,w,w,s,e,s,s,s,s,s,sw,sw,s',
@@ -984,8 +988,7 @@ var hairsfalling = {
     '林祖师': 'jh 20,w,w,s,e,s,s,s,s,s,sw,sw,s,s,s,s,e,e,event_1_3723773,se,n,e,s,e,s,e',
     '孙婆婆': 'jh 20,w,w,s,e,s,s,s,s,s,sw,sw,s,s,s,s,s,s,s,e,e,e,e,s,e',
   },
-
-  '白驼山': {
+  'baituo': {
     '玉门守将': 'jh 21,n,n,n,n,e',
     '青衣盾卫': 'jh 21,n,n,n,n,w',
     '飞羽神箭': 'jh 21,n,n,n,n,w,w',
@@ -1042,8 +1045,7 @@ var hairsfalling = {
     '竹叶青蛇': 'jh 21,nw,w,w,nw,n,n,n,n,n,n,n,n,ne,e',
     '金环蛇': 'jh 21,nw,w,w,nw,n,n,n,n,n,n,n,n,ne,e',
   },
-
-  '嵩山': {
+  'songshan': {
     '脚夫': 'jh 22',
     '秋半仙': 'jh 22,n',
     '风骚少妇': 'jh 22,n',
@@ -1082,8 +1084,7 @@ var hairsfalling = {
     '卢鸿一': 'jh 22,n,n,n,n,e',
     '英元鹤': 'jh 22,n,n,n,n,e,n',
   },
-
-  '寒梅庄': {
+  'meizhuang': {
     '柳府家丁': 'jh 23',
     '柳玥': 'jh 23,n,n',
     '老者': 'jh 23,n,n',
@@ -1112,8 +1113,7 @@ var hairsfalling = {
     '红衣僧人': 'jh 23,n,n,n,n,n,n,n,n,n,n,event_1_8188693,n,n,n,n',
     '黄衫婆婆': 'jh 23,n,n,n,n,n,n,n,n,n,n,event_1_8188693,n,n,n,e,n',
   },
-
-  '泰山': {
+  'taishan': {
     '挑夫': 'jh 24',
     '镖师': 'jh 24,se',
     '黄衣刀客': 'jh 24,n',
@@ -1172,8 +1172,7 @@ var hairsfalling = {
     '玉师叔': 'jh 24,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w',
     '泰山掌门': 'jh 24,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
   },
-
-  '大旗门': {
+  'tieflag': {
     '宾奴': 'jh 25,w',
     '小贩': 'jh 11,e,e,s,n,nw,w,nw,e',
     '酒肉和尚': 'jh 11,e,e,s,n,nw,w,nw,e,e,e,n,w',
@@ -1192,8 +1191,7 @@ var hairsfalling = {
     '蓝衣少女': 'jh 25,e,e,e,e,s,yell,s,e,event_1_81629028,s,e,n,w,w,s,w',
     '橙衣少女': 'jh 25,e,e,e,e,s,yell,s,e,event_1_81629028,s,e,n,w,w,s,w',
   },
-
-  '大昭寺': {
+  'guanwai': {
     '小绵羊': 'jh 26,w',
     '草原狼': 'jh 26,w',
     '大绵羊': 'jh 26,w,w',
@@ -1229,8 +1227,7 @@ var hairsfalling = {
     '灵空': 'jh 26,w,w,w,w,w,w,w,w,w,w',
     '葛伦': 'jh 26,w,w,w,w,w,w,w,w,w,w,ask lama_master,event_1_91837538',
   },
-
-  '魔教': {
+  'heimuya': {
     '店小二': 'jh 27,ne,w',
     '客店老板': 'jh 27,ne,w',
     '外面船夫': 'jh 27,ne,nw,w,nw,w,w',
@@ -1270,8 +1267,7 @@ var hairsfalling = {
     '莲亭': 'jh 27,ne,nw,w,nw,w,w,kill heimuya_shaogong,yell,w,nw,n,n,n,n,n,n,n,w,n,n,n,n,n,n,n,n,n,n,yell,n,n,n,n,n,n,n,n,n,n,n,n',
     '东方教主': 'jh 27,ne,nw,w,nw,w,w,kill heimuya_shaogong,yell,w,nw,n,n,n,n,n,n,n,w,n,n,n,n,n,n,n,n,n,n,yell,n,n,n,n,n,n,n,n,n,n,n,n,n,event_1_57107759,e,e,n,w',
   },
-
-  '星宿海': {
+  'xingxiu': {
     '狮吼师兄': 'jh 28,n,n',
     '星宿派鼓手': 'jh 28,n,n',
     '星宿派号手': 'jh 28,n,n',
@@ -1292,7 +1288,7 @@ var hairsfalling = {
     '出尘师弟': 'jh 28,n,w,n,n',
     '波斯商人': 'jh 28',
     '梅师姐': 'jh 28,sw',
-    '天梵密使': 'jh 28,sw',
+    '天梵密使': 'jh 28,nw,w,buy /map/xingxiu/npc/obj/fire from xingxiu_maimaiti,e,se,sw,event_1_83637364',
     '铁尸': 'jh 28,sw,nw,sw,sw,nw,nw,se,sw',
     '伊犁': 'jh 28,nw',
     '矮胖妇女': 'jh 28,nw',
@@ -1305,8 +1301,7 @@ var hairsfalling = {
     '伊犁马': 'jh 28,nw,nw',
     '阿凡提': 'jh 28,nw,e,e',
   },
-
-  '茅山': {
+  'taoguan': {
     '野猪': 'jh 29,n',
     '张天师': 'jh 29,n,n,n,n,event_1_60035830,event_1_65661209,n',
     '万年火龟': 'jh 29,n,n,n,n,event_1_60035830,event_1_65661209,n',
@@ -1317,8 +1312,7 @@ var hairsfalling = {
     '护山使者': 'jh 29,n,n,n,n,event_1_60035830,event_1_65661209,n,n,n,n,n,n,n,event_1_98579273,w',
     '林忌': 'jh 29,n,n,n,n,event_1_60035830,event_1_65661209,n,n,n,n,n,n,n,event_1_98579273,n',
   },
-
-  '桃花岛': {
+  'taohua': {
     '陆废人': 'jh 30',
     '神雕大侠': 'jh 30,n,n,ne',
     '老渔夫': 'jh 30,n,n,n,n,n,n',
@@ -1334,8 +1328,7 @@ var hairsfalling = {
     '傻姑': 'jh 30,yell,w,n',
     '戚总兵': 'jh 30,yell,w,n,e',
   },
-
-  '铁血山庄': {
+  'resort': {
     '樵夫': 'jh 31,n,n,n',
     '红色樵夫': 'jh 31,n,n,n,w',
     '老张': 'jh 31,n,n,n,w,w,w,w,n',
@@ -1372,8 +1365,7 @@ var hairsfalling = {
     '铁血打坐': 'jh 31,n,se,e,se,s,s,sw,se,se,e,nw,e,ne,n,ne,n,n,n,n,n,n,n,n,n,w,w',
     '烽火戏诸侯': 'jh 31,n,se,e,se,s,s,sw,se,se,e,nw,e,ne,n,ne,n,n,n,n,n,n,n,n,n,e,e',
   },
-
-  '慕容山庄': {
+  'murong': {
     '家丁': 'jh 32,n,n',
     '邓家臣': 'jh 32,n,n,se',
     '朱姑娘': 'jh 32,n,n,se,e,s,s',
@@ -1395,13 +1387,12 @@ var hairsfalling = {
     '王夫人': 'jh 32,n,n,se,n,n,n,n,w,w,w,n,w,n,e,n,e,n,n',
     '小茗': 'jh 32,n,n,se,n,n,n,n,w,w,w,n,w,n,e,n,e,n,n',
   },
-
-  '大理': {
+  'dali': {
     '摆夷女子': 'jh 33,sw,sw',
     '士兵': 'jh 33,sw,sw,s,s',
     '武将': 'jh 33,sw,sw,s,s',
     '乌夷商贩': 'jh 33,sw,sw,s,s,s,nw,n',
-    '台夷商贩1': 'jh 33,sw,sw,s,s,s,nw,n',
+    '台夷商贩': 'jh 33,sw,sw,s,s,s,nw,n',
     '土匪': 'jh 33,sw,sw,s,s,s,nw,n,ne,n,n,ne',
     '猎人': 'jh 33,sw,sw,s,s,s,nw,n,nw,n',
     '皮货商': 'jh 33,sw,sw,s,s,s,nw,n,nw,n',
@@ -1479,6 +1470,7 @@ var hairsfalling = {
     '段公子': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne',
     '竹叶青蛇': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,sw',
     '台夷商贩2': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e',
+    '老祭司': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,ne,e,n',
     '采桑女': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,s',
     '采笋人2': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,sw,s',
     '砍竹人': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,sw,s,s',
@@ -1486,8 +1478,7 @@ var hairsfalling = {
     '纺纱女': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,sw,s,s,e,n,e,n',
     '老祭祀': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,ne,e,n',
   },
-
-  '断剑山庄': {
+  'duanjian': {
     '黑袍老人': 'jh 34,ne,e,e,e,e,e,n,e,n',
     '白袍老人': 'jh 34,ne,e,e,e,e,e,n,e,n',
     '和尚': 'jh 34,ne,e,e,e,e,e,n,n,n,n,n,w',
@@ -1505,15 +1496,14 @@ var hairsfalling = {
     '雾中人': 'jh 34,ne,e,e,e,e,e,n,n,n,w,w,w,n,n,yell,n,n,n,n,n,n,n',
     '独孤不败': 'jh 34,ne,e,e,e,e,e,n,n,n,w,w,w,n,n,yell,n,n,n,n,n,n,e,e,event_1_10251226',
   },
-
-  '冰火岛': {
+  'binghuo': {
     '火麒麟王': 'jh 35,nw,nw,nw,n,ne,nw',
     '火麒麟': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,n,nw',
     '麒麟幼崽': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,n,nw',
     '游方道士': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e',
     '梅花鹿': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e',
-    '雪狼': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,s,se,w,sw',
-    '白熊': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,s,se,w,sw',
+    '雪狼': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,s,se,w,nw',
+    '白熊': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,s,se,w,nw,s,s,s,s,s,s',
     '殷夫人': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,s,se,w,nw,s,s,s,s,s,s,e',
     '张五侠': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,s,se,w,nw,s,s,s,s,s,s,w,w,n,e,n,w,w,s,s',
     '赵郡主': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,n,n',
@@ -1521,8 +1511,7 @@ var hairsfalling = {
     '黑衣杀手': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,n,n,w,n,w,nw',
     '元真和尚': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,n,n,w,n,w,nw,sw,se,s,sw,sw,se,se',
   },
-
-  '侠客岛': {
+  'xiakedao': {
     '黄衣船夫': 'jh 36,yell',
     '侠客岛厮仆': 'jh 36,yell',
     '张三': 'jh 36,yell,e',
@@ -1560,8 +1549,7 @@ var hairsfalling = {
     '青年海盗': 'jh 36,yell,e,se,e,e,s,s,s,e,ne,e,e,n',
     '老海盗': 'jh 36,yell,e,se,e,e,s,s,s,e,ne,e,e,n,e,n',
   },
-
-  '绝情谷': {
+  'jueqinggu': {
     '土匪': 'jh 37,n',
     '村民': 'jh 37,n,e,e',
     '野兔': 'jh 37,n,e,e,nw,nw,w,n,nw,n,n',
@@ -1585,8 +1573,7 @@ var hairsfalling = {
     '囚犯': 'jh 37,n,e,e,nw,nw,w,n,e,n,e,e,e,ne,ne,ne,se,s,s,s',
     '地牢看守': 'jh 37,n,e,e,nw,nw,w,n,e,n,e,e,e,ne,ne,ne,se,s,s,s,w',
   },
-
-  '碧海山庄': {
+  'bihaishanzhuang': {
     '法明大师': 'jh 38,n,n,w',
     '僧人': 'jh 38,n,n,w',
     '隐士': 'jh 38,n,n,n,n,w',
@@ -1604,8 +1591,7 @@ var hairsfalling = {
     '王子轩': 'jh 38,n,n,n,n,n,n,n,n,n,n,n,e,e,se,se,e,n,n,n',
     '王昕': 'jh 38,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
   },
-
-  '天山': {
+  'tianshan': {
     '周教头': 'jh 39,ne',
     '辛怪人': 'jh 39,ne,e,n,ne',
     '穆小哥': 'jh 39,ne,e,n,ne,ne,n',
@@ -1639,7 +1625,7 @@ var hairsfalling = {
     '杨英雄': 'jh 39,ne,e,n,ne,ne,n,ne,nw,ne,nw,event_1_17801939,ts2,ne,ne,nw,nw',
     '胡大侠': 'jh 39,ne,e,n,ne,ne,n,ne,nw,ne,nw,event_1_17801939,ts2,ne,ne,nw,nw,nw,w',
   },
-  '苗疆': {
+  'miaojiang': {
     '温青': 'jh 40,s,s,s,s',
     '苗村长': 'jh 40,s,s,s,s,w,w,w',
     '苗家小娃': 'jh 40,s,s,s,s,w,w,w,n',
@@ -1669,7 +1655,7 @@ var hairsfalling = {
     '五毒护法': 'jh 40,s,s,s,s,e,s,se,sw,s,s,s,e,e,sw,se,sw,se,event_1_8004914,se,s,s,e,n,n,e,s,e,ne,s,sw,e,e,ne,ne,nw,ne,ne,n,n,n,n,nw,ne,ne,nw,ne,e',
     '何教主': 'jh 40,s,s,s,s,e,s,se,sw,s,s,s,e,e,sw,se,sw,se,event_1_8004914,se,s,s,e,n,n,e,s,e,ne,s,sw,e,e,ne,ne,nw,ne,ne,n,n,n,n,nw,ne,ne,nw,ne,e',
   },
-  '白帝城': {
+  'baidicheng': {
     '白衣弟子': 'jh 41,se,e,e',
     '白衣少年': 'jh 41,se,e,e,se,se,se,se',
     '李峰': 'jh 41,se,e,e,se,se,se,se,s,s',
@@ -1690,7 +1676,7 @@ var hairsfalling = {
     '白衣士兵': 'jh 41,se,e,e,nw,nw,n,n,w,w',
     '文将军': 'jh 41,se,e,e,nw,nw,n,n,w,w,n,n,e',
   },
-  '墨家机关城': {
+  'mojiajiguancheng': {
     '索卢参': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n',
     '墨家弟子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n',
     '高孙子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n',
@@ -1704,19 +1690,19 @@ var hairsfalling = {
     '大博士': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,w',
     '治徒娱': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,n,w',
     '黑衣人': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213',
-    '徐夫子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,s,e,s,ne,s,sw,nw,s,se,s,sw,s,s|se,e',
-    '屈将子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,s,e,s,ne,s,sw,nw,s,se,s,e,e|se,e,n,n,ne,e,e',
-    '偷剑贼': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,s,e,s,ne,s,sw,nw,s,se,s,e,e,e|se,e,n,n,ne,e,e,e',
-    '大匠师': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,w,w|se,e,n,n,ne,n,nw,e,ne,n,n,e,s,e,n,nw,e,nw,w,w',
-    '随巢子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,e|se,e,n,n,ne,n,nw,e,ne,n,n,e,s,e,n,nw,e,nw,e',
-    '高何': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,sw|se,e,n,n,ne,n,nw,e,ne,n,n,e,s,e,n,nw,e,nw,sw',
-    '随师弟': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,sw,sw|se,e,n,n,ne,n,nw,e,ne,n,n,e,s,e,n,nw,e,nw,sw,sw',
-    '曹公子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,n,e|se,e,n,n,ne,n,nw,e,ne,n,n,e,s,e,n,nw,e,nw,n,e',
-    '鲁班': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,n,w|se,e,n,n,ne,n,nw,e,ne,n,n,e,s,e,n,nw,e,nw,n,w',
-    '耕柱子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,n,nw|se,e,n,n,ne,n,nw,e,ne,n,n,e,s,e,n,nw,e,nw,n,nw',
-    '墨子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,n,ne|se,e,n,n,ne,n,nw,e,ne,n,n,e,s,e,n,nw,e,nw,n,ne',
+    '徐夫子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,s,e,s,ne,s,sw,nw,s,se,s,sw,s,s',
+    '屈将子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,s,e,s,ne,s,sw,nw,s,se,s,e,e',
+    '偷剑贼': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,s,e,s,ne,s,sw,nw,s,se,s,e,e,e',
+    '大匠师': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,w,w',
+    '随巢子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,e',
+    '高何': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,sw',
+    '随师弟': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,sw,sw',
+    '曹公子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,n,e',
+    '鲁班': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,n,w',
+    '耕柱子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,n,nw',
+    '墨子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,n,ne',
   },
-  '掩月城': {
+  'yanyuecheng': {
     '执定长老': 'jh 43',
     '佩剑少女': 'jh 43',
     '野狗': 'jh 43',
@@ -1828,73 +1814,39 @@ var hairsfalling = {
     '风花侍女': 'jh 43,sw,sw,sw,s,se,se,se,e,s,sw,se,ne,se,s,e,e,e,ne,se,s,s,se',
     '天玑童子': 'jh 43,sw,sw,sw,s,se,se,se,e,s,sw,se,ne,se,s,e,e,e,ne,se,s,s,se,e',
   },
- '海云镇': {
-    '海云马夫': 'jh 44',
+  'haiyunge': {
+    '马夫': 'jh 44',
     '野狗': 'jh 44,n',
     '老镇长': 'jh 44,n,n',
     '烟袋老头': 'jh 44,n,n,w',
     '青年女子': 'jh 44,n,n,w',
     '背枪客': 'jh 44,n,n,n',
     '小孩': 'jh 44,n,n,n,n',
+    '游客': 'jh 44,n,n,n,n,e,ne',
     '野兔': 'jh 44,n,n,n,n,w,w',
-    '海云游客': 'jh 44,n,n,n,n,e,ne',
-    '青年剑客': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,w,w,w',
-    '九纹龙': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,w,w,w,w,w,w',
-    '蟒蛇': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,w,w,w,w,w,w,n,n,n,n',
-    '暗哨': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,w,w,w,w,w,w,n,n,n,n,n',
+    '青年剑客': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e',
     '石邪王': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,w,w,w,w,w,w,n,n,n,n,n,e,e,s,s',
-    '穿山豹': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,n,w,n,n,n,n,w,n,e,e,n',
-    '地杀': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,n,w,n,n,n,n,w,n,e,e,n,n,n,n',
-    '天杀': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,n,w,n,n,n,n,w,n,e,e,n,n,n,n,n,n',
-    '海东狮': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,n,w,n,n,n,n,w,n,e,e,n,n,n,n,n,n,n',
-    '海云长老': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,n,w,n,n,n,n,w,n,e,e,n,n,n,n,n,n,n',
-    '红纱舞女': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,n,w,n,n,n,n,w,n,e,e,n,n,n,n,n,n,n',
-    '青纱舞女': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,n,w,n,n,n,n,w,n,e,e,n,n,n,n,n,n,n',
-    '紫纱舞女': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,n,w,n,n,n,n,w,n,e,e,n,n,n,n,n,n,n',
-    '白纱舞女': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,n,w,n,n,n,n,w,n,e,e,n,n,n,n,n,n,n',
-    '六如公子': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,n,w,n,n,n,n,w,n,w,w,n,n,n',
-    '萧秋水': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,n,e,n,n,n,n,e,n,e,e,n,n',
     '啸林虎': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n',
+    '暗哨': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
+    '天杀': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w,w,w,w,w,w',
     '陆大刀': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,e,e',
     '水剑侠': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,e,e,ne',
     '乘风客': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,e,e,ne,ne',
     '血刀妖僧': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,e,e,ne,ne,e,se,se,se',
     '花铁枪': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,e,e,ne,ne,e,se,se,se,ne,ne',
-    '狄小侠': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,e,e,ne,ne,e,se,se,se,ne,ne,n,n,n,n,nw',
     '水姑娘': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,e,e,ne,ne,e,se,se,se,ne,ne,n,n,n,n,nw',
-    '虬髯犯人': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,n,w,n,n,n,n,w,n,e,e,n,n,n,n,n,n,n,n,nw,w,w,nw',
+    '狄小侠': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,e,e,ne,ne,e,se,se,se,ne,ne,n,n,n,n,nw',
+    '地杀': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w,w,w,w,w,w,s,s',
+    '青纱舞女': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w,w,w,w,w,w,n',
+    '红纱舞女': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w,w,w,w,w,w,n',
+    '紫纱舞女': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w,w,w,w,w,w,n',
+    '白纱舞女': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w,w,w,w,w,w,n',
+    '海东狮': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w,w,w,w,w,w,n',
+    '绝杀': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w,w,w,w,w,w,n,n',
+    '海云长老': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w,w,w,w,w,w,n',
+    '虬髯犯人': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w,w,w,w,w,w,n,n,nw,w,w,nw',
   },
-  '幽冥山庄': {
-    '野狗': 'jh 45,ne',
-    '毒蛇': 'jh 45,ne,ne,n,n',
-    '樵夫': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n',
-    '鲍龙': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,e',
-    '过之梗': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne',
-    '翁四': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne,ne,n',
-    '屈奔雷': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne,ne,n,n,e',
-    '伍湘云': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne,ne,n,n,e,e',
-    '殷乘风': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne,ne,n,n,e,e',
-    '辛仇': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne,ne,n,n,n',
-    '辛杀': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne,ne,n,n,n',
-    '蔡玉丹': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne,ne,n,n,n,nw,nw',
-    '辛十三娘': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne,ne,n,n,n,nw,nw,n',
-    '暗杀': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne,ne,n,n,n,nw,nw,n',
-    '巴司空': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne,ne,n,n,n,nw,nw,n,w',
-    '追命': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne,ne,n,n,n,nw,nw,n,e,e',
-    '艳无忧': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne,ne,n,n,n,nw,nw,n,e,e,e',
-    '摄魂鬼杀': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne,ne,n,n,n,nw,nw,n,e,e,e',
-    '幽冥山庄': 'jh 45,ne,ne,n,n,ne,ne,e,ne,n,n,n,n,n,ne,ne,n,n,n,nw,nw,n,e,e,e,e,e',
-    '柳激烟': 'jh 45,ne,ne,n,n,ne,ne,nw,nw,nw,n,n,n',
-    '龟敬渊': 'jh 45,ne,ne,n,n,ne,ne,nw,nw,nw,n,n,n,n',
-    '凌玉象': 'jh 45,ne,ne,n,n,ne,ne,nw,nw,nw,n,n,n,n',
-    '沈错骨': 'jh 45,ne,ne,n,n,ne,ne,nw,nw,nw,n,n,n,n',
-    '慕容水云': 'jh 45,ne,ne,n,n,ne,ne,nw,nw,nw,n,n,n,n',
-    '金盛煌': 'jh 45,ne,ne,n,n,ne,ne,nw,nw,nw,n,n,n,n,w',
-    '冷血': 'jh 45,ne,ne,n,n,ne,ne,nw,nw,nw,n,n,n,n,e',
-    '庄之洞': 'jh 45,ne,ne,n,n,ne,ne,nw,nw,nw,n,n,n,n,n',
-    '高山青': 'jh 45,ne,ne,n,n,ne,ne,nw,nw,nw,n,n,n,n,n',
-  },
-   '花街': {
+  'huajie': {
     '花札敖': 'jh 46,e',
     '尊信门杀手': 'jh 46,e',
     '山赤岳': 'jh 46,e,e',
@@ -1905,114 +1857,221 @@ var hairsfalling = {
     '甄素善': 'jh 46,e,e,e,e,e,e,e',
     '谈应手': 'jh 46,e,e,e,e,e,e,e,e',
     '戚长征': 'jh 46,e,e,e,e,e,e,e,e,e',
-    '怒蛟高手': 'jh 46,e,e,e,e,e,e,e,e,e',
     '韩柏': 'jh 46,e,e,e,e,e,e,e,e,e,e',
     '烈震北': 'jh 46,e,e,e,e,e,e,e,e,e,e,e',
     '赤尊信': 'jh 46,e,e,e,e,e,e,e,e,e,e,e,e',
     '乾罗': 'jh 46,e,e,e,e,e,e,e,e,e,e,e,e,e',
     '厉若海': 'jh 46,e,e,e,e,e,e,e,e,e,e,e,e,e,e',
     '浪翻云': 'jh 46,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e',
+    '怒蛟高手': 'jh 46,e,e,e,e,e,e,e,e,e,e,e',
     '方夜羽': 'jh 46,e,e,e,e,e,e,e,e,n',
     '封寒': 'jh 46,e,e,e,e,e,e,e,e,n,n,n,e,e',
     '盈散花': 'jh 46,e,e,e,e,e,e,e,e,n,n,n,e,e,n',
     '寒碧翠': 'jh 46,e,e,e,e,e,e,e,e,n,n,n,e,e,e',
     '薄昭如': 'jh 46,e,e,e,e,e,e,e,e,n,n,n,e,e,s',
-    '攻击': 'jh 46,e,e,e,e,e,e,e,e,n,n,n,e,e,n',
-    '血': 'jh 46,e,e,e,e,e,e,e,e,n,n,n,e,e,e',
-    '内': 'jh 46,e,e,e,e,e,e,e,e,n,n,n,e,e,s',
   },
-   '西凉城': {
-    '响尾蛇西凉': 'jh 47,ne',
+  'xiliangcheng': {
+    '响尾蛇': 'jh 47,ne',
     '官差': 'jh 47,ne,n,n,n,nw',
-    '门外官兵': 'jh 47,ne,n,n,n,nw',
+    '官兵': 'jh 47,ne,n,n,n,nw',
     '驿卒': 'jh 47,ne,n,n,n,ne,ne,e',
-    '官兵': 'jh 47,ne,n,n,n,ne,ne,e,e,e',
     '苦力': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne',
-    '樵夫': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n',
-    '疯狗': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne',
-    '野狗': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n',
-    '伍定远': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,w,w',
-    '捕快': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,w,w',
-    '农民': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n',
-    '马夫': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n,n',
-    '黑衣镖师': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n,n,nw,nw,nw',
-    '齐润翔': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n,n,nw,nw,nw',
-    '镖师': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n,n,nw,nw,nw,nw',
-    '管家': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n,n,nw,nw,ne,n,ne',
-    '李铁杉': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n,n,nw,nw,ne,n,ne,n',
-    '铁剑': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n,n,nw,nw,ne,n,ne,n',
-    '止观大师': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,e,e,n,n,n,n,n',
-    '慧清': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,e,e,n,n,n,n,n',
-    '佛灯': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,e,e,n,n,n,n,n,n,ne,n,get xiliangcheng_fodeng',
     '屠凌心': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,se',
-    '昆仑杀手': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,se',
     '金凌霜': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,se,s',
     '醉汉': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,se,s',
     '钱凌异': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,se,s,s',
     '齐伯川': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,se,s,s,s',
+    '樵夫': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n',
+    '疯狗': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne',
+    '慧清': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,e,e,n,n,n,n,n',
+    '止观大师': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,e,e,n,n,n,n,n',
+    '止观分身': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,e,e,n,n,n,n,n',
+    '野狗': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n',
+    '捕快': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,w,w',
+    '农民': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n',
+    '马夫': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n',
+    '管家': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n,nw,nw,ne,n,ne',
+    '李铁杉': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n,nw,nw,ne,n,ne,n',
+    '齐润翔': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n,n,nw,nw,nw',
+    '黑衣镖师': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n,n,nw,nw,nw',
+    '镖师': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n,n,nw,nw,nw,nw',
   },
-    '高昌迷宫': {
-    '糟老头子': 'jh 48,e,ne',
-    '阿曼': 'jh 48,e,ne',
+  'gaochangmigong': {
     '苏普': 'jh 48,e,ne',
-    '太行刀手': 'jh 48,e,ne',
+    '阿曼': 'jh 48,e,ne',
+    '糟老头子': 'jh 48,e,ne',
     '陈达海': 'jh 48,e,ne',
+    '太行刀手': 'jh 48,e,ne',
     '哈卜拉姆': 'jh 48,e,ne,ne',
     '天铃鸟': 'jh 48,e,ne,ne,s',
     '牧民': 'jh 48,e,ne,ne,se',
     '霍元龙': 'jh 48,e,se',
-    '恶狼': 'jh 48,e,se,se,e,ne,se',
-    '响尾蛇高昌': 'jh 48,e,se,se,e,ne,se,e',
-    '铁门': 'jh 48,e,se,se,e,ne,se,e,e,e,ne,ne',
-    '骆驼高昌': 'jh 48,e,se,se,e,ne,se,e,e,e,ne,se,se,s',
-    '男尸': 'jh 48,e,se,se,e,ne,se,e,e,e,ne,se,se,s,s,s,sw',
+    '恶狼': 'jh 48,e,se,e,ne,se',
+    '响尾蛇': 'jh 48,e,se,e,ne,se,e',
+    '骆驼': 'jh 48,e,se,se,e,ne,se,e,e,e,ne,se,se,s',
     '老翁': 'jh 48,e,se,se,e,ne,se,e,e,e,ne,se,se,s,s,s,sw,sw,s',
     '李文秀': 'jh 48,e,se,se,e,ne,se,e,e,e,ne,se,se,s,s,s,sw,sw,s,sw,se',
-    '苏鲁克': 'jh 48,e,se,se,e,ne,se,e,e,e,ne,ne,event_1_369927',
-    '车尔库': 'jh 48,e,se,se,e,ne,se,e,e,e,ne,ne,event_1_369927,n',
-    '瓦耳拉齐': 'jh 48,e,se,se,e,ne,se,e,e,e,ne,ne,event_1_369927,n,n,n',
+    '苏鲁克': 'jh 48,e,se,e,ne,se,e,e,e,ne,ne,event_1_54621',
+    '车尔库': 'jh 48,e,se,e,ne,se,e,e,e,ne,ne,event_1_54621,n',
+    '瓦耳拉齐': 'jh 48,e,se,e,ne,se,e,e,e,ne,ne,event_1_54621,n,n,n',
+    '分身': 'jh 48,e,se,e,ne,se,e,e,e,ne,ne,event_1_54621,n,n,n',
   },
-    '京城': {
+  'jingcheng': {
     '饥民': 'jh 49',
-    '捕快': 'jh 49,n,n,n,n',
     '武将': 'jh 49,n,n,n,n',
-    '小丫鬟': 'jh 49,n,n,n,n,n',
+    '捕快': 'jh 49,n,n,n,n',
     '侯府小姐': 'jh 49,n,n,n,n,n',
-    '九华山女弟子': 'jh 49,n,n,n,n,n,n',
-    '娟儿': 'jh 49,n,n,n,n,n,n',
-    '东厂侍卫': 'jh 49,n,n,n,n,n,n,n',
-    '城门官兵': 'jh 49,n,n,n,n,n,n,n,n',
-    '柳昂天': 'jh 49,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
-    '江充': 'jh 49,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
-    '柳府铁卫': 'jh 49,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
+    '小丫鬟': 'jh 49,n,n,n,n,n',
+    '学士': 'jh 49,n,n,n,n,n,w',
+    '书生': 'jh 49,n,n,n,n,n,w,w',
+    '打手': 'jh 49,n,n,n,n,n,w,w,n',
+    '藏六福': 'jh 49,n,n,n,n,n,w,w,n',
+    '看场打手': 'jh 49,n,n,n,n,n,w,w,n,event_1_23520182',
+    '琼芳': 'jh 49,n,n,n,n,n,w,w,n,event_1_23520182',
+    '荷官': 'jh 49,n,n,n,n,n,w,w,s',
+    '胡媚儿': 'jh 49,n,n,n,n,n,w,w,s',
+    '杂货贩子': 'jh 49,n,n,n,n,n,w,w,w',
+    '苦力': 'jh 49,n,n,n,n,n,w,w,w,w',
+    '掌柜': 'jh 49,n,n,n,n,n,w,w,w,w,s',
+    '醉汉': 'jh 49,n,n,n,n,n,w,w,w,w,w',
+    '游客': 'jh 49,n,n,n,n,n,w,w,w,w,w,w',
+    '顾倩兮': 'jh 49,n,n,n,n,n,w,w,w,w,w,w,n',
     '莫凌山': 'jh 49,n,n,n,n,n,e',
     '昆仑弟子': 'jh 49,n,n,n,n,n,e',
     '安道京': 'jh 49,n,n,n,n,n,e,e',
+    '东厂高手': 'jh 49,n,n,n,n,n,e,e',
+    '伍崇卿': 'jh 49,n,n,n,n,n,e,e,s',
+    '苏颖超': 'jh 49,n,n,n,n,n,e,e,s',
+    '店伙计': 'jh 49,n,n,n,n,n,e,e,s',
     '郝震湘': 'jh 49,n,n,n,n,n,e,e,e',
     '锦衣卫': 'jh 49,n,n,n,n,n,e,e,e',
     '韦子壮': 'jh 49,n,n,n,n,n,e,e,e,e',
     '王府卫士': 'jh 49,n,n,n,n,n,e,e,e,e',
     '风流司郎中': 'jh 49,n,n,n,n,n,e,e,e,e,n',
-    '伍崇卿': 'jh 49,n,n,n,n,n,e,e,s',
-    '苏颖超': 'jh 49,n,n,n,n,n,e,e,s',
-    '店伙计': 'jh 49,n,n,n,n,n,e,e,s',
-    '学士': 'jh 49,n,n,n,n,n,w',
-    '书生': 'jh 49,n,n,n,n,n,w,w',
-    '胡媚儿': 'jh 49,n,n,n,n,n,w,w,s',
-    '荷官': 'jh 49,n,n,n,n,n,w,w,s',
-    '白虎': 'jh 49,n,n,n,n,n,w,w,s',
-    '青龙': 'jh 49,n,n,n,n,n,w,w,n',
-    '打手': 'jh 49,n,n,n,n,n,w,w,n',
-    '藏六福': 'jh 49,n,n,n,n,n,w,w,n',
-    '杂货贩子': 'jh 49,n,n,n,n,n,w,w,w',
-    '苦力京城': 'jh 49,n,n,n,n,n,w,w,w,w',
-    '掌柜': 'jh 49,n,n,n,n,n,w,w,w,w,s',
-    '醉汉京城': 'jh 49,n,n,n,n,n,w,w,w,w,w',
-    '游客京城': 'jh 49,n,n,n,n,n,w,w,w,w,w,w',
-    '顾倩兮': 'jh 49,n,n,n,n,n,w,w,w,w,w,w,n',
-    '通天塔': 'jh 49,n,n,n,n,n,n,n,n,n,e,e,ne,e,e,ne,ne,n,n',
+    '九华山女弟子': 'jh 49,n,n,n,n,n,n',
+    '娟儿': 'jh 49,n,n,n,n,n,n',
+    '东厂侍卫': 'jh 49,n,n,n,n,n,n,n',
+    '城门官兵': 'jh 49,n,n,n,n,n,n,n,n',
+    '严松': 'jh 49,n,n,n,n,n,n,n,n,n,e,e,ne,e,e,ne,ne,n,n,event_1_54676242',
+    '祝老太婆': 'jh 49,n,n,n,n,n,n,n,n,n,e,e,ne,e,e,ne,ne,n,n,event_1_9774218',
+    '高天威': 'jh 49,n,n,n,n,n,n,n,n,n,e,e,ne,e,e,ne,ne,n,n,event_1_48836125',
+    '宋公迈': 'jh 49,n,n,n,n,n,n,n,n,n,e,e,ne,e,e,ne,ne,n,n,event_1_57722966',
+    '灵音禅师': 'jh 49,n,n,n,n,n,n,n,n,n,e,e,ne,e,e,ne,ne,n,n,event_1_8302301',
+    '灵定禅师': 'jh 49,n,n,n,n,n,n,n,n,n,e,e,ne,e,e,ne,ne,n,n,event_1_81340060',
+    '元易道长': 'jh 49,n,n,n,n,n,n,n,n,n,e,e,ne,e,e,ne,ne,n,n,event_1_92928219',
+    '灵真禅师': 'jh 49,n,n,n,n,n,n,n,n,n,e,e,ne,e,e,ne,ne,n,n,event_1_15456839',
+    '灵智禅师': 'jh 49,n,n,n,n,n,n,n,n,n,e,e,ne,e,e,ne,ne,n,n,event_1_47182812',
     '王一通': 'jh 49,n,n,n,n,n,n,n,n,n,w,w,nw,w,n,n,n,w,nw',
     '贵妇': 'jh 49,n,n,n,n,n,n,n,n,n,w,w,nw,w,n,n,n,w,nw,nw',
-    '红螺寺': 'jh 49,n,n,n,n,n,n,n,n,n,w,w,nw,w,n,n,n,w,nw,nw,nw,n',
+    '项天寿': 'jh 49,n,n,n,n,n,n,n,n,n,w,w,nw,w,n,n,n,w,nw,nw,nw,n,event_1_15467958',
+    '言二娘': 'jh 49,n,n,n,n,n,n,n,n,n,w,w,nw,w,n,n,n,w,nw,nw,nw,n,event_1_9302105',
+    '郝震湘': 'jh 49,n,n,n,n,n,n,n,n,n,w,w,nw,w,n,n,n,w,nw,nw,nw,n,event_1_15467958',
+    '陆孤瞻': 'jh 49,n,n,n,n,n,n,n,n,n,w,w,nw,w,n,n,n,w,nw,nw,nw,n,event_1_18189689',
+    '石刚': 'jh 49,n,n,n,n,n,n,n,n,n,w,w,nw,w,n,n,n,w,nw,nw,nw,n,event_1_12962473',
+    '韩毅': 'jh 49,n,n,n,n,n,n,n,n,n,w,w,nw,w,n,n,n,w,nw,nw,nw,n,event_1_87347064',
+    '青衣秀士': 'jh 49,n,n,n,n,n,n,n,n,n,w,w,nw,w,n,n,n,w,nw,nw,nw,n,event_1_18392435',
+    '方子敬': 'jh 49,n,n,n,n,n,n,n,n,n,w,w,nw,w,n,n,n,w,nw,nw,nw,n,event_1_31866559',
+    '秦仲海': 'jh 49,n,n,n,n,n,n,n,n,n,w,w,nw,w,n,n,n,w,nw,nw,nw,n,event_1_21438965',
+    '银川公主': 'jh 49,n,n,n,n,n,n,n,n,n,n,n,nw,nw,n',
+    '小太监': 'jh 49,n,n,n,n,n,n,n,n,n,n,n,ne,ne,n,n,nw',
+    '刘敬': 'jh 49,n,n,n,n,n,n,n,n,n,n,n,ne,ne,n,n,nw',
+    '柳府铁卫': 'jh 49,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
+    '江充': 'jh 49,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
+    '柳昂天': 'jh 49,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
+  },
+  'yuewangjiangong': {
+    '樵夫': 'jh 50',
+    '毒蛇': 'jh 50,ne',
+    '欧余刀客': 'jh 50,ne,ne',
+    '西施': 'jh 50,ne,ne,n,n',
+    '山狼': 'jh 50,ne,ne,n,n',
+    '山狼王': 'jh 50,ne,ne,n,n',
+    '范蠡': 'jh 50,ne,ne,n,n,n,ne',
+    '吴国暗探': 'jh 50,ne,ne,n,n,n,ne',
+    '老奶奶': 'jh 50,ne,ne,n,n,n,ne,ne,ne',
+    '青竹巨蟒': 'jh 50,ne,ne,n,n,n,ne,ne,ne,n',
+    '猎人': 'jh 50,ne,ne,n,n,n,ne,ne,ne,n,n',
+    '白猿': 'jh 50,ne,ne,n,n,n,ne,ne,ne,n,n,n',
+    '锦衣剑士': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se',
+    '青衣剑士': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se',
+    '采药人': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se',
+    '山羊': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s',
+    '牧羊少女': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s',
+    '采药少女': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s',
+    '风胡子': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,sw,sw,sw',
+    '三少爷': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,w,event_1_61129504',
+    '丹枫老人': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,w,event_1_26427119',
+    '黄杉女子': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,w,event_1_99138879',
+    '西门吹雪': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,w,event_1_79085149',
+    '郭嵩阳': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,w,event_1_76965640',
+    '木道神': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,w,event_1_6220788',
+    '宫九': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,w,event_1_81120263',
+    '沈浪': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,w,event_1_27926026',
+    '阿青': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,w,event_1_53092576',
+    '越王': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n',
+    '金衣剑士': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n',
+    '文种': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n',
+    '薛烛': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n,n',
+    '铸剑师': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n,n',
+    '南仁通': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n,n,ne,event_1_61129504',
+    '六先生': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n,n,ne,event_1_26427119',
+    '孔周': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n,n,ne,event_1_99138879',
+    '独孤不败': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n,n,ne,event_1_79085149',
+    '张鸦九': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n,n,ne,event_1_76965640',
+    '陶弘景': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n,n,ne,event_1_6220788',
+    '曾从子': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n,n,ne,event_1_81120263',
+    '烛庸子': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n,n,ne,event_1_27926026',
+    '欧冶子': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n,n,ne,event_1_53092576',
+  },
+  'jiangling': {
+    '茶叶贩子': 'jh 51',
+    '书生': 'jh 51,n',
+    '乞丐': 'jh 51,n,n',
+    '米店伙计': 'jh 51,n,n,w',
+    '米三江': 'jh 51,n,n,w',
+    '妇人': 'jh 51,n,n,w',
+    '花小倩': 'jh 51,n,n,e',
+    '巡城府兵': 'jh 51,n,n,n,n',
+    '巡城参将': 'jh 51,n,n,n,n',
+    '客栈小二': 'jh 51,n,n,n,n,w',
+    '酒保': 'jh 51,n,n,n,n,w,w',
+    '江小酒': 'jh 51,n,n,n,n,w,w,n',
+    '江老板': 'jh 51,n,n,n,n,w,w,n,n',
+    '雷动山': 'jh 51,n,n,n,n,n,n,w',
+    '唐经天': 'jh 51,n,n,n,n,n,n,w,event_1_61129504',
+    '慧明禅师': 'jh 51,n,n,n,n,n,n,w,event_1_26427119',
+    '金世遗': 'jh 51,n,n,n,n,n,n,w,event_1_99138879',
+    '李布衣': 'jh 51,n,n,n,n,n,n,w,event_1_79085149',
+    '沈虎禅': 'jh 51,n,n,n,n,n,n,w,event_1_76965640',
+    '米苍穹': 'jh 51,n,n,n,n,n,n,w,event_1_6220788',
+    '关七': 'jh 51,n,n,n,n,n,n,w,event_1_81120263',
+    '方歌吟': 'jh 51,n,n,n,n,n,n,w,event_1_27926026',
+    '李沉舟': 'jh 51,n,n,n,n,n,n,w,event_1_53092576',
+    '苦力': 'jh 51,n,n,n,n,e',
+    '驿使': 'jh 51,n,n,n,n,e,e,e',
+    '江陵府卫': 'jh 51,n,n,n,n,e,e,e,e',
+    '参将': 'jh 51,n,n,n,n,e,e,e,e,s',
+    '萧劲': 'jh 51,n,n,n,n,e,e,e,e,s',
+    '醉汉': 'jh 51,n,n,n,n,e,e,e,e,e,e',
+    '黑衣人': 'jh 51,n,n,n,n,e,e,e,e,e,e,s',
+    '城门守卫': 'jh 51,n,n,n,n,e,e,e,e,e,e,s,s,s',
+    '癞蛤蟆': 'jh 51,n,n,n,n,e,e,e,e,e,e,s,s,s,se,se',
+    '霍无双': 'jh 51,n,n,n,n,e,e,e,e,e,e,s,s,s,se,se,e,e',
+    '金莲': 'jh 51,n,n,n,n,e,e,e,e,e,e,e,e',
+    '邋遢男子': 'jh 51,n,n,n,n,e,e,e,e,e,e,e,e,se',
+    '酒坊伙计': 'jh 51,n,n,n,n,e,e,e,e,e,e,e,e,se,e,e',
+    '九叔': 'jh 51,n,n,n,n,e,e,e,e,e,e,e,e,se,e,e',
+    '趟子手': 'jh 51,n,n,n,n,e,e,e,e,n,n',
+    '萧长河': 'jh 51,n,n,n,n,e,e,e,e,n,n,w',
+    '分身': 'jh 51,n,n,n,n,e,e,e,e,n,n,w',
+    '周长老': 'jh 51,n,n,n,n,e,e,e,e,n,n,w,w',
+    '脱不花马': 'jh 51,n,n,n,n,e,e,e,e,n,n,w,w',
+    '渔老': 'jh 51,n,n,n,n,e,e,e,e,n,n,e',
+    '余小鱼': 'jh 51,n,n,n,n,e,e,e,e,n,n,e',
+    '截道恶匪': 'jh 51,n,n,n,n,e,e,e,e,n,n,n,n,nw,n',
+    '漕帮好手': 'jh 51,n,n,n,n,e,e,e,e,n,n,n,n,nw,n,n,n',
+    '扬子鳄': 'jh 51,n,n,n,n,e,e,e,e,n,n,n,n,nw,n,n,n,e,e',
+    '金冠巨蟒': 'rank go 222,nw,nw',
+    '亡魂分身': 'rank go 222',
   },
 };
