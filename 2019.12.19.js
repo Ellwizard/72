@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         B20191219
+// @name         B-1-5区-2019.10
 // @namespace    http://tampermonkey.net/
-// @version      2019.12.19
+// @version      2019.8.27
 // @description  try to take over the world!
 // @author       Lihaorong
 // @match        http://*.yytou.cn/*
@@ -33,8 +33,8 @@ var mySkillListsUnarmed = "天魔策;降龙廿八掌;";
 var mySkillListsSword = "不凡三剑;天外飞仙;无剑之剑;";
 var mySkillListsBlade = "天刀八诀;左手刀法;";
 //-----自动绝学阵变量
-var skillstr = "无剑之剑,温候戟舞,6,紫血大法";
-var skillstr6 = "月夜鬼萧,无剑之剑,6,紫血大法";
+var skillstr = "神龙东来,温候戟舞,6,紫血大法";
+var skillstr6 = "月夜鬼萧,神龙东来,6,紫血大法";
 var skillstr9 = "打狗棒法,温候戟舞,6,紫血大法";
 
 
@@ -332,7 +332,7 @@ createButton('晚安', btnBox0, Goodnight);
 createButton('外传日常', btnBox0, WaiZhuanRiChangFunc);
 createButton('直通车', btnBox0, ZhiTongCheFunc);
 createButton('辅助集合', btnBox0, FuZhuJiFunc);
-//createButton('整理包裹', btnBox0, clearBag);
+createButton('整理包裹', btnBox0, clearBag);
 createButton('一键恢复', btnBox0, yijianhuifuFunc);
 createButton('战斗补血', btnBox0, addXueFunc);
 createButton('战斗装', btnBox0, ZhuangBei);
@@ -370,7 +370,7 @@ function hideButton() {
     btnList['外传日常'].style.visibility = "hidden";
     btnList['直通车'].style.visibility = "hidden";
     btnList['辅助集合'].style.visibility = "hidden";
-    //btnList['整理包裹'].style.visibility = "hidden";
+    btnList['整理包裹'].style.visibility = "hidden";
     btnList['一键恢复'].style.visibility = "hidden";
     btnList['战斗补血'].style.visibility = "hidden";
     btnList['战斗装'].style.visibility = "hidden";
@@ -397,7 +397,7 @@ function showButton() {
     btnList['外传日常'].style.visibility = "visible";
     btnList['直通车'].style.visibility = "visible";
     btnList['辅助集合'].style.visibility = "visible";
-  //  btnList['整理包裹'].style.visibility = "visible";
+    btnList['整理包裹'].style.visibility = "visible";
     btnList['一键恢复'].style.visibility = "visible";
     btnList['战斗补血'].style.visibility = "visible";
     btnList['战斗装'].style.visibility = "visible";
@@ -430,8 +430,8 @@ function WhoAmIFunc() {
     if (llmyattrs) {
         myID = llmyattrs.get("id"); //自己的ID
         sm_MastID = llmyattrs.get("master_id");
-        if (myID == 'u7755231') {   // 1区圆
-            skillstr6 = "冰月破魔枪,6,道种心魔经";
+        if (myID == 'u6070198') {   // 1区圆
+            skillstr6 = "月夜鬼萧,天外飞仙,6,紫血大法";
             skillstr9 = "月夜鬼萧,冰月破魔枪,6,紫血大法";
             mySkillLists = "冰月破魔枪";
             //listenQLFunc();
@@ -704,9 +704,9 @@ function FbyFunc() {
     go('rank go 209;sw;s;s;s;s;s;s;s;s;s;s;s;w;w;n;n;n;n;nw;nw;nw;nw;n;n;n;');     //飞白陀
 }
 //称号飞葬剑-------------------------
-createPopButton('飞葬剑','直通车',FzjFunc);
+createPopButton('飞无相','直通车',FzjFunc);
 function FzjFunc() {
-    go('rank go 222');//飞
+    go('rank go 230');//飞
 }
 
 //KB--------------------------------------------------
@@ -1439,7 +1439,8 @@ function JianyaoshiFunc() {
     setTimeout(JYS, 10000);
 }
 function JYS() {
-    go('get yin yaoshi');
+     go('get tianlongsi_putiguo');
+    //go('get yin yaoshi');
     setTimeout(JianyaoshiFunc, 10000);
 }
 //快速师门帮派---------
@@ -1543,7 +1544,7 @@ createPopButton('买灵芝', '辅助集合', buyMedecineFunc);
 //createPopButton('买白羽箭', '辅助集合', buyArrowFunc);
 //createPopButton('买糖葫芦', '辅助集合', buyTanghuluFunc);
 //createPopButton('谜题密码', '辅助集合', quizCodeFunc);
-//createPopButton('捡钥匙', '辅助集合', JianyaoshiFunc);
+createPopButton('捡钥匙', '辅助集合', JianyaoshiFunc);
 //createPopButton('合宝石', '辅助集合', heBaoshi);
 createPopButton('开白银', '辅助集合', KaibaiyinFunc);
 createPopButton('开青木', '辅助集合', KaiqingmuFunc);
@@ -3045,11 +3046,11 @@ function clearBag() {
     clearInterval(clb_time);
     clb_time = setInterval(clearitem, 200);
 }
-var items_use = '『秘籍木盒』 兰陵美酒 周年英雄令 周年热血令 神鸢宝箱 茉莉汤 云梦青 『神匠宝箱』冰糖葫芦青凤纹绶 热血印 风云宝箱 腊八粥  腊百草美酒年糕 高级狂暴丹特级狂暴丹保险卡特级大还丹高级大还丹特级乾坤再造丹高级乾坤再造丹神秘宝箱冰镇酸梅汤';
-var items_store = '长生石 晚香玉 凌霄花 百宜雪梅 朝开暮落花 凤凰木 熙颜花 君影草 矢车菊 忘忧草 仙客来 雪英 夕雾草 洛神花千年紫芝千年灵草驻颜丹烧香符周年礼券玄重铁分身卡高级乾坤袋装备打折卡碎片鎏金黑玉锥';
+var items_use = '周年英雄令 周年热血令 神鸢宝箱 茉莉汤 云梦青 冰糖葫芦青凤纹绶 热血印 风云宝箱保险卡神秘宝箱冰镇酸梅汤';
+var items_store = '百宝令黄金钥匙赤璃钥匙曜玉钥匙铂金钥匙开元宝票火腿粽子玄重铁狗年礼券空识卷轴舞鸢尾冰月羽【帝玺碎】璞玉【龙庭魄】璞玉【昆仑印】璞玉【九天落】璞玉百宜雪梅『秘籍木盒』『隐武竹笺』长生石 晚香玉 凌霄花 百宜雪梅 朝开暮落花 凤凰木 熙颜花 君影草 矢车菊 忘忧草 仙客来 雪英 夕雾草 洛神花千年紫芝千年灵草驻颜丹烧香符周年礼券玄重铁分身卡高级乾坤袋装备打折卡碎片鎏金黑玉锥';
 var items_study = ' ';
-var items_splite = '翎眼赤护 青鸾护臂 苍狼护臂 宝玉甲 天寒匕 貂皮斗篷 白玉腰束 无心匕 玄武盾 月光宝甲 沧海护腰 夜行披风虎皮腰带红光匕金丝甲羊毛斗篷破军盾金丝甲疯魔杖毒龙鞭玉清棍生死符霹雳掌套血屠刀残雪帽残雪戒残雪鞋残雪手镯残雪项链金丝宝甲衣';
-var items_sell = '漫天花雨匕三清神冠七星翻云靴咒剑王□鲜红锦衣牛皮靴八角锤灰雁七星宝戒船桨白金项链断云斧乌夷长裙红色绸裙包子大剪刀黑水伏蛟帝王剑麻布手套银丝帽吴钩绵裙铜钹大刀紫袍铁笛圣火令绿罗裙绣花针清心散垓下刀紫金杖阿拉伯弯刀青锋剑青布袍淑女剑紫霜血蝉衣软金束带穿花蛇影鞋魔鞭翩珑大红僧袍九环禅杖精铁棒毒蒺藜暗灵桃木剑横断钩银丝链甲衣天魔刀玉竹杖叫化鸡七星剑逆钩匕银丝甲天寒帽天寒戒天寒鞋天寒项链天寒手镯软甲衣金刚杖飞羽剑斩空刀拜月掌套金弹子新月棍白蟒鞭硫磺木戟黑袍粗布白袍长戟回旋镖拂尘松子白色棋子黑色棋子竹节鞭白棋子木叉银色丝带波斯长袍铁鞭竹刀长虹剑莲蓬鲤鱼窄裉袄灵芝锦衣台夷头巾毛毯废焦丹废药渣台夷头巾粉红绸衫灰燕野山鸡麻雀岩鸽瑶琴维吾尔族长袍旧书桃符纸木锤木钩竹鞭木刀木枪木剑彩巾彩靴彩帽彩带彩镯彩衣砍刀绣花鞋舞蝶彩衫军刀铁扇剑割鹿刀大理雪梨圆领小袄皮帽弯月刀兔肉粗磁大碗羊肉串天山雪莲青铜盾禅杖金刚罩丝质披风暗箭青葫芦松子铁斧水蜜桃蓑衣破弯刀柴刀丝衣长鞭道德经布裙钢丝甲衣牛皮带制服金刚杖斩空刀拜月掌套金弹子新月棍白蟒鞭-草莓玉蜂浆玉蜂蜜蜂浆瓶豆浆蛋糕菠菜粉条包裹鸡叫草水密桃--新月棍银簪重甲羊角匕梅花匕日月神教腰牌船篙-丝绸马褂白缨冠白色长袍蛇杖鬼头刀拐杖古铜缎子袄裙大环刀鹿皮手套丝绸衣羊毛裙牧羊鞭牛皮酒袋麻带钢剑钢杖藤甲盾长斗篷军袍破披风木盾铁盾锦缎腰带鞶革青色道袍-鲫鱼树枝水草破烂衣服-鹿皮小靴青绫绸裙粗布衣草帽草鞋布鞋精铁甲-柳玉刀玉竹剑钢刀戒刀单刀长剑长枪铁锤木棍轻罗绸衫兽皮鞋皮鞭铁棍飞镖匕首细剑绣鞋绣花小鞋狼皮雪靴金戒金手镯铁戒银戒铁手镯银手镯铁项链银项链';
+var items_splite = '翎眼赤护 青鸾护臂 苍狼护臂';
+var items_sell = '';
 
 function clearitem() {
     var t = $("tr[bgcolor]:contains(万两)").siblings();
@@ -3073,23 +3074,7 @@ function clearitem() {
                     for (j = 0; j < b; j++) {
                         go('study ' + c);
                     }
-                } else if (items_sell.indexOf(a) != -1) {
-                    console.log("卖掉：" + a + " 数量：" + b);
-                    for (j = 0; j < Math.floor(b / 10); j++) {
-                        go('items sell ' + c + '_N_10');
-                    }
-                    for (j = 0; j < (b % 10); j++) {
-                        go('items sell ' + c);
-                    }
-                } else if (items_splite.indexOf(a) != -1) {
-                    console.log("分解：" + a + " 数量：" + b);
-                    for (j = 0; j < Math.floor(b / 10); j++) {
-                        go('items splite ' + c + '_N_10');
-                    }
-                    for (j = 0; j < (b % 10); j++) {
-                        go('items splite ' + c);
-                    }
-                }/*
+                }
                 if (a.indexOf('】璞玉') != -1) {
                     console.log("存仓库：" + a + " 数量：" + b);
                     go('items put_store ' + c);
@@ -3101,21 +3086,41 @@ function clearitem() {
                 if (a.indexOf('】墨玉') != -1) {
                     console.log("存仓库：" + a + " 数量：" + b);
                     go('items put_store ' + c);
-                }*/
-                //                if(a.indexOf('残页』')!=-1){
-                //                    console.log("存仓库："+a+" 数量："+b);
-                //                    go('items put_store '+c);
-                //                }
-                // if(a.indexOf('宝石')!=-1){
-                //     console.log("存仓库："+a+" 数量："+b);
-                //     go('items put_store '+c);
-                // }
+                }
+                               if(a.indexOf('残页』')!=-1){
+                                    console.log("存仓库："+a+" 数量："+b);
+                                    go('items put_store '+c);
+                                }
+                 if(a.indexOf('宝石')!=-1){
+                     console.log("存仓库："+a+" 数量："+b);
+                     go('items put_store '+c);
+                 }
+                 /*
+                 else if (items_sell.indexOf(a) != -1) {
+                    console.log("卖掉：" + a + " 数量：" + b);
+                    for (j = 0; j < Math.floor(b / 10); j++) {
+                        go('items sell ' + c + '_N_10');
+                    }
+                    for (j = 0; j < (b % 10); j++) {
+                        go('items sell ' + c);
+                    }
+                }
+                else if (items_splite.indexOf(a) != -1) {
+                    console.log("分解：" + a + " 数量：" + b);
+                    for (j = 0; j < Math.floor(b / 10); j++) {
+                        go('items splite ' + c + '_N_10');
+                    }
+                    for (j = 0; j < (b % 10); j++) {
+                        go('items splite ' + c);
+                    }
+                }
                 if (a.indexOf('基础') != -1 || a.indexOf('中级') != -1 || a.indexOf('进阶') != -1 || a.indexOf('衫') != -1 || a.indexOf('劲服') != -1 || a.indexOf('袈裟') != -1 || a.indexOf('吹雪') != -1 || a.indexOf('圣衣') != -1 || a.indexOf('道袍') != -1 || a.indexOf('水烟阁') != -1) {
                     console.log("卖掉：" + a + " 数量：" + b);
                     for (j = 0; j < b; j++) {
                         go('items sell ' + c);
                     }
                 }
+                */
             }
         }
        // go('use_all');
@@ -3249,7 +3254,7 @@ function JinKuaFuFunc() {
 //广场杀坏人------------------------------------------------
 
 // 杀坏人----------------------------------------------------------------------------------------------------------------
-var HongMingNPCList = ["阴九幽","白开心","李大嘴","慕容博","庞斑","方夜羽","东方不败","祝玉妍","李秋水","石观音","白猿","凌未风","萧秋水","蒙赤行","叶孤城","厉工","石幽明","胡铁花","星宿恶徒【二】","星宿恶徒【一】","星宿恶徒【三】","星宿恶徒【四】","夜魔*恶棍", "夜魔*流寇", "夜魔*剧盗", "夜魔*云老四", "夜魔*岳老三", "夜魔*二娘", "夜魔*段老大", "黑袍公", "独孤须臾", "翼国公", "云观海", "年兽", "铁狼军", "银狼军", "金狼军", "金狼将", "十夫长", "百夫长", "月幽剑士", "濯缨剑士", "对影剑士", "夏花剑士", "[一]镇擂斧将", "[二]镇擂斧将", "天魔真身", "攻楼死士", "镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神", "不『二』剑客"];
+var HongMingNPCList = ["慕容博","庞斑","方夜羽","东方不败","祝玉妍","李秋水","石观音","白猿","凌未风","萧秋水","蒙赤行","叶孤城","厉工","石幽明","胡铁花","星宿恶徒【二】","星宿恶徒【一】","星宿恶徒【三】","星宿恶徒【四】","夜魔*恶棍", "夜魔*流寇", "夜魔*剧盗", "夜魔*云老四", "夜魔*岳老三", "夜魔*二娘", "夜魔*段老大", "黑袍公", "独孤须臾", "翼国公", "云观海", "年兽", "铁狼军", "银狼军", "金狼军", "金狼将", "十夫长", "百夫长", "月幽剑士", "濯缨剑士", "对影剑士", "夏花剑士", "[一]镇擂斧将", "[二]镇擂斧将", "天魔真身", "攻楼死士", "镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神", "不『二』剑客"];
 var HongMingNPCListClan1 = ["镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神"];
 var HongMingNPCListKuaFu = ["[1-5区]段老大", "[1-5区]墟归一", "[1-5区]上官晓芙", "[1-5区]洪昭天"];
 var killHongMingIntervalFunc = null;
@@ -5191,3 +5196,4 @@ function getAnswer2Question(localQuestion) {
             console.error("没有找到该奇侠：" + localname + " ！");
     }
 */
+
