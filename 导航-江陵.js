@@ -131,6 +131,7 @@ createButton('超',CJJSFunc);
 createButton('舍',SLJSFunc);
 createButton('加',JSKJSFunc);
 createButton('通',TTJSFunc);
+createButton('买',TTBUYFunc);
 
 
 function createButton(btnName,func){
@@ -186,6 +187,9 @@ function JSKJSFunc(){
 }
 function TTJSFunc(){
     clickButton('tupo_speedup3_1');
+}
+function TTBUYFunc(){
+    clickButton('reclaim buy 19 10000');
 }
 //==========================================
 function MyNavigatorFunc(){
@@ -282,6 +286,23 @@ function MyNavigatorFunc(){
 
 
 hairsfalling = {
+     '雪山活动': {
+    '雪婷': 'jh 1,e,e,s,ne,ne',
+    '峨眉': 'jh 8,w,nw,n,n,n,n,e,e,n,n,e,em1,n,em2,n,n,n,w,n,n,n,n,n,n,n,n,n,ne,nw,nw,n,n',
+    '少林': 'jh 13,n,n,n,n,n,n,n,n,n,n',
+    '明教': 'jh 18,n,nw,n,n,n,n,n,ne,n,n,n,n,n,e,e,se,se,e',
+    '泰山': 'jh 24,n,n,n,n,n,n,n,n,w,n,n',
+    '铁雪': 'jh 31,n,n,n,w,w,w,w,n,n,n',
+    '冰火岛雪原': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,s,se,w',
+    '冰火岛冰湖': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,e',
+    '冰火岛雪山': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,n,n,ne,n',
+   '绝情谷': 'jh 37,n,e,e,nw,nw,w,n,e,n,e,e,e,ne,ne,ne',
+   '断剑': 'jh 34,ne,e,e,e,e,e,n,n,n,w,w,w,n,n,yell,n,n,n,n,w,w',
+   '掩月城黑岩': 'jh 43,n,ne,ne,n,n,n,nw,n,ne,ne,n,n,w,sw',
+   '掩月城朝暮': 'jh 43,w,n,n,n,ne,nw,nw,ne',
+   '星宿': 'jh 28,n,w,w,w,w,w,w,nw,ne,nw,ne,nw,ne,nw,ne,nw,ne,nw,ne,e',
+   '扬州': 'jh 5,n,n,n,n,n,e,n,e,n,w,n,n',
+  },
   'snow': {
     '逄义': 'jh 1',
     '金庸大师': 'jh 1,w',
