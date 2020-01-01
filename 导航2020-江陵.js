@@ -11,7 +11,7 @@
 var btnList = {};		// 按钮列表
 var buttonWidth = '30px';	// 按钮宽度
 var buttonHeight = '20px';	// 按钮高度
-var currentPos = 70;		// 当前按钮距离顶端高度，初始130
+var currentPos = 0;		// 当前按钮距离顶端高度，初始130
 var delta = 20;	                // 每个按钮间隔
 //var corpseNPCLists = prompt("请输入要摸的目标","月老的尸体");
 
@@ -22,7 +22,22 @@ var isDelayCmd = 1, // 是否延迟命令
     timeCmd = null,     // 定时器句柄
     paustStatus = 0,   //是否暂停执行
     cmdDelayTime = 200; // 命令延迟时间
-
+var post_list = [];
+setInterval(function() {
+	var room = g_obj_map.get('msg_room');
+	for (var t, i = 1; (t = room.get('npc' + i)) != undefined; i++) {
+		t = t.split(',');
+		if ((t[1] == '白衣神君' || t[1] == '白自在'|| t[1] == '花万紫') && post_list.indexOf(t[0]) < 0) {
+			post_list.push(t[0]);
+			var msg = '发现' + t[1] + '位于' + room.get('map_id') + '-' + room.get('short');
+			clickButton('clan chat ' + msg);
+			var data = {cate: '定位', value: msg, notify: 1, expiredminu: 30};
+			$.post('http://122.112.197.227:8100/home/LogCommon', data).error(function (xhr) {
+				console.log('error: ' + xhr.status + ' ' + xhr.statusText);
+			});
+		}
+	}
+}, 1000);
 
 // 执行命令串
 function go(str) {
@@ -127,11 +142,29 @@ createButton('导',MyNavigatorFunc);
 createButton('令',CLPFunc);
 createButton('卡',CMTKFunc);
 createButton('爆',VIPBFunc);
+createButton(' ', );
 createButton('超',CJJSFunc);
 createButton('舍',SLJSFunc);
 createButton('加',JSKJSFunc);
 createButton('通',TTJSFunc);
 createButton('买',TTBUYFunc);
+createButton(' ', );
+createButton('雪 ',xtslFunc);
+createButton('扬',yzfxtFunc);
+createButton('峨',emjdFunc);
+createButton('明',mjbshtFunc);
+createButton('泰',tsstFunc);
+createButton('星',xxbctzFunc);
+createButton('铁',txczwFunc);
+createButton('断',djmrxFunc);
+createButton('温',bhxywqFunc);
+createButton('冰',bhbhFunc);
+createButton('雪',bhxsfdFunc);
+createButton('绝',jqdyFunc);
+createButton('黑',yyhyxFunc);
+createButton('朝',yyzmgFunc);
+
+
 
 
 function createButton(btnName,func){
@@ -192,6 +225,64 @@ function TTBUYFunc(){
     clickButton('reclaim buy 19 10000');
 }
 //==========================================
+//主体-------------------------
+function xtslFunc(){
+    go('jh 1,e,e,s,ne,ne');
+}
+function emjdFunc(){
+    go('jh 8,w,nw,n,n,n,n,e,e,n,n,e,eval_halt_move();,n,eval_halt_move();,n,n,n,w,n,n,n,n,n,n,n,n,n,nw,nw,n,n');
+}
+function sllxtFunc(){
+    go('jh 13,n,n,n,n,n,n,n,n,n,n');
+}
+function mjbshtFunc(){
+   go('jh 18,n,nw,n,n,n,n,n,ne,n,n,n,n,n,e,e,se,se,e');
+}
+function tsstFunc(){
+  go('jh 24,n,n,n,n,n,n,n,n,w,n,n');
+}
+function txczwFunc(){
+    go('jh 31,n,n,n,w,w,w,w,n,n,n');
+}
+function bhxywqFunc(){
+   go('jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,s,se,w');
+}
+function bhbhFunc(){
+   go('jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,e');
+}
+function bhxsfdFunc(){
+   go('jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,n,n,ne,n');
+}
+function jqdyFunc(){
+    go('jh 37,n,e,e,nw,nw,w,n,e,n,e,e,e,ne,ne,ne');
+}
+function djmrxFunc(){
+    go('jh 34;ne;e;e;e;e;e;n;n;n;w;w;w;n;n;yell;');
+    //alert("下船向北走一步");
+    djmrx1Func();
+}
+function djmrx1Func(){
+        var locationname=g_obj_map.get("msg_room").get("short");
+        console.log(locationname);
+        if(locationname=="试剑碑"){
+            go('n;n;n;w;w');
+        }else{
+            setTimeout(function(){djmrx1Func();},2000);
+        }
+    }
+function yyhyxFunc(){
+    go('jh 43,n,ne,ne,n,n,n,nw,n,ne,ne,n,n,w,sw');
+}
+function yyzmgFunc(){
+   go('jh 43,w,n,n,n,ne,nw,nw,ne');
+}
+function xxbctzFunc(){
+    go('jh 28,n,w,w,w,w,w,w,nw,ne,nw,ne,nw,ne,nw,ne,nw,ne,nw,ne,e');
+}
+function yzfxtFunc(){
+     go('jh 5,n,n,n,n,n,e,n,e,n,w,n,n');
+}
+//=============================================================
 function MyNavigatorFunc(){
     var ljsonpath ={};
     var llnpcList = [];
@@ -288,16 +379,18 @@ function MyNavigatorFunc(){
 hairsfalling = {
      '雪山活动': {
     '雪婷': 'jh 1,e,e,s,ne,ne',
-    '峨眉': 'jh 8,w,nw,n,n,n,n,e,e,n,n,e,em1,n,em2,n,n,n,w,n,n,n,n,n,n,n,n,n,ne,nw,nw,n,n',
+    '峨眉': 'jh 8,w,nw,n,n,n,n,e,e,n,n,e,eval_halt_move(),n,eval_halt_move(),n,n,n,w,n,n,n,n,n,n,n,n,n,ne,nw,nw,n,n',
     '少林': 'jh 13,n,n,n,n,n,n,n,n,n,n',
     '明教': 'jh 18,n,nw,n,n,n,n,n,ne,n,n,n,n,n,e,e,se,se,e',
     '泰山': 'jh 24,n,n,n,n,n,n,n,n,w,n,n',
     '铁雪': 'jh 31,n,n,n,w,w,w,w,n,n,n',
-    '冰火': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,s,se,w',
+    '冰雪': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,s,se,w',
+    '冰冰': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,e',
+    '冰山': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,n,n,ne,n',
    '绝情': 'jh 37,n,e,e,nw,nw,w,n,e,n,e,e,e,ne,ne,ne',
-   '断剑': 'jh 34,ne,e,e,e,e,e,n,n,n,w,w,w,n,n,yell,n,n,n,n,w,w',
-   '掩月黑岩': 'jh 43,n,ne,ne,n,n,n,nw,n,ne,ne,n,n,w,sw',
-   '掩月朝暮': 'jh 43,w,n,n,n,ne,nw,nw,ne',
+   '断剑': 'jh 34,ne,e,e,e,e,e,n,n,n,w,w,w,n,n,eval_halt_move(),n,n,n,n,w,w',
+   '掩月黑': 'jh 43,n,ne,ne,n,n,n,nw,n,ne,ne,n,n,w,sw',
+   '掩月朝': 'jh 43,w,n,n,n,ne,nw,nw,ne',
    '星宿': 'jh 28,n,w,w,w,w,w,w,nw,ne,nw,ne,nw,ne,nw,ne,nw,ne,nw,ne,e',
    '扬州': 'jh 5,n,n,n,n,n,e,n,e,n,w,n,n',
   },
