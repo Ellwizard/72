@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         B-2019.12.28
+// @name         B-2020
 // @namespace    http://tampermonkey.net/
 // @version      2019.8.27
 // @description  try to take over the world!
@@ -698,15 +698,15 @@ function XLFZJFunc() { go("jh 47;ne;n;n;n;ne;ne;e;e;e;e;ne;n;ne;e;e;n;n;n;n;n;n;
 createPopButton('少林罗汉','直通车',SLLHFunc);
 function SLLHFunc(){ go("jh 13;n;n;n;n;enable mapped_skills restore 2;"); }
 
-//称号飞白猿-------------------------
-createPopButton('飞白猿','直通车',FbyFunc);
+//-------------------------
+createPopButton('跑洱海','直通车',FbyFunc);
 function FbyFunc() {
-    go('rank go 209;sw;s;s;s;s;s;s;s;s;s;s;s;w;w;n;n;n;n;nw;nw;nw;nw;n;n;n;');     //飞白陀
+    go('jh 52;ne;ne;n;n;n;ne;ne;e;e;se;se;s;s;s;');
 }
-//称号飞葬剑-------------------------
-createPopButton('飞无相','直通车',FzjFunc);
+//-------------------------
+createPopButton('跑无相','直通车',FzjFunc);
 function FzjFunc() {
-    go('rank go 230');//飞
+    go('jh 52;ne;ne;n;n;n;ne;ne;e;e;n;n;n;n;w;nw;nw;n;n;n;');
 }
 
 //KB--------------------------------------------------
@@ -961,37 +961,38 @@ function WaiZhuanRiChangFunc() {
 }
 var wzrc_popbk = createPop('外传日常');
 popList['外传日常'].innerHTML = '<div>选择日常</div>';
-//createPopButton('开答题', '外传日常', answerQuestionsFunc);
-//createPopButton('签到','外传日常',CheckInFunc);
+
 createPopButton('V师帮', '外传日常', bangpaiANDshimenFunc);
-//createPopButton('大昭壁画', '外传日常', MianBiFunc);
-//createPopButton('侠客日常', '外传日常', xiakedao1);
 createPopButton('冰月谷', '外传日常', bingyueFunc);
 createPopButton('试剑', '外传日常', ShiJianFunc);
 createPopButton('比试铜人', '外传日常', BiShiTongRenFunc);
 createPopButton('本六', '外传日常', InstanceSix);
-//createPopButton('苗疆炼药', '外传日常', MjlyFunc);
-//createPopButton('铁血日常', '外传日常', TiexueFunc);
-//createPopButton('天山挂机', '外传日常', TsdzFunc);
-createPopButton('打榜', '外传日常', PaiHangFunc);
-createPopButton('特殊正邪', '外传日常', DiTuSuiPianFunc);
 createPopButton('自动一条', '外传日常', behqOneKeyFunc);// 自动打这四个外传
 createPopButton('天山七剑', '外传日常', TianShanQiJianFunc);
+createPopButton('毒魔', '外传日常', KunLunFeiDuFunc);
+createPopButton('绝杀', '外传日常', jsFunc);
+createPopButton('木人','外传日常',murenFunc);
+createPopButton('铁血求教','外传日常',tiexueqiujiaoFunc);
+createPopButton('邪分级', '外传日常', xfjFunc);
+//createPopButton('射雕', '外传日常', shediaoFunc);
+//createPopButton('佳人觅香', '外传日常', JRMXFunc);
+//createPopButton('开答题', '外传日常', answerQuestionsFunc);
+//createPopButton('签到','外传日常',CheckInFunc);
+//createPopButton('V外传', '外传日常', waizhuanQuandianFunc);// 元宝点2-白坨闯阵，3-青城孽龙，5-峨眉解围，10-恒山山贼，11-唐门试炼； 12-长安糖葫芦，13-峨眉再战孤城，14-扬州听琴，15-少林伏魔，16-白坨奇袭   捐金锭换果子；帮本1，卖蛋壳
 //createPopButton('白坨闯阵', '外传日常', pozhenFunc);
 //createPopButton('青城孽龙', '外传日常', nielongFunc);
 //createPopButton('峨眉解围', '外传日常', JinlangFunc);
 //createPopButton('恒山杀神', '外传日常', shashenFunc);
 //createPopButton('少林伏魔', '外传日常', dujieFunc);
 //createPopButton('白坨奇袭', '外传日常', tuxiFunc);
-createPopButton('毒魔', '外传日常', KunLunFeiDuFunc);
-//createPopButton('V外传', '外传日常', waizhuanQuandianFunc);// 元宝点2-白坨闯阵，3-青城孽龙，5-峨眉解围，10-恒山山贼，11-唐门试炼； 12-长安糖葫芦，13-峨眉再战孤城，14-扬州听琴，15-少林伏魔，16-白坨奇袭   捐金锭换果子；帮本1，卖蛋壳
+//createPopButton('苗疆炼药', '外传日常', MjlyFunc);
+//createPopButton('铁血日常', '外传日常', TiexueFunc);
+//createPopButton('天山挂机', '外传日常', TsdzFunc);
+//createPopButton('大昭壁画', '外传日常', MianBiFunc);
+//createPopButton('侠客日常', '外传日常', xiakedao1);
+//createPopButton('打榜', '外传日常', PaiHangFunc);
+//createPopButton('特殊正邪', '外传日常', DiTuSuiPianFunc);
 
-createPopButton('绝杀', '外传日常', jsFunc);
-createPopButton('木人','外传日常',murenFunc);
-createPopButton('铁血求教','外传日常',tiexueqiujiaoFunc);
-createPopButton('邪分级', '外传日常', xfjFunc);
-createPopButton('射雕', '外传日常', shediaoFunc);
-createPopButton('佳人觅香', '外传日常', JRMXFunc);
 //佳人觅香------------------------------------------------
 function JRMXFunc(){
  go("jh 32;n;n;se;e;s;s;event_1_99232080;e;e;s;e;s;e;e;e;event_1_2207248");
@@ -1118,7 +1119,7 @@ function QiJian2Func() {
 // 签到--------------------------------------------------------
 function CheckInFunc() {
     go('jh 1;look_npc snow_mercenary;eval_startFengyi();zhounian_lb;lq_znboss_rewards');
-    //go('jh 1;w;event_1_46497436;home;');//纪念金庸
+    go('jh 17;n;event_1_36603700;home;');//开封
     go('jh 5;n;n;e;look_npc yangzhou_yangzhou9;eval_startShuanger();');//扬州双儿礼包
     go('home;vip drops;shop money_buy mny_shop1_N_10');//领通勤
     //go('vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;');//10次暴击
@@ -1137,7 +1138,7 @@ function CheckInFunc() {
     go('jh 26;w;w;n;n;event_1_14435995;home');//大招破阵
     go("jh 37;n;e;e;nw;nw;w;n;e;n;e;e;e;ne;ne;ne;se;n;event_1_97487911;home");//绝情谷鳄鱼
     go('jh 35;nw;nw;nw;n;ne;nw;w;nw;e;e;e;e;e;se;n;n;w;n;w;event_1_53278632;sousuo;sousuo;home'); //冰火岛玄重铁
-    go("eval_shediaoFunc()");//射雕
+    //go("eval_shediaoFunc()");//射雕
 }
 //晚安----------------------------------------------------------------------------
 function Goodnight() {
@@ -2421,7 +2422,7 @@ function healFunc() {
     //    console.log("内力是: "+force+"/"+max_force);
     if (kee < max_kee) {
         if (force > 0) { clickButton('recovery'); }
-        else if (force <= 0) { clickButton('items use snow_wannianlingzhi'); clickButton('items use snow_qiannianlingzhi'); }
+        else if (force <= 0) { clickButton('items use snow_wannianlingzhi'); clickButton('items use tianlongsi_sanqingwan'); }
         setTimeout(function () { healFunc() }, 300);
         return;
     }
@@ -3254,7 +3255,7 @@ function JinKuaFuFunc() {
 //广场杀坏人------------------------------------------------
 
 // 杀坏人----------------------------------------------------------------------------------------------------------------
-var HongMingNPCList = ["燕十三","慕容博","庞斑","方夜羽","东方不败","祝玉妍","李秋水","石观音","白猿","凌未风","萧秋水","蒙赤行","叶孤城","厉工","石幽明","胡铁花","星宿恶徒【二】","星宿恶徒【一】","星宿恶徒【三】","星宿恶徒【四】","夜魔*恶棍", "夜魔*流寇", "夜魔*剧盗", "夜魔*云老四", "夜魔*岳老三", "夜魔*二娘", "夜魔*段老大", "黑袍公", "独孤须臾", "翼国公", "云观海", "年兽", "铁狼军", "银狼军", "金狼军", "金狼将", "十夫长", "百夫长", "月幽剑士", "濯缨剑士", "对影剑士", "夏花剑士", "[一]镇擂斧将", "[二]镇擂斧将", "天魔真身", "攻楼死士", "镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神", "不『二』剑客"];
+var HongMingNPCList = ["燕十三","小鱼儿","慕容博","庞斑","方夜羽","东方不败","祝玉妍","李秋水","石观音","白猿","凌未风","萧秋水","蒙赤行","叶孤城","白自在","白万剑","花万紫","星宿恶徒【二】","星宿恶徒【一】","星宿恶徒【三】","星宿恶徒【四】","夜魔*恶棍", "夜魔*流寇", "夜魔*剧盗", "夜魔*云老四", "夜魔*岳老三", "夜魔*二娘", "夜魔*段老大", "黑袍公", "独孤须臾", "翼国公", "云观海", "年兽", "铁狼军", "银狼军", "金狼军", "金狼将", "十夫长", "百夫长", "月幽剑士", "濯缨剑士", "对影剑士", "夏花剑士", "[一]镇擂斧将", "[二]镇擂斧将", "天魔真身", "攻楼死士", "镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神", "不『二』剑客"];
 var HongMingNPCListClan1 = ["镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神"];
 var HongMingNPCListKuaFu = ["[1-5区]段老大", "[1-5区]墟归一", "[1-5区]上官晓芙", "[1-5区]洪昭天"];
 var killHongMingIntervalFunc = null;
@@ -3336,7 +3337,7 @@ Array.prototype.contains = function (obj) {
 
 
 // 杀好人----------------------------------------------------------------------------------------------------------------
-var HuangMingNPCList = ["三少爷","浪翻云","令狐冲","乔峰","乾罗","令狐冲","天山童姥","楚昭南","阿青","楚留香","朱大天王","石之轩","追三","西门吹雪","令东来","传鹰","无花", "守楼虎将", "天魔真身", "无『双』公主",];
+var HuangMingNPCList = ["三少爷","花无缺","浪翻云","令狐冲","乔峰","乾罗","令狐冲","天山童姥","楚昭南","阿青","楚留香","朱大天王","石之轩","追三","西门吹雪","令东来","传鹰","无花", "守楼虎将", "天魔真身", "无『双』公主",];
 //var HuangMingNPCList = ["[1-5区]王铁匠", "[1-5区]杨掌柜", "[1-5区]柳绘心", "[1-5区]柳小花", "[1-5区]卖花姑娘","[1-5区]刘守财","[1-5区]朱老伯","[1-5区]方老板", "[1-5区]客商","[1-5区]方寡妇","王铁匠", "杨掌柜", "柳绘心", "柳小花", "卖花姑娘","刘守财","朱老伯","方老板", "客商","方寡妇","[1-5区]无一","[1-5区]铁二","[1-5区]追三","[1-5区]冷四","[1-5区]花落云", "[1-5区]辰川","[1-5区]王世仲","[一]镇擂斧将","[二]镇擂斧将","饕餮分身","饕餮兽魂","饕餮幼崽","守谷神兽","镇谷神兽","守楼虎将"];
 var killHuangMingIntervalFunc = null;
 currentNPCIndex = 0;
