@@ -27,7 +27,7 @@ setInterval(function() {
 	var room = g_obj_map.get('msg_room');
 	for (var t, i = 1; (t = room.get('npc' + i)) != undefined; i++) {
 		t = t.split(',');
-		if ((t[1] == '白衣神君' || t[1] == '白自在'|| t[1] == '花万紫') && post_list.indexOf(t[0]) < 0) {
+		if ((t[1] == '白衣神君') && post_list.indexOf(t[0]) < 0) {
 			post_list.push(t[0]);
 			var msg = '发现' + t[1] + '位于' + room.get('map_id') + '-' + room.get('short');
 			clickButton('clan chat ' + msg);
