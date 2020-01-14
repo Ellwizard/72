@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         B-2020
+// @name         B-2020.1
 // @namespace    http://tampermonkey.net/
 // @version      2019.8.27
 // @description  try to take over the world!
@@ -89,7 +89,7 @@ var isDelayCmd = 1, // 是否延迟命令
 function go_reset() {
     cmdCache = [],      // 命令池
         paustStatus = 0,   //是否暂停执行
-        cmdDelayTime = 200; // 命令延迟时间
+        cmdDelayTime = 195; // 命令延迟时间
 }
 
 
@@ -431,7 +431,7 @@ function WhoAmIFunc() {
         myID = llmyattrs.get("id"); //自己的ID
         sm_MastID = llmyattrs.get("master_id");
         if (myID == 'u6070198') {   // 1区圆
-            skillstr6 = "月夜鬼萧,天外飞仙,6,紫血大法";
+            skillstr6 = "月夜鬼萧,无剑之剑,6,紫血大法";
             skillstr9 = "月夜鬼萧,冰月破魔枪,6,紫血大法";
             mySkillLists = "冰月破魔枪";
             //listenQLFunc();
@@ -1120,24 +1120,25 @@ function QiJian2Func() {
 function CheckInFunc() {
     go('jh 1;look_npc snow_mercenary;eval_startFengyi();zhounian_lb;lq_znboss_rewards');
     go('jh 17;n;event_1_36603700;home;');//开封
-    go('jh 5;n;n;e;look_npc yangzhou_yangzhou9;eval_startShuanger();');//扬州双儿礼包
+  //go('jh 5;n;n;e;look_npc yangzhou_yangzhou9;eval_startShuanger();');//扬州双儿礼包
+    go('jh 2;n;n;n;n;n;n;n;e;tzjh;touzi_jihua2 buygo 6;tzjh_lq;w;n;n;n;n;n;n;n;n;n;n;n;n;e;n;n;n;w;event_1_31320275;home');//理财采莲
+    go('jh 5;n;n;n;w;sign7;home;');//扬州签到
     go('home;vip drops;shop money_buy mny_shop1_N_10');//领通勤
-    //go('vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;');//10次暴击
+  //go('vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;vip finish_big_task;');//10次暴击
     go('vip finish_dig;vip finish_dig;vip finish_dig;vip finish_dig;vip finish_dig;vip finish_dig;vip finish_dig;vip finish_dig;vip finish_dig;vip finish_dig');//挖宝
-    go('vip finish_fb dulongzhai;vip finish_fb dulongzhai;vip finish_fb junying;vip finish_fb junying;vip finish_fb beidou;vip finish_fb beidou;vip finish_fb youling;vip finish_fb youling;vip finish_fb siyu;vip finish_fb changleweiyang;vip finish_fb heishuihuangling;vip finish_fb jiandangfenglingdu; ');//副本扫荡
+    go('vip finish_fb dulongzhai;vip finish_fb dulongzhai;vip finish_fb junying;vip finish_fb junying;vip finish_fb beidou;vip finish_fb beidou;vip finish_fb youling;vip finish_fb youling;vip finish_fb siyu;vip finish_fb changleweiyang;vip finish_fb heishuihuangling;vip finish_fb jiandangfenglingdu;vip finish_fb tianshanlongxue; ');//副本扫荡
     go('vip finish_diaoyu;vip finish_diaoyu;vip finish_diaoyu;vip finish_diaoyu;vip finish_diaoyu;vip finish_diaoyu;vip finish_diaoyu;vip finish_diaoyu;vip finish_diaoyu;vip finish_diaoyu;');//钓鱼
     go('clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan incense yx;clan buy 302;clan buy 302;clan buy 302;clan buy 302;clan buy 302;clan buy 401;clan buy 501;clan buy 601;clan buy 703;clan buy 703;clan buy 703;clan buy 703;clan buy 703;clan buy 703;clan buy 703;clan buy 703;clan buy 703;clan buy 703;');//上香
     go("share_ok 1;share_ok 2;share_ok 3;share_ok 4;share_ok 5;share_ok 6;share_ok 7;");//分享
     go('cangjian get_all;xueyin_shenbinggu blade get_all;xueyin_shenbinggu unarmed get_all;xueyin_shenbinggu throwing get_all;xueyin_shenbinggu spear get_all;xueyin_shenbinggu stick get_all;xueyin_shenbinggu whip get_all;xueyin_shenbinggu staff get_all;');//闯楼奖励
- //   go("jh 1;e;e;event_1_63788647;w;n;e;e;e;e;n;lq_bysf_lb;lq_lmyh_lb;home;");//比翼双飞和劳模英豪
-    go('jh 2;n;n;n;n;n;n;n;e;tzjh;touzi_jihua2 buygo 6;tzjh_lq;w;n;n;n;n;n;n;n;n;n;n;n;n;e;n;n;n;w;event_1_31320275;home');//理财采莲
-    go('jh 5;n;n;n;w;sign7;home;');//扬州签到
-    // go("jh 5;n;n;n;n;n;n;n;n;w;w;w;s;e;e;s;s;e;e;s;s;s;event_1_30729073;event_1_30729073 go;home");//扬州听琴
-    // go('jh 14;sw;s;e;s;s;sw;sw;w;w;s;s;e;e;e;n;ne;event_1_56989555 go;home');//唐门试炼
+ // go("jh 1;e;e;event_1_63788647;w;n;e;e;e;e;n;lq_bysf_lb;lq_lmyh_lb;home;");//比翼双飞和劳模英豪
+  //go("jh 5;n;n;n;n;n;n;n;n;w;w;w;s;e;e;s;s;e;e;s;s;s;event_1_30729073;event_1_30729073 go;home");//扬州听琴
+ // go('jh 14;sw;s;e;s;s;sw;sw;w;w;s;s;e;e;e;n;ne;event_1_56989555 go;home');//唐门试炼
     go('jh 26;w;w;n;e;e;event_1_18075497;home');//大招采矿
     go('jh 26;w;w;n;n;event_1_14435995;home');//大招破阵
     go("jh 37;n;e;e;nw;nw;w;n;e;n;e;e;e;ne;ne;ne;se;n;event_1_97487911;home");//绝情谷鳄鱼
     go('jh 35;nw;nw;nw;n;ne;nw;w;nw;e;e;e;e;e;se;n;n;w;n;w;event_1_53278632;sousuo;sousuo;home'); //冰火岛玄重铁
+    go("items use obj_xuanbingbihuojiu;items use obj_xuanbingbihuojiu1;items use tianlongsi_sanxiangmenmgzhuling;items use tianlongsi_nanguagu;");
     //go("eval_shediaoFunc()");//射雕
 }
 //晚安----------------------------------------------------------------------------
@@ -1304,33 +1305,36 @@ function ZhuangBei() {
     if (btnList["战斗装"].innerText == '战斗装') {
         console.log("切换战斗装备！");
         go('auto_equip on');// 一键装备
-     go('unwield longwulianmoge_yuyemoqiang');//脱魔枪
-     go('unwield longwulianmoge_fengleixuefu');//脱风雷
-     go('unwield longwulianmoge_xiefoyaochui');//脱妖锤
-     go('unwield longwulianmoge_mojianlianhun');//脱魔剑
-   //go('unwield weapon_sb_unarmed11');       // 脱拳套
-   //go('unwield weapon_sb_sword12');       // 脱轩辕剑
-   //go('unwield weapon_sb_spear12');       // 脱枪
-     go('wield weapon_sb_spear12 rumai');// 入脉枪
-   //go('wield weapon_sb_spear12');       // 穿枪
-   //go('wield weapon_sb_sword12');        //穿轩辕剑
-   //go('wield weapon_sb_stick12 rumai');        //穿破宇棍
-
+      //go('unwield longwulianmoge_yuyemoqiang');//脱魔枪
+     // go('unwield longwulianmoge_fengleixuefu');//脱风雷
+     // go('unwield longwulianmoge_xiefoyaochui');//脱妖锤
+        go('unwield longwulianmoge_mojianlianhun');//脱魔剑
+      //go('unwield weapon_sb_unarmed11');       // 脱拳套
+      //go('unwield weapon_sb_sword12');       // 脱轩辕剑
+        go('unwield weapon_sb_spear12');// 脱枪
+     // go('wield weapon_sb_spear12 rumai');// 入脉枪
+      //go('wield weapon_sb_spear12');       // 穿枪
+      //go('wield weapon_sb_sword12');        //穿轩辕剑
+        go('unwield weapon_sb_stick12');// 脱棍
+        go('wield tianlongsi_sb_libiegou');
+        go('wield weapon_sb_spear12');
+        go('wield weapon_sb_stick12 rumai');//穿破宇棍
         btnList["战斗装"].innerText = '打坐装';
     }
     else {
         console.log("切换打坐装备！");
-     go('auto_equip on');       // 一键装备
-     go('unwield weapon_sb_stick12');       // 脱棍子
-     go('unwield weapon_sb_sword12');       // 脱剑
+     go('auto_equip on');// 一键装备
+     go('unwield weapon_sb_stick12');// 脱棍子
+     go('unwield weapon_sb_spear12');// 脱枪
+   //go('unwield weapon_sb_sword12');// 脱剑
    //go('wield sword of windspring rumai');       // 风泉
-     go('wield sword of windspring');       // 风泉
-     go('wear longyuan banzhi moke');       // 龙渊
-     go('wear equip_finger_kongdong_bulao');       // 博睿扳指equip_head_dashi_wushuang
+     go('wield sword of windspring');// 风泉
+  // go('wear longyuan banzhi moke');// 龙渊
+     go('wear equip_finger_kongdong_bulao');// 博睿扳指equip_head_dashi_wushuang
      go('wear equip_head_tianji_jiuxuan'); // 天机帽
      go('wear tianlongsi_mumianjiasha'); //木棉衣服
    //go('wield longwulianmoge_mojianlianhun');//穿魔剑
-     go('wield weapon_stick_miaoyun_lhx');       // 装笛子
+     go('wield weapon_stick_miaoyun_lhx');// 装笛子
         btnList["战斗装"].innerText = '战斗装';
     }
 }
@@ -1577,7 +1581,7 @@ function KaibaiyinFunc() {
 }
 //挖天证--------------------------------------------------
 function WTZFunc() {
-    for (var i = 0; i < 100; i++) { // 从第一个开始循环
+    for (var i = 0; i < 300; i++) { // 从第一个开始循环
         go("event_1_21731755"); //进洞
              for(var j = 0;j<5;j++){
              go("event_1_22920188");
@@ -1587,7 +1591,7 @@ function WTZFunc() {
    }
 //挖地证--------------------------------------------------
 function WDZFunc() {
-    for (var i = 0; i < 100; i++) { // 从第一个开始循环
+    for (var i = 0; i < 700; i++) { // 从第一个开始循环
         go("event_1_83697921"); //进洞
              for(var j = 0;j<5;j++){
              go("event_1_64388826");
@@ -2525,7 +2529,7 @@ function JiaLanFight() {
         var iStart = onclickValue.indexOf("clickButton('");
         var iEnd = onclickValue.indexOf("', 0)");
 
-        if (skillButtons[i].textContent == '紫血大法') {
+        if (skillButtons[i].textContent == '不动明王诀') {
             healSkill = onclickValue.substring(iStart + 13, iEnd);
             console.log(healSkill);
         }
@@ -3255,7 +3259,7 @@ function JinKuaFuFunc() {
 //广场杀坏人------------------------------------------------
 
 // 杀坏人----------------------------------------------------------------------------------------------------------------
-var HongMingNPCList = ["燕十三","小鱼儿","慕容博","庞斑","方夜羽","东方不败","祝玉妍","李秋水","石观音","白猿","凌未风","萧秋水","蒙赤行","叶孤城","白自在","白万剑","花万紫","星宿恶徒【二】","星宿恶徒【一】","星宿恶徒【三】","星宿恶徒【四】","夜魔*恶棍", "夜魔*流寇", "夜魔*剧盗", "夜魔*云老四", "夜魔*岳老三", "夜魔*二娘", "夜魔*段老大", "黑袍公", "独孤须臾", "翼国公", "云观海", "年兽", "铁狼军", "银狼军", "金狼军", "金狼将", "十夫长", "百夫长", "月幽剑士", "濯缨剑士", "对影剑士", "夏花剑士", "[一]镇擂斧将", "[二]镇擂斧将", "天魔真身", "攻楼死士", "镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神", "不『二』剑客"];
+var HongMingNPCList = ["夜魔","燕十三","小鱼儿","慕容博","庞斑","方夜羽","东方不败","白开心","李秋水","石观音","白猿","凌未风","萧秋水","李大嘴","叶孤城","白自在","白衣神君","花万紫","星宿恶徒【二】","星宿恶徒【一】","星宿恶徒【三】","星宿恶徒【四】","夜魔*恶棍", "夜魔*流寇", "夜魔*剧盗", "夜魔*云老四", "夜魔*岳老三", "夜魔*二娘", "夜魔*段老大", "黑袍公", "独孤须臾", "翼国公", "云观海", "年兽", "铁狼军", "银狼军", "金狼军", "金狼将", "十夫长", "百夫长", "月幽剑士", "濯缨剑士", "对影剑士", "夏花剑士", "[一]镇擂斧将", "[二]镇擂斧将", "天魔真身", "攻楼死士", "镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神", "不『二』剑客"];
 var HongMingNPCListClan1 = ["镇山神兽", "守山神兽", "应龙幼崽", "应龙兽魂", "应龙分身", "应龙王", "应龙战神", "镇潭神兽", "守潭神兽", "螣蛇幼崽", "螣蛇兽魂", "螣蛇分身", "螣蛇王", "螣蛇战神", "镇殿神兽", "守殿神兽", "幽荧幼崽", "幽荧兽魂", "幽荧分身", "幽荧王", "幽荧战神", "饕餮分身", "饕餮兽魂", "饕餮幼崽", "守谷神兽", "镇谷神兽", "饕餮王", "饕餮战神"];
 var HongMingNPCListKuaFu = ["[1-5区]段老大", "[1-5区]墟归一", "[1-5区]上官晓芙", "[1-5区]洪昭天"];
 var killHongMingIntervalFunc = null;
@@ -3337,7 +3341,7 @@ Array.prototype.contains = function (obj) {
 
 
 // 杀好人----------------------------------------------------------------------------------------------------------------
-var HuangMingNPCList = ["三少爷","花无缺","浪翻云","令狐冲","乔峰","乾罗","令狐冲","天山童姥","楚昭南","阿青","楚留香","朱大天王","石之轩","追三","西门吹雪","令东来","传鹰","无花", "守楼虎将", "天魔真身", "无『双』公主",];
+var HuangMingNPCList = ["云梦璃","三少爷","花无缺","浪翻云","令狐冲","乔峰","乾罗","令狐冲","天山童姥","楚昭南","阿青","楚留香","朱大天王","石之轩","追三","西门吹雪","令东来","传鹰","无花", "守楼虎将", "天魔真身", "无『双』公主",];
 //var HuangMingNPCList = ["[1-5区]王铁匠", "[1-5区]杨掌柜", "[1-5区]柳绘心", "[1-5区]柳小花", "[1-5区]卖花姑娘","[1-5区]刘守财","[1-5区]朱老伯","[1-5区]方老板", "[1-5区]客商","[1-5区]方寡妇","王铁匠", "杨掌柜", "柳绘心", "柳小花", "卖花姑娘","刘守财","朱老伯","方老板", "客商","方寡妇","[1-5区]无一","[1-5区]铁二","[1-5区]追三","[1-5区]冷四","[1-5区]花落云", "[1-5区]辰川","[1-5区]王世仲","[一]镇擂斧将","[二]镇擂斧将","饕餮分身","饕餮兽魂","饕餮幼崽","守谷神兽","镇谷神兽","守楼虎将"];
 var killHuangMingIntervalFunc = null;
 currentNPCIndex = 0;
