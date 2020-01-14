@@ -21,9 +21,9 @@ var isDelayCmd = 1, // 是否延迟命令
     cmdCache = [],      // 命令池
     timeCmd = null,     // 定时器句柄
     paustStatus = 0,   //是否暂停执行
-    cmdDelayTime = 200; // 命令延迟时间
+    cmdDelayTime = 195; // 命令延迟时间
 var post_list = [];
-setInterval(function() {
+/*setInterval(function() {
 	var room = g_obj_map.get('msg_room');
 	for (var t, i = 1; (t = room.get('npc' + i)) != undefined; i++) {
 		t = t.split(',');
@@ -38,7 +38,8 @@ setInterval(function() {
 		}
 	}
 }, 1000);
-
+*/
+//setInterval(function() {go('e;w');},2000);//自动左右走路
 // 执行命令串
 function go(str) {
     var arr = str.split(";");
@@ -148,10 +149,10 @@ createButton('舍',SLJSFunc);
 createButton('加',JSKJSFunc);
 createButton('通',TTJSFunc);
 createButton('买',TTBUYFunc);
-createButton(' ', );
 createButton('雪 ',xtslFunc);
 createButton('扬',yzfxtFunc);
 createButton('峨',emjdFunc);
+createButton('少',sllxtFunc);
 createButton('明',mjbshtFunc);
 createButton('泰',tsstFunc);
 createButton('星',xxbctzFunc);
@@ -163,6 +164,8 @@ createButton('雪',bhxsfdFunc);
 createButton('绝',jqdyFunc);
 createButton('黑',yyhyxFunc);
 createButton('朝',yyzmgFunc);
+//createButton('F',FULLFunc);
+
 
 
 
@@ -233,7 +236,7 @@ function emjdFunc(){
     go('jh 8,w,nw,n,n,n,n,e,e,n,n,e,eval_halt_move();,n,eval_halt_move();,n,n,n,w,n,n,n,n,n,n,n,n,n,nw,nw,n,n');
 }
 function sllxtFunc(){
-    go('jh 13,n,n,n,n,n,n,n,n,n,n');
+    go('jh 13;n;n;n;n;n;n;n;n;n;n');
 }
 function mjbshtFunc(){
    go('jh 18,n,nw,n,n,n,n,n,ne,n,n,n,n,n,e,e,se,se,e');
@@ -282,6 +285,23 @@ function xxbctzFunc(){
 function yzfxtFunc(){
      go('jh 5,n,n,n,n,n,e,n,e,n,w,n,n');
 }
+//巡逻=================================================
+function FULLFunc(){
+     xtslFunc();
+    setTimeout(function(){yzfxtFunc()},3000);
+    setTimeout(function(){sllxtFunc();},8000);
+    setTimeout(function(){mjbshtFunc();},8000);
+    setTimeout(function(){tsstFunc();},8000);
+    setTimeout(function(){xxbctzFunc();},8000);
+    setTimeout(function(){txczwFunc();},8000);
+    setTimeout(function(){bhxywqFunc();},8000);
+    setTimeout(function(){bhbhFunc();},8000);
+    setTimeout(function(){bhxsfdFunc();},8000);
+    setTimeout(function(){jqdyFunc();},8000);
+    setTimeout(function(){yyhyxFunc();},8000);
+    setTimeout(function(){yyzmgFunc();},8000);
+}
+
 //=============================================================
 function MyNavigatorFunc(){
     var ljsonpath ={};
@@ -394,7 +414,7 @@ hairsfalling = {
    '星宿': 'jh 28,n,w,w,w,w,w,w,nw,ne,nw,ne,nw,ne,nw,ne,nw,ne,nw,ne,e',
    '扬州': 'jh 5,n,n,n,n,n,e,n,e,n,w,n,n',
   },
-  'snow': {
+  '雪婷': {
     '逄义': 'jh 1',
     '金庸大师': 'jh 1,w',
     '胡斐': 'jh 1,w,w,n',
@@ -439,7 +459,7 @@ hairsfalling = {
     '杜宽': 'jh 1,e,n,n,n,n,w',
     '杜宽宽': 'jh 1,e,n,n,n,n,w',
   },
-  'luoyang': {
+  '洛阳': {
     '农夫': 'jh 2,n',
     '守城士兵': 'jh 2,n,n',
     '客商': 'jh 2,n,n,e',
@@ -489,7 +509,7 @@ hairsfalling = {
     '萧问天': 'jh 2,n,n,n,n,n,n,n,n,n,e,n,n',
     '藏剑楼首领': 'jh 2,n,n,n,n,n,n,n,n,n,e,n,n,n',
   },
-  'changan': {
+  '长安': {
     '胡商': 'jh 2,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
     '城门卫兵': 'jh 2,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
     '无影卫': 'jh 2,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w',
@@ -550,7 +570,7 @@ hairsfalling = {
     '卓小妹': 'jh 2,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,e,e,e,e,n,n,n,w',
     '上官小婉': 'jh 2,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,e,e,e,e,n,n,n,e',
   },
-  'huashancun': {
+  '华山村': {
     '泼皮': 'jh 3',
     '松鼠': 'jh 3,n',
     '野兔': 'jh 3,n,e',
@@ -591,7 +611,7 @@ hairsfalling = {
     '萧独眼': 'jh 3,s,s,s,s,s,nw,n,n,n,n,n',
     '刘寨主': 'jh 3,s,s,s,s,s,nw,n,n,n,n,n,n',
   },
-  'huashan': {
+  '华山': {
     '孙驼子': 'jh 4',
     '吕子弦': 'jh 4,n',
     '女弟子': 'jh 4,n,n',
@@ -632,7 +652,7 @@ hairsfalling = {
     '蒙面剑客': 'jh 4,n,n,n,n,n,n,n,n,n,n,w,event_1_30014247,s,s,s,s',
     '黑衣人': 'jh 4,n,n,n,n,n,n,n,n,n,n,w,event_1_30014247,s,s,s,s,s,e',
   },
-  'yangzhou': {
+  '扬州': {
     '官兵': 'jh 5',
     '花店伙计': 'jh 5,n,w,w,n',
     '大黑马': 'jh 5,n,n',
@@ -694,7 +714,7 @@ hairsfalling = {
     '楚雄霸': 'jh 5,n,n,n,n,n,w,w,n,n,n,get_silver',
     '朱先生': 'jh 5,n,n,n,n,n,e,n,n,n',
   },
-  'gaibang': {
+  '丐帮': {
     '左全': 'jh 6',
     '裘万家': 'jh 6',
     '梁长老': 'jh 6,event_1_98623439',
@@ -707,7 +727,7 @@ hairsfalling = {
     '马俱为': 'jh 6,event_1_98623439,ne,n,ne,ne,ne',
     '余洪兴': 'jh 6,event_1_98623439,ne,n,ne,ne,ne,event_1_97428251',
   },
-  'choyin': {
+  '乔阴': {
     '守城官兵': 'jh 7',
     '卖饼大叔': 'jh 7,s',
     '陆得财': 'jh 7,s',
@@ -725,7 +745,7 @@ hairsfalling = {
     '妇人': 'jh 7,s,s,s,s,s,s,s,sw,w,n',
     '骆云舟': 'jh 7,s,s,s,s,s,s,s,s,e,n,e,s,e',
   },
-  'emei': {
+  '峨眉': {
     '参谋官': 'daily go 13',
     '王坚': 'daily go 13',
     '军械官': 'daily go 13,w,n',
@@ -770,7 +790,7 @@ hairsfalling = {
     '灭绝掌门': 'jh 8,w,nw,n,n,n,n,e,e,n,n,e,em1,n,em2,n,n,n,w,n,n,n,n,n,n,n,n,n,ne,ne,n',
     '方碧翠': 'jh 8,w,nw,n,n,n,n,e,e,n,n,e,em1,n,em2,n,n,n,w,n,n,n,n,n,n,n,n,n,ne,ne,n',
   },
-  'henshan': {
+  '恒山': {
     '山盗': 'jh 9',
     '秦卷帘': 'jh 9,n',
     '九戒大师': 'jh 9,n,w',
@@ -797,7 +817,7 @@ hairsfalling = {
     '魔教杀手': 'jh 9,n,n,n,n,n,n,n,n,n,w,n,e,henshan_qinqitai23_op1',
     '魔教头目': 'jh 9,n,n,n,n,n,n,n,n,n,w,n,n,n,n',
   },
-  'wudang': {
+  '武当': {
     '土匪': 'jh 10',
     '王五': 'jh 10,w',
     '剑童': 'jh 10,w,n,search',
@@ -817,7 +837,7 @@ hairsfalling = {
     '小蜜蜂': 'jh 10,w,n,n,w,w,w,n,n,n,n,e,e,e,e,s,e,s,e,n',
     '猴子': 'jh 10,w,n,n,w,w,w,n,n,n,n,e,e,e,e,s,e,s,e,s',
   },
-  'latemoon': {
+  '晚月': {
     '蝴蝶': 'jh 11,e,e,s',
     '彩衣少女': 'jh 11,e,e,s,sw',
     '蓝止萍': 'jh 11,e,e,s,sw,se,w',
@@ -837,7 +857,7 @@ hairsfalling = {
     '金仪彤': 'jh 11,e,e,s,sw,se,w,w,s,s,s,e,s,s,w,s,e',
     '凤凰': 'jh 11,e,e,s,sw,se,w,w,s,s,s,e,s,s,w,s,e,e',
   },
-  'waterfog': {
+  '水烟': {
     '天邪虎': 'jh 12,n,n,n',
     '董老头': 'jh 12,n,n,n,e,n,n',
     '水烟阁武士': 'jh 12,n,n,n',
@@ -847,7 +867,7 @@ hairsfalling = {
     '水烟阁司事': 'jh 12,n,n,n,w,n,nw,e',
     '於兰天武': 'jh 12,n,n,n,w,n,nw,e,n',
   },
-  'shaolin': {
+  '少林': {
     '山猪': 'jh 13',
     '虚通': 'jh 13',
     '虚明': 'jh 13,n',
@@ -914,7 +934,7 @@ hairsfalling = {
     '渡云': 'jh 13,e,s,s,w,w,w',
     '渡风': 'jh 13,e,s,s,w,w,w',
   },
-  'tangmen': {
+  '唐门': {
     '张之岳': 'jh 14,e,event_1_10831808,n',
     '唐门弟子': 'jh 14,w,n',
     '黄色唐门弟子': 'jh 14,w,n,n,n,e,e,n',
@@ -932,7 +952,7 @@ hairsfalling = {
     '默剑客': 'jh 14,sw,s,e,s,s,sw,sw,w,w,s,s,e,e,e',
     '欧阳敏': 'jh 14,w,n,n,n,e,e,n,n,ask tangmen_tangmei,ask tangmen_tangmei,e,event_1_8413183,event_1_39383240,e,s,e,n,w,n,n',
   },
-  'qingcheng': {
+  '青城': {
     '海公公': 'jh 15',
     '游方郎中': 'jh 15,n',
     '仵作': 'jh 15,s,ne',
@@ -967,7 +987,7 @@ hairsfalling = {
     '木道神': 'jh 15,s,s,s,s,s,s,w',
     '背剑老人': 'jh 15,s,s,s,s,s,s,s,s,s,e,s',
   },
-  'xiaoyao': {
+  '逍遥': {
     '天山姥姥': 'jh 16,s,s,s,s,e,n,e,event_1_5221690,s,w,event_1_57688376,n,n,e,n,event_1_88625473,event_1_82116250,event_1_90680562,event_1_38586637',
     '吴统领': 'jh 16,s,s,s,s,e,e,s,w',
     '逍遥祖师': 'jh 16,s,s,s,s,e,n,e,event_1_5221690,s,w,event_1_57688376,n,n',
@@ -982,7 +1002,7 @@ hairsfalling = {
     '苟书痴': 'jh 16,s,s,s,s,e,e,s,w,w,w',
     '李唱戏': 'jh 16,s,s,s,s,e,e,s,w,w,w,w,s',
   },
-  'kaifeng': {
+  '开封': {
     '骆驼': 'jh 17',
     '毒蛇': 'jh 17,event_1_97081006',
     '野猪': 'jh 17,event_1_97081006,s',
@@ -1042,7 +1062,7 @@ hairsfalling = {
     '新娘': 'jh 17,sw,nw',
     '耶律夷烈': 'jh 17,sw,s,sw,nw,ne',
   },
-  'mingjiao': {
+  '明教': {
     '村民': 'jh 18',
     '沧桑老人': 'jh 18,e',
     '村妇': 'jh 18,w',
@@ -1074,7 +1094,7 @@ hairsfalling = {
     '范右使': 'jh 18,n,nw,n,n,n,n,n,ne,n,n,n,n,n,n,n,n,n,n,n',
     '小昭': 'jh 18,n,nw,n,n,n,n,n,ne,n,n,n,n,n,n,n,n,n,n,n,n',
   },
-  'quanzhen': {
+  '全真': {
     '终南山游客': 'jh 19,s,s,s,sw,s,e',
     '野马': 'jh 19,s',
     '男童': 'jh 19,s,s,s,sw,s,e,n,nw',
@@ -1107,7 +1127,7 @@ hairsfalling = {
     '老人': 'jh 19,s,s,s,sw,s,e,n,nw,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
     '蜜蜂': 'jh 19,s,s,s,sw,s,e,n,nw,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w,n',
   },
-  'gumu': {
+  '古墓': {
     '天蛾': 'jh 20,w,w,s,e,s,s,s',
     '食虫虻': 'jh 20,w,w,s,e,s,s,s,s,s,sw',
     '白色玉蜂': 'jh 20,w,w,s,e,s,s,s,s,s,sw,sw,s',
@@ -1117,8 +1137,9 @@ hairsfalling = {
     '林祖师': 'jh 20,w,w,s,e,s,s,s,s,s,sw,sw,s,s,s,s,e,e,event_1_3723773,se,n,e,s,e,s,e',
     '孙婆婆': 'jh 20,w,w,s,e,s,s,s,s,s,sw,sw,s,s,s,s,s,s,s,e,e,e,e,s,e',
   },
-  'baituo': {
+  '白陀': {
     '玉门守将': 'jh 21,n,n,n,n,e',
+    '傅介子': 'jh 21',
     '青衣盾卫': 'jh 21,n,n,n,n,w',
     '飞羽神箭': 'jh 21,n,n,n,n,w,w',
     '银狼近卫': 'jh 21,n,n,n,n,w,w,w',
@@ -1174,7 +1195,7 @@ hairsfalling = {
     '竹叶青蛇': 'jh 21,nw,w,w,nw,n,n,n,n,n,n,n,n,ne,e',
     '金环蛇': 'jh 21,nw,w,w,nw,n,n,n,n,n,n,n,n,ne,e',
   },
-  'songshan': {
+  '嵩山': {
     '脚夫': 'jh 22',
     '秋半仙': 'jh 22,n',
     '风骚少妇': 'jh 22,n',
@@ -1213,7 +1234,7 @@ hairsfalling = {
     '卢鸿一': 'jh 22,n,n,n,n,e',
     '英元鹤': 'jh 22,n,n,n,n,e,n',
   },
-  'meizhuang': {
+  '梅庄': {
     '柳府家丁': 'jh 23',
     '柳玥': 'jh 23,n,n',
     '老者': 'jh 23,n,n',
@@ -1242,7 +1263,7 @@ hairsfalling = {
     '红衣僧人': 'jh 23,n,n,n,n,n,n,n,n,n,n,event_1_8188693,n,n,n,n',
     '黄衫婆婆': 'jh 23,n,n,n,n,n,n,n,n,n,n,event_1_8188693,n,n,n,e,n',
   },
-  'taishan': {
+  '泰山': {
     '挑夫': 'jh 24',
     '镖师': 'jh 24,se',
     '黄衣刀客': 'jh 24,n',
@@ -1301,7 +1322,7 @@ hairsfalling = {
     '玉师叔': 'jh 24,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w',
     '泰山掌门': 'jh 24,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
   },
-  'tieflag': {
+  '大旗': {
     '宾奴': 'jh 25,w',
     '小贩': 'jh 11,e,e,s,n,nw,w,nw,e',
     '酒肉和尚': 'jh 11,e,e,s,n,nw,w,nw,e,e,e,n,w',
@@ -1320,7 +1341,7 @@ hairsfalling = {
     '蓝衣少女': 'jh 25,e,e,e,e,s,yell,s,e,event_1_81629028,s,e,n,w,w,s,w',
     '橙衣少女': 'jh 25,e,e,e,e,s,yell,s,e,event_1_81629028,s,e,n,w,w,s,w',
   },
-  'guanwai': {
+  '大昭': {
     '小绵羊': 'jh 26,w',
     '草原狼': 'jh 26,w',
     '大绵羊': 'jh 26,w,w',
@@ -1356,7 +1377,7 @@ hairsfalling = {
     '灵空': 'jh 26,w,w,w,w,w,w,w,w,w,w',
     '葛伦': 'jh 26,w,w,w,w,w,w,w,w,w,w,ask lama_master,event_1_91837538',
   },
-  'heimuya': {
+  '明教': {
     '店小二': 'jh 27,ne,w',
     '客店老板': 'jh 27,ne,w',
     '外面船夫': 'jh 27,ne,nw,w,nw,w,w',
@@ -1396,7 +1417,7 @@ hairsfalling = {
     '莲亭': 'jh 27,ne,nw,w,nw,w,w,kill heimuya_shaogong,yell,w,nw,n,n,n,n,n,n,n,w,n,n,n,n,n,n,n,n,n,n,yell,n,n,n,n,n,n,n,n,n,n,n,n',
     '东方教主': 'jh 27,ne,nw,w,nw,w,w,kill heimuya_shaogong,yell,w,nw,n,n,n,n,n,n,n,w,n,n,n,n,n,n,n,n,n,n,yell,n,n,n,n,n,n,n,n,n,n,n,n,n,event_1_57107759,e,e,n,w',
   },
-  'xingxiu': {
+  '星宿': {
     '狮吼师兄': 'jh 28,n,n',
     '星宿派鼓手': 'jh 28,n,n',
     '星宿派号手': 'jh 28,n,n',
@@ -1430,7 +1451,7 @@ hairsfalling = {
     '伊犁马': 'jh 28,nw,nw',
     '阿凡提': 'jh 28,nw,e,e',
   },
-  'taoguan': {
+  '茅山': {
     '野猪': 'jh 29,n',
     '张天师': 'jh 29,n,n,n,n,event_1_60035830,event_1_65661209,n',
     '万年火龟': 'jh 29,n,n,n,n,event_1_60035830,event_1_65661209,n',
@@ -1441,7 +1462,7 @@ hairsfalling = {
     '护山使者': 'jh 29,n,n,n,n,event_1_60035830,event_1_65661209,n,n,n,n,n,n,n,event_1_98579273,w',
     '林忌': 'jh 29,n,n,n,n,event_1_60035830,event_1_65661209,n,n,n,n,n,n,n,event_1_98579273,n',
   },
-  'taohua': {
+  '桃花': {
     '陆废人': 'jh 30',
     '神雕大侠': 'jh 30,n,n,ne',
     '老渔夫': 'jh 30,n,n,n,n,n,n',
@@ -1457,7 +1478,7 @@ hairsfalling = {
     '傻姑': 'jh 30,yell,w,n',
     '戚总兵': 'jh 30,yell,w,n,e',
   },
-  'resort': {
+  '铁血': {
     '樵夫': 'jh 31,n,n,n',
     '红色樵夫': 'jh 31,n,n,n,w',
     '老张': 'jh 31,n,n,n,w,w,w,w,n',
@@ -1494,7 +1515,7 @@ hairsfalling = {
     '铁血打坐': 'jh 31,n,se,e,se,s,s,sw,se,se,e,nw,e,ne,n,ne,n,n,n,n,n,n,n,n,n,w,w',
     '烽火戏诸侯': 'jh 31,n,se,e,se,s,s,sw,se,se,e,nw,e,ne,n,ne,n,n,n,n,n,n,n,n,n,e,e',
   },
-  'murong': {
+  '慕容': {
     '家丁': 'jh 32,n,n',
     '邓家臣': 'jh 32,n,n,se',
     '朱姑娘': 'jh 32,n,n,se,e,s,s',
@@ -1516,7 +1537,7 @@ hairsfalling = {
     '王夫人': 'jh 32,n,n,se,n,n,n,n,w,w,w,n,w,n,e,n,e,n,n',
     '小茗': 'jh 32,n,n,se,n,n,n,n,w,w,w,n,w,n,e,n,e,n,n',
   },
-  'dali': {
+  '大理': {
     '摆夷女子': 'jh 33,sw,sw',
     '士兵': 'jh 33,sw,sw,s,s',
     '武将': 'jh 33,sw,sw,s,s',
@@ -1545,6 +1566,8 @@ hairsfalling = {
     '傅护卫': 'jh 33,sw,sw,s,s,s,s,s,e',
     '褚护卫': 'jh 33,sw,sw,s,s,s,s,s,e,n',
     '家丁': 'jh 33,sw,sw,s,s,s,s,s,e,n,se',
+    '丹顶鹤': 'jh 33,sw,sw,s,s,s,s,s,e,n,se,w,e,e',
+    '养花女': 'jh 33,sw,sw,s,s,s,s,s,e,n,se,w,e,e,e,e,e',
     '霍先生': 'jh 33,sw,sw,s,s,s,s,s,e,n,se,w',
     '华司徒': 'jh 33,sw,sw,s,s,s,s,s,e,n,se,n,w',
     '范司马': 'jh 33,sw,sw,s,s,s,s,s,e,n,se,n,e',
@@ -1574,9 +1597,9 @@ hairsfalling = {
     '台夷姑娘': 'jh 33,sw,sw,s,s,s,s,s,s,s,s,s,s,s,s,s,sw,sw',
     '水牛': 'jh 33,sw,sw,s,s,s,s,s,s,s,s,s,s,s,s,s,sw,sw,n',
     '台夷农妇': 'jh 33,sw,sw,s,s,s,s,s,s,s,s,s,s,s,s,s,sw,sw,s',
-    '采笋人1': 'jh 33,sw,sw,s,s,s,s,s,s,s,s,s,s,s,s,s,sw,sw,w',
+    '采笋人': 'jh 33,sw,sw,s,s,s,s,s,s,s,s,s,s,s,s,s,sw,sw,w',
     '族长': 'jh 33,sw,sw,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,e,n,n',
-    '祭祀': 'jh 33,sw,sw,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,e,n,n,n',
+    '祭司': 'jh 33,sw,sw,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,e,n,n,n',
     '侍者': 'jh 33,sw,sw,s,s,s,s,s,s,s,s,s,s,w,w,se',
     '高侯爷': 'jh 33,sw,sw,s,s,s,s,s,s,s,s,s,s,w,w,se,n',
     '素衣卫士': 'jh 33,sw,sw,s,s,s,s,s,s,s,s,s,s,w,w,se,n',
@@ -1601,13 +1624,13 @@ hairsfalling = {
     '台夷商贩2': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e',
     '老祭司': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,ne,e,n',
     '采桑女': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,s',
-    '采笋人2': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,sw,s',
+    '采笋人1': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,sw,s',
     '砍竹人': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,sw,s,s',
     '养蚕女': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,sw,s,s,e,e',
     '纺纱女': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,sw,s,s,e,n,e,n',
     '老祭祀': 'jh 33,sw,sw,s,s,s,s,e,e,e,e,se,s,e,e,e,ne,e,e,se,e,e,ne,e,n',
   },
-  'duanjian': {
+  '断剑': {
     '黑袍老人': 'jh 34,ne,e,e,e,e,e,n,e,n',
     '白袍老人': 'jh 34,ne,e,e,e,e,e,n,e,n',
     '和尚': 'jh 34,ne,e,e,e,e,e,n,n,n,n,n,w',
@@ -1625,7 +1648,7 @@ hairsfalling = {
     '雾中人': 'jh 34,ne,e,e,e,e,e,n,n,n,w,w,w,n,n,yell,n,n,n,n,n,n,n',
     '独孤不败': 'jh 34,ne,e,e,e,e,e,n,n,n,w,w,w,n,n,yell,n,n,n,n,n,n,e,e,event_1_10251226',
   },
-  'binghuo': {
+  '冰火岛': {
     '火麒麟王': 'jh 35,nw,nw,nw,n,ne,nw',
     '火麒麟': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,n,nw',
     '麒麟幼崽': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,n,nw',
@@ -1640,7 +1663,7 @@ hairsfalling = {
     '黑衣杀手': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,n,n,w,n,w,nw',
     '元真和尚': 'jh 35,nw,nw,nw,n,ne,nw,w,nw,e,e,e,e,e,se,n,n,w,n,w,nw,sw,se,s,sw,sw,se,se',
   },
-  'xiakedao': {
+  '侠客岛': {
     '黄衣船夫': 'jh 36,yell',
     '侠客岛厮仆': 'jh 36,yell',
     '张三': 'jh 36,yell,e',
@@ -1678,7 +1701,7 @@ hairsfalling = {
     '青年海盗': 'jh 36,yell,e,se,e,e,s,s,s,e,ne,e,e,n',
     '老海盗': 'jh 36,yell,e,se,e,e,s,s,s,e,ne,e,e,n,e,n',
   },
-  'jueqinggu': {
+  '绝情谷': {
     '土匪': 'jh 37,n',
     '村民': 'jh 37,n,e,e',
     '野兔': 'jh 37,n,e,e,nw,nw,w,n,nw,n,n',
@@ -1702,7 +1725,7 @@ hairsfalling = {
     '囚犯': 'jh 37,n,e,e,nw,nw,w,n,e,n,e,e,e,ne,ne,ne,se,s,s,s',
     '地牢看守': 'jh 37,n,e,e,nw,nw,w,n,e,n,e,e,e,ne,ne,ne,se,s,s,s,w',
   },
-  'bihaishanzhuang': {
+  '碧海': {
     '法明大师': 'jh 38,n,n,w',
     '僧人': 'jh 38,n,n,w',
     '隐士': 'jh 38,n,n,n,n,w',
@@ -1720,7 +1743,7 @@ hairsfalling = {
     '王子轩': 'jh 38,n,n,n,n,n,n,n,n,n,n,n,e,e,se,se,e,n,n,n',
     '王昕': 'jh 38,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
   },
-  'tianshan': {
+  '天山': {
     '周教头': 'jh 39,ne',
     '辛怪人': 'jh 39,ne,e,n,ne',
     '穆小哥': 'jh 39,ne,e,n,ne,ne,n',
@@ -1754,7 +1777,7 @@ hairsfalling = {
     '杨英雄': 'jh 39,ne,e,n,ne,ne,n,ne,nw,ne,nw,event_1_17801939,ts2,ne,ne,nw,nw',
     '胡大侠': 'jh 39,ne,e,n,ne,ne,n,ne,nw,ne,nw,event_1_17801939,ts2,ne,ne,nw,nw,nw,w',
   },
-  'miaojiang': {
+  '苗疆': {
     '温青': 'jh 40,s,s,s,s',
     '苗村长': 'jh 40,s,s,s,s,w,w,w',
     '苗家小娃': 'jh 40,s,s,s,s,w,w,w,n',
@@ -1784,7 +1807,7 @@ hairsfalling = {
     '五毒护法': 'jh 40,s,s,s,s,e,s,se,sw,s,s,s,e,e,sw,se,sw,se,event_1_8004914,se,s,s,e,n,n,e,s,e,ne,s,sw,e,e,ne,ne,nw,ne,ne,n,n,n,n,nw,ne,ne,nw,ne,e',
     '何教主': 'jh 40,s,s,s,s,e,s,se,sw,s,s,s,e,e,sw,se,sw,se,event_1_8004914,se,s,s,e,n,n,e,s,e,ne,s,sw,e,e,ne,ne,nw,ne,ne,n,n,n,n,nw,ne,ne,nw,ne,e',
   },
-  'baidicheng': {
+  '白帝城': {
     '白衣弟子': 'jh 41,se,e,e',
     '白衣少年': 'jh 41,se,e,e,se,se,se,se',
     '李峰': 'jh 41,se,e,e,se,se,se,se,s,s',
@@ -1805,7 +1828,7 @@ hairsfalling = {
     '白衣士兵': 'jh 41,se,e,e,nw,nw,n,n,w,w',
     '文将军': 'jh 41,se,e,e,nw,nw,n,n,w,w,n,n,e',
   },
-  'mojiajiguancheng': {
+  '墨家': {
     '索卢参': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n',
     '墨家弟子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n',
     '高孙子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n',
@@ -1831,7 +1854,7 @@ hairsfalling = {
     '耕柱子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,n,nw',
     '墨子': 'jh 42,nw,ne,n,e,nw,e,nw,w,ne,se,n,nw,e,n,w,n,n,n,n,e,e,n,n,event_1_39026213,n,ne,se,s,event_1_623818,e,n,e,s,e,n,nw,e,nw,n,ne',
   },
-  'yanyuecheng': {
+  '掩月': {
     '执定长老': 'jh 43',
     '佩剑少女': 'jh 43',
     '野狗': 'jh 43',
@@ -1943,7 +1966,7 @@ hairsfalling = {
     '风花侍女': 'jh 43,sw,sw,sw,s,se,se,se,e,s,sw,se,ne,se,s,e,e,e,ne,se,s,s,se',
     '天玑童子': 'jh 43,sw,sw,sw,s,se,se,se,e,s,sw,se,ne,se,s,e,e,e,ne,se,s,s,se,e',
   },
-  'haiyunge': {
+  '海云': {
     '马夫': 'jh 44',
     '野狗': 'jh 44,n',
     '老镇长': 'jh 44,n,n',
@@ -1975,7 +1998,7 @@ hairsfalling = {
     '海云长老': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w,w,w,w,w,w,n',
     '虬髯犯人': 'jh 44,n,n,n,n,w,w,nw,n,n,ne,n,n,e,n,n,n,e,e,e,e,e,e,n,n,n,n,n,n,n,n,n,n,n,n,n,n,w,w,w,w,w,w,n,n,nw,w,w,nw',
   },
-  'huajie': {
+  '花街': {
     '花札敖': 'jh 46,e',
     '尊信门杀手': 'jh 46,e',
     '山赤岳': 'jh 46,e,e',
@@ -1999,7 +2022,7 @@ hairsfalling = {
     '寒碧翠': 'jh 46,e,e,e,e,e,e,e,e,n,n,n,e,e,e',
     '薄昭如': 'jh 46,e,e,e,e,e,e,e,e,n,n,n,e,e,s',
   },
-  'xiliangcheng': {
+  '西凉': {
     '响尾蛇': 'jh 47,ne',
     '官差': 'jh 47,ne,n,n,n,nw',
     '官兵': 'jh 47,ne,n,n,n,nw',
@@ -2025,7 +2048,7 @@ hairsfalling = {
     '黑衣镖师': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n,n,nw,nw,nw',
     '镖师': 'jh 47,ne,n,n,n,ne,ne,e,e,e,e,ne,n,ne,n,n,n,n,n,nw,nw,nw,nw',
   },
-  'gaochangmigong': {
+  '高昌': {
     '苏普': 'jh 48,e,ne',
     '阿曼': 'jh 48,e,ne',
     '糟老头子': 'jh 48,e,ne',
@@ -2045,7 +2068,7 @@ hairsfalling = {
     '瓦耳拉齐': 'jh 48,e,se,e,ne,se,e,e,e,ne,ne,event_1_54621,n,n,n',
     '分身': 'jh 48,e,se,e,ne,se,e,e,e,ne,ne,event_1_54621,n,n,n',
   },
-  'jingcheng': {
+  '京城': {
     '饥民': 'jh 49',
     '武将': 'jh 49,n,n,n,n',
     '捕快': 'jh 49,n,n,n,n',
@@ -2108,7 +2131,7 @@ hairsfalling = {
     '江充': 'jh 49,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
     '柳昂天': 'jh 49,n,n,n,n,n,n,n,n,n,n,n,n,n,n',
   },
-  'yuewangjiangong': {
+  '越王': {
     '樵夫': 'jh 50',
     '毒蛇': 'jh 50,ne',
     '欧余刀客': 'jh 50,ne,ne',
@@ -2152,7 +2175,7 @@ hairsfalling = {
     '烛庸子': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n,n,ne,event_1_27926026',
     '欧冶子': 'jh 50,ne,ne,n,n,n,ne,ne,ne,se,se,se,s,s,s,s,se,se,e,n,n,n,n,n,n,n,n,n,n,n,ne,event_1_53092576',
   },
-  'jiangling': {
+  '江陵': {
     '茶叶贩子': 'jh 51',
     '书生': 'jh 51,n',
     '乞丐': 'jh 51,n,n',
