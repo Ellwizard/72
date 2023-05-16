@@ -4,9 +4,9 @@
 // @version      2019.8.27
 // @description  try to take over the world!
 // @author       Lihaorong
-// @match        http://*.yytou.cn/*
-// @exclude      http://res.yytou.cn/*
-// @exclude      http://sword.mud.yytou.
+// @match        http://*.ihuogame.com/*
+// @exclude      http://sword-direct102.ihuogame.com/*
+// @exclude      http://sword.ihuogame.cn/*
 // @grant        none
 // ==/UserScript== 520  620  720
 
